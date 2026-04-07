@@ -1,0 +1,560 @@
+/* Reset / base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main_form_section html, .main_form_section body {
+  height: 100%;
+}
+
+.main_form_section body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #f5f5f5;
+  color: #333;
+  padding: 24px;
+}
+
+/* Card wrapper */
+.main_form_section {
+  width: 100%;
+  max-width: 440px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  padding: 15px;
+  border: 1px solid #eee;
+}
+
+.main_form {
+  display: grid;
+  gap: 18px;
+}
+
+.main_form h2 {
+  margin-bottom: 4px;
+  color: #333;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: left; /* screenshot shows left, change to center if you like */
+}
+
+/* Fields */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  color: #444;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* red star for required (see tiny JS tweak below) */
+.form-group label.required::after {
+  content: " *";
+  color: #d93025;
+  font-weight: 700;
+}
+
+/* Inputs / selects / textareas */
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  line-height: 1.4;
+  background: #fff;
+  color: #333;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+.form-group textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+/* Focus states: soft green like the sample */
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.15);
+}
+
+/* Placeholder style (optional) */
+.form-group ::placeholder {
+  color: #9aa0a6;
+}
+
+/* Select placeholder option */
+.form-group select:invalid {
+  color: #9aa0a6;
+}
+
+
+.form-group .iti {
+  width: 100%;
+  display: block;
+}
+
+.form-group .iti input[type="tel"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;          /* match your standard inputs */
+  border: 1px solid #ddd;      /* match your standard inputs */
+  border-radius: 6px;          /* match your standard inputs */
+  font-size: 14px;             /* match your standard inputs */
+  line-height: 1.4;
+  background: #fff;
+  color: #333;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+/* Match your focus style */
+.form-group .iti input[type="tel"]:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.15);
+}
+
+
+/* Submit button */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #3D506B;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color .2s ease, transform .02s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #31445E;
+}
+button[type="submit"]:active {
+  transform: translateY(1px);
+}
+
+/* Bottom divider area (Stripe/PayPal etc.) */
+.payment_section {
+  margin-top: 8px;
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+  color: #555;
+  font-size: 14px;
+}
+
+#stripe-pay-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #635BFF;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+#stripe-pay-button:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+/* Optional small help / error text */
+.help-text {
+  color: #6b7280;
+  font-size: 12px;
+  margin-top: 6px;
+}
+.error-text {
+  color: #d93025;
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+/* ---- Product Summary ---- */
+.product_area {
+  margin-top: 8px;
+}
+.product_area__title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+  margin: 6px 0 10px;
+}
+.product_price {
+  margin: -70px 20px 0 0;
+}
+.qty_stepper {
+  background: transparent !important;
+  padding: 2px;
+  z-index: 9;
+}
+.product_row {
+  display: grid;
+  grid-template-columns: auto; /* left | qty | price */
+  align-items: center;
+  gap: 16px;
+  padding: 15px 15px 0;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
+}
+.product_row + .product_row {
+  margin-top: 10px;
+}
+
+/* Left side: icon + name + matched gift badge */
+.product_left {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  gap: 12px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.product_icon {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
+
+/* Custom checkbox */
+.product_left input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 22px;
+  height: 22px;
+  margin: 0;
+}
+.product_left .fakebox {
+  width: 22px;
+  height: 22px;
+  border: 2px solid #cbd5e1;
+  border-radius: 6px;
+  background: #fff;
+  display: inline-block;
+  transition: all .15s ease;
+}
+.product_left input[type="checkbox"]:checked + .fakebox {
+  border-color: #3D506B;
+  background: #3D506B;
+  box-shadow: 0 0 0 3px rgba(61, 80, 107, 0.12);
+}
+.product_left input[type="checkbox"]:checked + .fakebox::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 6px;
+  border: 2px solid #fff;
+  border-top: 0;
+  border-right: 0;
+  transform: rotate(-45deg);
+  margin: 4px auto 0;
+}
+.product_name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #3a3a3a;
+  line-height: 1.25;
+}
+
+.matched_gift{
+   font-size: 16px;
+  font-weight: 800;
+  color: #70161f;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  justify-self: end;
+}
+
+/* Quantity stepper (visual only here) */
+/* Quantity stepper */
+.qty_stepper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.qty_btn {
+  flex: 0 0 36px;
+  height: 36px;
+  border: none;
+  background: #f3f4f6;
+  color: #374151;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  line-height: 1;
+  transition: background-color 0.2s ease;
+}
+.qty_btn:hover {
+  background: #e2e8f0;
+}
+
+.qty_stepper input[type="number"] {
+  width: 50px;
+  height: 36px;
+  border: none;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #111827;
+  outline: none;
+  -moz-appearance: textfield; /* Firefox */
+}
+.qty_stepper input::-webkit-outer-spin-button,
+.qty_stepper input::-webkit-inner-spin-button {
+  -webkit-appearance: none; /* Chrome/Safari */
+  margin: 0;
+}
+
+/* Price */
+.product_price {
+  min-width: 84px;
+  text-align: right;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: .2px;
+}
+
+/* Triple-match icons — inline within the row card */
+.product_match_popup {
+  display: none;
+  padding: 12px 0 4px;
+  text-align: center;
+}
+
+.product_match_popup.is-visible {
+  display: block;
+}
+
+.match_icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.match_icon {
+  width: 52px;
+  height: 52px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+}
+
+.match_label {
+  margin-top: 8px;
+  font-size: 11px;
+  font-weight: 800;
+  color: #70161f;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Dimmed row (for unchecked look) */
+.product_row.is-disabled {
+  opacity: .75;
+}
+.product_row.is-disabled .product_price {
+  color: #9aa0a6;
+}
+
+/* ---- Donation Section ---- */
+.donation_section {
+  margin: 16px 0 8px;
+}
+.donation_label {
+  display: block;
+  margin: 6px 0 6px;
+  font-weight: 600;
+  color: #3D506B;
+}
+.donation_input {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 8px;
+  width:100%;
+  max-width: none;
+  margin-top: 0;
+}
+.donation_input .currency {
+  display: inline-block;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #f8fafc;
+  color: #475569;
+}
+.donation_input input[type="number"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  line-height: 1.4;
+  background: #fff;
+  color: #333;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+.donation_input input[type="number"]:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.15);
+  padding-bottom: 10px;
+}
+
+.donation_input--inline {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+
+
+.order_summary {
+  margin-top: 16px;
+}
+.order_summary__title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+  margin: 14px 0 10px;
+}
+
+.order_card {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fff;
+  padding: 14px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
+}
+
+.order_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 2px;
+  color: #444;
+  font-size: 15px;
+}
+.order_divider {
+  margin: 8px 0;
+  border-top: 1px dashed #e5e7eb;
+}
+.order_row--total {
+  font-weight: 800;
+  font-size: 17px;
+  color: #31445E; /* harmonizes with your button color */
+}
+.pay-with-paypal {
+  margin-top: 12px;
+}
+.pay-with-paypal .paypal-buttons {
+  width: 100%;
+}
+.or-divider {
+  font-size: 14px;
+}
+
+.pay-with-stripe {
+  margin-top: 8px;
+}
+#payment-element {
+  min-height: 48px; /* keep area visible before mount */
+}
+
+#calendar-offer {
+  border: 1px dashed #e5e7eb;
+  border-radius: 8px;
+  padding: 12px;
+  background: #fafafa;
+}
+
+.calendar-options {
+  display: flex;
+  gap: 20px;
+  margin-top: 8px;
+}
+
+/* Opt-in checkboxes under order summary */
+.optin_section {
+  margin: 12px 0 4px;
+  padding-top: 8px;
+  border-top: 1px solid #eee;
+}
+
+.optin_row {
+  margin-top: 10px;
+}
+
+.optin_label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  max-width: 360px;
+  margin: 0 auto;              /* centers the block under the summary */
+  font-size: 13px;
+  line-height: 1.5;
+  color: #374151;
+}
+
+.optin_label input[type="checkbox"] {
+  margin-top: 3px;             /* vertically aligns box with first line of text */
+}
+
+.optin_text {
+  display: block;
+}
+
+/* Tiny donor disclaimer text */
+.donor_disclaimer_small {
+  margin: 12px auto 0;
+  max-width: 360px;
+  font-size: 11px;             /* ~8–9pt */
+  line-height: 1.5;
+  color: #6b7280;
+}
+
+
+#calendar-offer label {
+  font-weight: 600;
+  color: #333;
+}
+@media only screen and (max-width: 479px) {
+  .product_name {
+    font-size: 12px;
+  }
+  .product_price {
+    font-size: 16px;
+    margin-right: 5px;
+  }
+  .main_form_section a.button:not(a.button.btn-custom), .main_form_section button:not(button.splide__pagination__page, .main_form_section button.splide__arrow, button.btn-custom, .main_form_section .slider__container button.splide__toggle) {
+    padding: 10px 25px !important;
+  }
+}

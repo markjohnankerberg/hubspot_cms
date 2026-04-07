@@ -1,0 +1,201 @@
+/* ── Banner shell ───────────────────────────────────────────── */
+.announcement-bar {
+  width: 100%;
+  padding: 28px 24px;
+  font-size: 15px;
+  font-family: inherit;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background-color: #546A7B;
+  color: #fff;
+  position: relative;
+}
+
+.announcement-bar__inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ── Row 1: raised + goal ───────────────────────────────────── */
+.announcement-bar__progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+
+.announcement-bar__raised {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.announcement-bar__goal {
+  font-size: 13px;
+  opacity: 0.8;
+  line-height: 1;
+}
+
+/* ── Progress bar ───────────────────────────────────────────── */
+.announcement-bar__bar-track {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 9999px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.announcement-bar__bar-fill {
+  height: 100%;
+  background: #E3B341;
+  border-radius: 9999px;
+  transition: width 0.4s ease;
+  min-width: 0;
+}
+
+/* ── Row 2: stats + actions ─────────────────────────────────── */
+.announcement-bar__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.announcement-bar__stats {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.announcement-bar__stat-divider {
+  opacity: 0.5;
+}
+
+.announcement-bar__skus {
+  display: flex;
+  align-items: center;
+}
+
+#sku-breakdown {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.announcement-bar__sku-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.announcement-bar__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.announcement-bar__donate-btn {
+  display: inline-block;
+  background: rgb(255, 255, 255);
+  color: #546A7B;
+  text-decoration: none;
+  padding: 8px 22px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 5px;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.announcement-bar__donate-btn:hover {
+  opacity: 0.88;
+  text-decoration: none;
+}
+
+/* ── Close button (top-right) ───────────────────────────────── */
+.announcement-bar__close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  opacity: 0.75;
+  color: #fff;
+  padding: 0 4px;
+}
+
+.announcement-bar__close:hover {
+  opacity: 1;
+}
+
+/* ── Learn More + Donate buttons (shared outlined style) ─────── */
+.announcement-bar__learn-btn,
+.announcement-bar__donate-btn {
+  display: inline-block;
+  background: transparent;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 22px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 5px;
+  border: 2px solid #fff;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.announcement-bar__learn-btn:hover,
+.announcement-bar__donate-btn:hover {
+  opacity: 0.88;
+  text-decoration: none;
+}
+
+/* ── Hidden state (toggled by JS) ───────────────────────────── */
+.announcement-bar--hidden {
+  display: none;
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .announcement-bar {
+    padding: 10px 16px;
+  }
+
+  .announcement-bar__raised {
+    font-size: 15px;
+  }
+
+  .announcement-bar__stats {
+    font-size: 12px;
+    gap: 4px 8px;
+  }
+
+  .announcement-bar__skus {
+    display: none;
+  }
+
+  .announcement-bar__donate-btn {
+    padding: 7px 16px;
+    font-size: 13px;
+    border-radius: 12px;
+  }
+}

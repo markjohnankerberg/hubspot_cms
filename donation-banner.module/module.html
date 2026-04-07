@@ -1,0 +1,57 @@
+{% if module.banner_visible != false %}
+<div class="announcement-bar"
+     id="announcement-bar"
+     data-api-url="{{ module.api_url }}"
+     data-show-skus="{{ module.show_sku_breakdown }}">
+  <button class="announcement-bar__close" type="button" aria-label="Close banner">&#x2715;</button>
+  <div class="announcement-bar__inner">
+
+    <!-- Row 1: Devices raised (left) + Goal (right) -->
+    <div class="announcement-bar__progress-header">
+      <span class="announcement-bar__raised"><span id="donation-total">—</span> Total Amount Given</span>
+      <span class="announcement-bar__goal">$500000 device goal</span>
+    </div>
+
+    <!-- Progress bar -->
+    <div class="announcement-bar__bar-track">
+      <div class="announcement-bar__bar-fill" id="donation-progress" style="width: 0%"></div>
+    </div>
+
+    <!-- Row 2: Stats (left) + Donate + Learn More buttons (right) -->
+    <div class="announcement-bar__footer">
+      <div class="announcement-bar__stats">
+        <span class="announcement-bar__stat"><strong id="trees-planted">—</strong> Devices Donated</span>
+        <span class="announcement-bar__stat announcement-bar__skus" id="sku-breakdown"></span>
+      </div>
+      <div class="announcement-bar__actions">
+        <a class="announcement-bar__learn-btn" href="https://atriresearch.org" target="_blank" rel="noopener">Learn More</a>
+        <a class="announcement-bar__donate-btn" href="https://atriresearch.org/mark_domeracki_ab_testing" target="_blank" rel="noopener">Donate</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endif %}
+
+<script>
+(function () {
+  var GOAL = 500000;
+  var totalEl = document.getElementById('donation-total');
+  var barEl   = document.getElementById('donation-progress');
+  if (!totalEl || !barEl) return;
+
+  function updateBar() {
+    var raw = totalEl.textContent.replace(/[^0-9.]/g, '').replace(/\.(?=.*\.)/g, '');
+    var val = parseFloat(raw);
+    if (isNaN(val)) return;
+    var pct = Math.min(100, (val / GOAL) * 100);
+    barEl.style.width = pct.toFixed(2) + '%';
+  }
+
+  // Run once in case the total is already set
+  updateBar();
+
+  // Watch for future updates from module.js
+  new MutationObserver(updateBar).observe(totalEl, { childList: true, characterData: true, subtree: true });
+})();
+</script>
