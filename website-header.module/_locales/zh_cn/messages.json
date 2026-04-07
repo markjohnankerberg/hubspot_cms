@@ -1,0 +1,647 @@
+{
+  "name": {
+    "message": "网站页眉",
+    "description": "",
+    "placeholders": null
+  },
+  "button.add_button.label": {
+    "message": "添加按钮",
+    "description": "",
+    "placeholders": null
+  },
+  "button.add_icon.label": {
+    "message": "添加图标",
+    "description": "",
+    "placeholders": null
+  },
+  "button.button_link.label": {
+    "message": "按钮链接",
+    "description": "",
+    "placeholders": null
+  },
+  "button.button_text.default": {
+    "message": "联系我们",
+    "description": "",
+    "placeholders": null
+  },
+  "button.button_text.label": {
+    "message": "按钮文本",
+    "description": "",
+    "placeholders": null
+  },
+  "button.icon.icon_field.label": {
+    "message": "图标",
+    "description": "",
+    "placeholders": null
+  },
+  "button.icon.label": {
+    "message": "图标",
+    "description": "",
+    "placeholders": null
+  },
+  "button.icon.position.choices.left": {
+    "message": "左对齐",
+    "description": "",
+    "placeholders": null
+  },
+  "button.icon.position.choices.right": {
+    "message": "右对齐",
+    "description": "",
+    "placeholders": null
+  },
+  "button.icon.position.label": {
+    "message": "位置",
+    "description": "",
+    "placeholders": null
+  },
+  "button.label": {
+    "message": "按钮",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.close_main_navigation_text.default": {
+    "message": "关闭主导航",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.close_main_navigation_text.label": {
+    "message": "关闭主导航",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.desktop_navigation_text.default": {
+    "message": "桌面导航",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.desktop_navigation_text.label": {
+    "message": "桌面导航",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.label": {
+    "message": "默认文本",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.mobile_navigation_text.default": {
+    "message": "移动导航",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.mobile_navigation_text.label": {
+    "message": "移动导航",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.open_main_navigation_text.default": {
+    "message": "打开主导航",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.open_main_navigation_text.label": {
+    "message": "打开主导航",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.show_for_submenu_text.default": {
+    "message": "显示 {{ link.label }} 的子菜单",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.show_for_submenu_text.label": {
+    "message": "显示子菜单文本",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.show_submenu_for_translations_text.default": {
+    "message": "显示翻译的子菜单",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.show_submenu_for_translations_text.label": {
+    "message": "显示翻译的子菜单",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.add_language_switcher.help_text": {
+    "message": "仅当页面有多种语言版本时，才会显示语言切换器。",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.add_language_switcher.label": {
+    "message": "添加语言切换器",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.choices.hybrid": {
+    "message": "混合",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.choices.localized": {
+    "message": "本地化",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.choices.pagelang": {
+    "message": "页面语言",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.help_text": {
+    "message": "语言切换器文本所用的语言。 “页面语言”表示切换器所在页面支持显示的语言的名称。 “本地化”表示实际显示所用语言的名称。“混合”包含以上两种显示形式。",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.label": {
+    "message": "显示模式",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.placeholder": {
+    "message": "搜索",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.label": {
+    "message": "语言切换器",
+    "description": "",
+    "placeholders": null
+  },
+  "layout.choices.centered": {
+    "message": "徽标居中",
+    "description": "",
+    "placeholders": null
+  },
+  "layout.choices.left": {
+    "message": "徽标左对齐",
+    "description": "",
+    "placeholders": null
+  },
+  "layout.label": {
+    "message": "布局",
+    "description": "",
+    "placeholders": null
+  },
+  "logo.label": {
+    "message": "徽标",
+    "description": "",
+    "placeholders": null
+  },
+  "logo.link.help_text": {
+    "message": "如果没有指定 URL，徽标将链接到你的主域名",
+    "description": "",
+    "placeholders": null
+  },
+  "logo.link.label": {
+    "message": "链接",
+    "description": "",
+    "placeholders": null
+  },
+  "logo.logo.label": {
+    "message": "徽标",
+    "description": "",
+    "placeholders": null
+  },
+  "logo.open_in_new_tab.label": {
+    "message": "访问者点击时，在新标签页中打开链接",
+    "description": "",
+    "placeholders": null
+  },
+  "menu.label": {
+    "message": "菜单",
+    "description": "",
+    "placeholders": null
+  },
+  "menu.max_levels.help_text": {
+    "message": "确定可以在菜单中展开的菜单树子项的数量",
+    "description": "",
+    "placeholders": null
+  },
+  "menu.max_levels.label": {
+    "message": "菜单最大级数",
+    "description": "",
+    "placeholders": null
+  },
+  "menu.menu.label": {
+    "message": "菜单",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.alignment.alignment.label": {
+    "message": "对齐方式",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.alignment.label": {
+    "message": "对齐方式",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.background.color.label": {
+    "message": "颜色",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.background.label": {
+    "message": "背景",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.border.border.label": {
+    "message": "边框",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.border.label": {
+    "message": "边框",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.corner.label": {
+    "message": "圆角",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.corner.radius.label": {
+    "message": "半径",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.background.color.label": {
+    "message": "颜色",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.background.label": {
+    "message": "背景",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.border.border.label": {
+    "message": "边框",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.border.label": {
+    "message": "边框",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.label": {
+    "message": "悬停",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.text.font.label": {
+    "message": "字体",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.text.label": {
+    "message": "文本",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.label": {
+    "message": "按钮",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_size.choices.large": {
+    "message": "大",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_size.choices.regular": {
+    "message": "常规",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_size.choices.small": {
+    "message": "小",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_size.label": {
+    "message": "按钮大小",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_style.choices.primary": {
+    "message": "主要",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_style.choices.secondary": {
+    "message": "次要",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_style.choices.simple": {
+    "message": "简单",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_style.label": {
+    "message": "按钮样式",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.help_text": {
+    "message": "使用预设可快速根据预定值调整选定项的外观。",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.label": {
+    "message": "预设",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.spacing.label": {
+    "message": "间距",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.spacing.spacing.label": {
+    "message": "间距",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.font.label": {
+    "message": "字体",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.label": {
+    "message": "文本",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.text_transform.choices.capitalize": {
+    "message": "首字母大写",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.text_transform.choices.lowercase": {
+    "message": "小写",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.text_transform.choices.none": {
+    "message": "无",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.text_transform.choices.uppercase": {
+    "message": "大写",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.text_transform.label": {
+    "message": "文本转换",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.label": {
+    "message": "样式",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.background.color.label": {
+    "message": "颜色",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.background.label": {
+    "message": "背景",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.hover.background_color.label": {
+    "message": "背景颜色",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.hover.font_color.label": {
+    "message": "字体颜色",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.hover.label": {
+    "message": "悬停",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.label": {
+    "message": "下拉列表",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.text.font_color.label": {
+    "message": "字体颜色",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.text.label": {
+    "message": "文本",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.hover.font.label": {
+    "message": "字体",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.hover.label": {
+    "message": "悬停",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.label": {
+    "message": "语言切换器",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.font.label": {
+    "message": "字体",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.label": {
+    "message": "文本",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.text_transform.choices.capitalize": {
+    "message": "首字母大写",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.text_transform.choices.lowercase": {
+    "message": "小写",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.text_transform.choices.none": {
+    "message": "无",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.text_transform.choices.uppercase": {
+    "message": "大写",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.text_transform.label": {
+    "message": "文本转换",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.logo.corner.label": {
+    "message": "圆角",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.logo.corner.radius.label": {
+    "message": "半径",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.logo.label": {
+    "message": "徽标",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.active.font.label": {
+    "message": "字体",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.active.label": {
+    "message": "活动",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.active.background_color.label": {
+    "message": "背景颜色",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.active.font_color.label": {
+    "message": "字体颜色",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.active.label": {
+    "message": "活动",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.background.color.label": {
+    "message": "颜色",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.background.label": {
+    "message": "背景",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.hover.background_color.label": {
+    "message": "背景颜色",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.hover.font_color.label": {
+    "message": "字体颜色",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.hover.label": {
+    "message": "悬停",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.label": {
+    "message": "下拉列表",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.text.font_color.label": {
+    "message": "字体颜色",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.text.label": {
+    "message": "文本",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.hover.font.label": {
+    "message": "字体",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.hover.label": {
+    "message": "悬停",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.label": {
+    "message": "菜单",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.font.label": {
+    "message": "字体",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.label": {
+    "message": "文本",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.text_transform.choices.capitalize": {
+    "message": "首字母大写",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.text_transform.choices.lowercase": {
+    "message": "小写",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.text_transform.choices.none": {
+    "message": "无",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.text_transform.choices.uppercase": {
+    "message": "大写",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.text_transform.label": {
+    "message": "文本转换",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.top_bar.background.color.label": {
+    "message": "颜色",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.top_bar.background.label": {
+    "message": "背景",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.top_bar.label": {
+    "message": "顶栏",
+    "description": "",
+    "placeholders": null
+  }
+}

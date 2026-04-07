@@ -1,0 +1,647 @@
+{
+  "name": {
+    "message": "वेबसाइट का हेडर",
+    "description": "",
+    "placeholders": null
+  },
+  "button.add_button.label": {
+    "message": "बटन जोड़ें",
+    "description": "",
+    "placeholders": null
+  },
+  "button.add_icon.label": {
+    "message": "आइकॉन जोड़ें",
+    "description": "",
+    "placeholders": null
+  },
+  "button.button_link.label": {
+    "message": "बटन का लिंक",
+    "description": "",
+    "placeholders": null
+  },
+  "button.button_text.default": {
+    "message": "संपर्क करें",
+    "description": "",
+    "placeholders": null
+  },
+  "button.button_text.label": {
+    "message": "बटन टेक्स्ट",
+    "description": "",
+    "placeholders": null
+  },
+  "button.icon.icon_field.label": {
+    "message": "आइकॉन",
+    "description": "",
+    "placeholders": null
+  },
+  "button.icon.label": {
+    "message": "आइकॉन",
+    "description": "",
+    "placeholders": null
+  },
+  "button.icon.position.choices.left": {
+    "message": "बाएं",
+    "description": "",
+    "placeholders": null
+  },
+  "button.icon.position.choices.right": {
+    "message": "दाएं",
+    "description": "",
+    "placeholders": null
+  },
+  "button.icon.position.label": {
+    "message": "पोजीशन",
+    "description": "",
+    "placeholders": null
+  },
+  "button.label": {
+    "message": "बटन",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.close_main_navigation_text.default": {
+    "message": "मुख्य नेविगेशन बंद करें",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.close_main_navigation_text.label": {
+    "message": "मुख्य नेविगेशन बंद करें",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.desktop_navigation_text.default": {
+    "message": "डेस्कटॉप नेविगेशन",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.desktop_navigation_text.label": {
+    "message": "डेस्कटॉप नेविगेशन",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.label": {
+    "message": "डिफ़ॉल्ट टेक्स्ट",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.mobile_navigation_text.default": {
+    "message": "मोबाइल नेविगेशन",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.mobile_navigation_text.label": {
+    "message": "मोबाइल नेविगेशन",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.open_main_navigation_text.default": {
+    "message": "मुख्य नेविगेशन बंद करें",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.open_main_navigation_text.label": {
+    "message": "मुख्य नेविगेशन बंद करें",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.show_for_submenu_text.default": {
+    "message": "{{ link.label }} के लिए सबमेनू दिखाएं",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.show_for_submenu_text.label": {
+    "message": "टेक्स्ट के लिए सबमेनू दिखाएं",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.show_submenu_for_translations_text.default": {
+    "message": "अनुवाद के लिए सबमेनू दिखाएं",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.show_submenu_for_translations_text.label": {
+    "message": "अनुवाद के लिए सबमेनू दिखाएं",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.add_language_switcher.help_text": {
+    "message": "भाषा स्विचर केवल तभी दिखाई देगा जब किसी पेज के लिए मल्टी-भाषा का वेरिएशन हो।",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.add_language_switcher.label": {
+    "message": "भाषा स्विचर जोड़ें",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.choices.hybrid": {
+    "message": "हाइब्रिड",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.choices.localized": {
+    "message": "लोकलाइज़ड",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.choices.pagelang": {
+    "message": "पेजलैंग",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.help_text": {
+    "message": "भाषा स्विचर में टेक्स्ट की भाषा। PageLang का अर्थ है कि भाषाओं के नाम उस पेज की भाषा में प्रदर्शित होंगे जिस पर स्विचर चालू है। लोकलाइज़्ड का अर्थ है कि प्रत्येक भाषा का नाम उसी भाषा में प्रदर्शित होगा। हाइब्रिड इन दोनों का मिश्रण है।",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.label": {
+    "message": "डिस्प्ले मोड",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.placeholder": {
+    "message": "खोजें",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.label": {
+    "message": "भाषा स्विचर",
+    "description": "",
+    "placeholders": null
+  },
+  "layout.choices.centered": {
+    "message": "लोगो गैलरी",
+    "description": "",
+    "placeholders": null
+  },
+  "layout.choices.left": {
+    "message": "लोगो बाएं",
+    "description": "",
+    "placeholders": null
+  },
+  "layout.label": {
+    "message": "लेआउट",
+    "description": "",
+    "placeholders": null
+  },
+  "logo.label": {
+    "message": "लोगो",
+    "description": "",
+    "placeholders": null
+  },
+  "logo.link.help_text": {
+    "message": "यदि कोई url निर्दिष्ट नहीं है, तो आपका लोगो आपके प्राइमरी डोमेन से लिंक हो जाएगा",
+    "description": "",
+    "placeholders": null
+  },
+  "logo.link.label": {
+    "message": "लिंक",
+    "description": "",
+    "placeholders": null
+  },
+  "logo.logo.label": {
+    "message": "लोगो",
+    "description": "",
+    "placeholders": null
+  },
+  "logo.open_in_new_tab.label": {
+    "message": "जब विज़िटर्स क्लिक करें तो लिंक को नए टैब में खोलें",
+    "description": "",
+    "placeholders": null
+  },
+  "menu.label": {
+    "message": "मेन्यू",
+    "description": "",
+    "placeholders": null
+  },
+  "menu.max_levels.help_text": {
+    "message": "मेन्यू ट्री चिल्ड्रन की संख्या निर्धारित करता है जिसे मेन्यू में एक्सपैंडेड किया जा सकता है",
+    "description": "",
+    "placeholders": null
+  },
+  "menu.max_levels.label": {
+    "message": "अधिकतम स्तर",
+    "description": "",
+    "placeholders": null
+  },
+  "menu.menu.label": {
+    "message": "मेन्यू",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.alignment.alignment.label": {
+    "message": "अलाइनमेंट",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.alignment.label": {
+    "message": "अलाइनमेंट",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.background.color.label": {
+    "message": "कलर",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.background.label": {
+    "message": "बैकग्राउंड",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.border.border.label": {
+    "message": "बॉर्डर",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.border.label": {
+    "message": "बॉर्डर",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.corner.label": {
+    "message": "कॉर्नर",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.corner.radius.label": {
+    "message": "रेडियस",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.background.color.label": {
+    "message": "कलर",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.background.label": {
+    "message": "बैकग्राउंड",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.border.border.label": {
+    "message": "बॉर्डर",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.border.label": {
+    "message": "बॉर्डर",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.label": {
+    "message": "होवर",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.text.font.label": {
+    "message": "फ़ॉन्ट",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.text.label": {
+    "message": "टेक्स्ट",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.label": {
+    "message": "बटन",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_size.choices.large": {
+    "message": "बड़ा",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_size.choices.regular": {
+    "message": "रेगुलर",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_size.choices.small": {
+    "message": "छोटा",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_size.label": {
+    "message": "बटन साइज़",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_style.choices.primary": {
+    "message": "प्राइमरी",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_style.choices.secondary": {
+    "message": "सेकंडरी",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_style.choices.simple": {
+    "message": "सामान्य",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_style.label": {
+    "message": "बटन स्टाइल",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.help_text": {
+    "message": "चुने हुए आइटम की दिखावट को पूर्वनिर्धारित वैल्यू में त्वरित रूप से समायोजित करने के लिए प्रीसेट का उपयोग करें।",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.label": {
+    "message": "प्रीसेट्स",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.spacing.label": {
+    "message": "स्पेसिंग",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.spacing.spacing.label": {
+    "message": "स्पेसिंग",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.font.label": {
+    "message": "फ़ॉन्ट",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.label": {
+    "message": "टेक्स्ट",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.text_transform.choices.capitalize": {
+    "message": "कैपिटलाइज़",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.text_transform.choices.lowercase": {
+    "message": "लोअरकेस",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.text_transform.choices.none": {
+    "message": "कोई नहीं",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.text_transform.choices.uppercase": {
+    "message": "अपरकेस",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.text_transform.label": {
+    "message": "टेक्स्ट ट्रांसफॉर्म",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.label": {
+    "message": "स्टाइल",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.background.color.label": {
+    "message": "कलर",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.background.label": {
+    "message": "बैकग्राउंड",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.hover.background_color.label": {
+    "message": "बैकग्राउंड का कलर",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.hover.font_color.label": {
+    "message": "फ़ॉन्ट कलर",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.hover.label": {
+    "message": "होवर",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.label": {
+    "message": "ड्रॉप डाउन",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.text.font_color.label": {
+    "message": "फ़ॉन्ट कलर",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.text.label": {
+    "message": "टेक्स्ट",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.hover.font.label": {
+    "message": "फ़ॉन्ट",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.hover.label": {
+    "message": "होवर",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.label": {
+    "message": "भाषा स्विचर",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.font.label": {
+    "message": "फ़ॉन्ट",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.label": {
+    "message": "टेक्स्ट",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.text_transform.choices.capitalize": {
+    "message": "कैपिटलाइज़",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.text_transform.choices.lowercase": {
+    "message": "लोअरकेस",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.text_transform.choices.none": {
+    "message": "कोई नहीं",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.text_transform.choices.uppercase": {
+    "message": "अपरकेस",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.text_transform.label": {
+    "message": "टेक्स्ट ट्रांसफॉर्म",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.logo.corner.label": {
+    "message": "कॉर्नर",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.logo.corner.radius.label": {
+    "message": "रेडियस",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.logo.label": {
+    "message": "लोगो",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.active.font.label": {
+    "message": "फ़ॉन्ट",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.active.label": {
+    "message": "सक्रिय है",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.active.background_color.label": {
+    "message": "बैकग्राउंड का कलर",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.active.font_color.label": {
+    "message": "फ़ॉन्ट कलर",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.active.label": {
+    "message": "सक्रिय है",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.background.color.label": {
+    "message": "कलर",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.background.label": {
+    "message": "बैकग्राउंड",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.hover.background_color.label": {
+    "message": "बैकग्राउंड का कलर",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.hover.font_color.label": {
+    "message": "फ़ॉन्ट कलर",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.hover.label": {
+    "message": "होवर",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.label": {
+    "message": "ड्रॉप डाउन",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.text.font_color.label": {
+    "message": "फ़ॉन्ट कलर",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.text.label": {
+    "message": "टेक्स्ट",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.hover.font.label": {
+    "message": "फ़ॉन्ट",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.hover.label": {
+    "message": "होवर",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.label": {
+    "message": "मेन्यू",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.font.label": {
+    "message": "फ़ॉन्ट",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.label": {
+    "message": "टेक्स्ट",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.text_transform.choices.capitalize": {
+    "message": "कैपिटलाइज़",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.text_transform.choices.lowercase": {
+    "message": "लोअरकेस",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.text_transform.choices.none": {
+    "message": "कोई नहीं",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.text_transform.choices.uppercase": {
+    "message": "अपरकेस",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.text_transform.label": {
+    "message": "टेक्स्ट ट्रांसफॉर्म",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.top_bar.background.color.label": {
+    "message": "कलर",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.top_bar.background.label": {
+    "message": "बैकग्राउंड",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.top_bar.label": {
+    "message": "टॉप बार",
+    "description": "",
+    "placeholders": null
+  }
+}

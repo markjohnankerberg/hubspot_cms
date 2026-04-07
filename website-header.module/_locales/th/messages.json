@@ -1,0 +1,647 @@
+{
+  "name": {
+    "message": "ส่วนหัวของเว็บไซต์",
+    "description": "",
+    "placeholders": null
+  },
+  "button.add_button.label": {
+    "message": "เพิ่มปุ่ม",
+    "description": "",
+    "placeholders": null
+  },
+  "button.add_icon.label": {
+    "message": "เพิ่มไอคอน",
+    "description": "",
+    "placeholders": null
+  },
+  "button.button_link.label": {
+    "message": "ลิงก์ของปุ่ม",
+    "description": "",
+    "placeholders": null
+  },
+  "button.button_text.default": {
+    "message": "ติดต่อเรา",
+    "description": "",
+    "placeholders": null
+  },
+  "button.button_text.label": {
+    "message": "ข้อความบนปุ่ม",
+    "description": "",
+    "placeholders": null
+  },
+  "button.icon.icon_field.label": {
+    "message": "ไอคอน",
+    "description": "",
+    "placeholders": null
+  },
+  "button.icon.label": {
+    "message": "ไอคอน",
+    "description": "",
+    "placeholders": null
+  },
+  "button.icon.position.choices.left": {
+    "message": "ซ้าย",
+    "description": "",
+    "placeholders": null
+  },
+  "button.icon.position.choices.right": {
+    "message": "ขวา",
+    "description": "",
+    "placeholders": null
+  },
+  "button.icon.position.label": {
+    "message": "ตำแหน่ง",
+    "description": "",
+    "placeholders": null
+  },
+  "button.label": {
+    "message": "ปุ่ม",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.close_main_navigation_text.default": {
+    "message": "ปิดการนำทางหลัก",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.close_main_navigation_text.label": {
+    "message": "ปิดการนำทางหลัก",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.desktop_navigation_text.default": {
+    "message": "การนำทางบนเดสก์ท็อป",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.desktop_navigation_text.label": {
+    "message": "การนำทางบนเดสก์ท็อป",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.label": {
+    "message": "ข้อความเริ่มต้น",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.mobile_navigation_text.default": {
+    "message": "การนำทางบนมือถือ",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.mobile_navigation_text.label": {
+    "message": "การนำทางบนมือถือ",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.open_main_navigation_text.default": {
+    "message": "เปิดการนำทางหลัก",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.open_main_navigation_text.label": {
+    "message": "เปิดการนำทางหลัก",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.show_for_submenu_text.default": {
+    "message": "แสดงเมนูย่อยของ {{ link.label }}",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.show_for_submenu_text.label": {
+    "message": "ข้อความแสดงเมนูย่อย",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.show_submenu_for_translations_text.default": {
+    "message": "แสดงเมนูย่อยสำหรับการแปล",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.show_submenu_for_translations_text.label": {
+    "message": "แสดงเมนูย่อยสำหรับการแปล",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.add_language_switcher.help_text": {
+    "message": "ตัวสลับภาษาจะปรากฏก็ต่อเมื่อมีตัวแปรหลายภาษาในหน้าเท่านั้น",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.add_language_switcher.label": {
+    "message": "เพิ่มตัวสลับภาษา",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.choices.hybrid": {
+    "message": "ไฮบริด",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.choices.localized": {
+    "message": "ภาษาท้องถิ่น",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.choices.pagelang": {
+    "message": "PageLang",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.help_text": {
+    "message": "ภาษาของข้อความในตัวสลับภาษา PageLang หมายถึงชื่อภาษาที่จะแสดงในภาษาของหน้าที่มีตัวสลับภาษาอยู่ ภาษาท้องถิ่นหมายถึงชื่อของแต่ละภาษาที่จะแสดงในภาษานั้น ไฮบริดคือการผสมสองตัวเลือกนี้เข้าด้วยกัน",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.label": {
+    "message": "โหมดจอแสดงผล",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.placeholder": {
+    "message": "ค้นหา",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.label": {
+    "message": "ตัวสลับภาษา",
+    "description": "",
+    "placeholders": null
+  },
+  "layout.choices.centered": {
+    "message": "โลโก้ตรงกลาง",
+    "description": "",
+    "placeholders": null
+  },
+  "layout.choices.left": {
+    "message": "โลโก้ซ้าย",
+    "description": "",
+    "placeholders": null
+  },
+  "layout.label": {
+    "message": "เลย์เอาท์",
+    "description": "",
+    "placeholders": null
+  },
+  "logo.label": {
+    "message": "โลโก้",
+    "description": "",
+    "placeholders": null
+  },
+  "logo.link.help_text": {
+    "message": "หากไม่มีการระบุ URL โลโก้ของคุณจะเชื่อมโยงไปยังโดเมนหลักของคุณ",
+    "description": "",
+    "placeholders": null
+  },
+  "logo.link.label": {
+    "message": "ลิงก์",
+    "description": "",
+    "placeholders": null
+  },
+  "logo.logo.label": {
+    "message": "โลโก้",
+    "description": "",
+    "placeholders": null
+  },
+  "logo.open_in_new_tab.label": {
+    "message": "เปิดลิงก์ในแท็บใหม่เมื่อผู้เยี่ยมชมคลิก",
+    "description": "",
+    "placeholders": null
+  },
+  "menu.label": {
+    "message": "เมนู",
+    "description": "",
+    "placeholders": null
+  },
+  "menu.max_levels.help_text": {
+    "message": "กำหนดจำนวนแผนภูมิเมนูสำหรับเด็กที่สามารถขยายได้ในเมนู",
+    "description": "",
+    "placeholders": null
+  },
+  "menu.max_levels.label": {
+    "message": "ระดับสูงสุด",
+    "description": "",
+    "placeholders": null
+  },
+  "menu.menu.label": {
+    "message": "เมนู",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.alignment.alignment.label": {
+    "message": "การจัดแนว",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.alignment.label": {
+    "message": "การจัดแนว",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.background.color.label": {
+    "message": "สี",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.background.label": {
+    "message": "พื้นหลัง",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.border.border.label": {
+    "message": "ขอบ",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.border.label": {
+    "message": "ขอบ",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.corner.label": {
+    "message": "มุม",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.corner.radius.label": {
+    "message": "รัศมี",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.background.color.label": {
+    "message": "สี",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.background.label": {
+    "message": "พื้นหลัง",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.border.border.label": {
+    "message": "ขอบ",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.border.label": {
+    "message": "ขอบ",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.label": {
+    "message": "วางเมาส์เหนือ",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.text.font.label": {
+    "message": "แบบอักษร",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.text.label": {
+    "message": "ข้อความ",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.label": {
+    "message": "ปุ่ม",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_size.choices.large": {
+    "message": "ใหญ่",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_size.choices.regular": {
+    "message": "ปกติ",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_size.choices.small": {
+    "message": "เล็ก",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_size.label": {
+    "message": "ขนาดปุ่ม",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_style.choices.primary": {
+    "message": "หลัก",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_style.choices.secondary": {
+    "message": "รอง",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_style.choices.simple": {
+    "message": "อย่างง่าย",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_style.label": {
+    "message": "รูปแบบปุ่ม",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.help_text": {
+    "message": "ใช้ค่าที่กำหนดไว้ล่วงหน้าเพื่อปรับเปลี่ยนลักษณะที่ปรากฏของรายการที่เลือกเป็นค่าที่กำหนดไว้ล่วงหน้าอย่างรวดเร็ว",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.label": {
+    "message": "ค่าที่กำหนดไว้ล่วงหน้า",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.spacing.label": {
+    "message": "เว้นวรรค",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.spacing.spacing.label": {
+    "message": "เว้นวรรค",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.font.label": {
+    "message": "แบบอักษร",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.label": {
+    "message": "ข้อความ",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.text_transform.choices.capitalize": {
+    "message": "ใช้ตัวพิมพ์ใหญ่",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.text_transform.choices.lowercase": {
+    "message": "ตัวพิมพ์เล็ก",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.text_transform.choices.none": {
+    "message": "ไม่มี",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.text_transform.choices.uppercase": {
+    "message": "ตัวพิมพ์ใหญ่",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.text_transform.label": {
+    "message": "การแปลงข้อความ",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.label": {
+    "message": "รูปแบบ",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.background.color.label": {
+    "message": "สี",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.background.label": {
+    "message": "พื้นหลัง",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.hover.background_color.label": {
+    "message": "สีพื้นหลัง",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.hover.font_color.label": {
+    "message": "สีแบบอักษร",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.hover.label": {
+    "message": "วางเมาส์เหนือ",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.label": {
+    "message": "ดร็อปดาวน์",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.text.font_color.label": {
+    "message": "สีแบบอักษร",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.text.label": {
+    "message": "ข้อความ",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.hover.font.label": {
+    "message": "แบบอักษร",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.hover.label": {
+    "message": "วางเมาส์เหนือ",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.label": {
+    "message": "ตัวสลับภาษา",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.font.label": {
+    "message": "แบบอักษร",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.label": {
+    "message": "ข้อความ",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.text_transform.choices.capitalize": {
+    "message": "ใช้ตัวพิมพ์ใหญ่",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.text_transform.choices.lowercase": {
+    "message": "ตัวพิมพ์เล็ก",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.text_transform.choices.none": {
+    "message": "ไม่มี",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.text_transform.choices.uppercase": {
+    "message": "ตัวพิมพ์ใหญ่",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.text_transform.label": {
+    "message": "การแปลงข้อความ",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.logo.corner.label": {
+    "message": "มุม",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.logo.corner.radius.label": {
+    "message": "รัศมี",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.logo.label": {
+    "message": "โลโก้",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.active.font.label": {
+    "message": "แบบอักษร",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.active.label": {
+    "message": "ใช้งานอยู่",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.active.background_color.label": {
+    "message": "สีพื้นหลัง",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.active.font_color.label": {
+    "message": "สีแบบอักษร",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.active.label": {
+    "message": "ใช้งานอยู่",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.background.color.label": {
+    "message": "สี",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.background.label": {
+    "message": "พื้นหลัง",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.hover.background_color.label": {
+    "message": "สีพื้นหลัง",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.hover.font_color.label": {
+    "message": "สีแบบอักษร",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.hover.label": {
+    "message": "วางเมาส์เหนือ",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.label": {
+    "message": "ดร็อปดาวน์",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.text.font_color.label": {
+    "message": "สีแบบอักษร",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.text.label": {
+    "message": "ข้อความ",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.hover.font.label": {
+    "message": "แบบอักษร",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.hover.label": {
+    "message": "วางเมาส์เหนือ",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.label": {
+    "message": "เมนู",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.font.label": {
+    "message": "แบบอักษร",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.label": {
+    "message": "ข้อความ",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.text_transform.choices.capitalize": {
+    "message": "ใช้ตัวพิมพ์ใหญ่",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.text_transform.choices.lowercase": {
+    "message": "ตัวพิมพ์เล็ก",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.text_transform.choices.none": {
+    "message": "ไม่มี",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.text_transform.choices.uppercase": {
+    "message": "ตัวพิมพ์ใหญ่",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.text_transform.label": {
+    "message": "การแปลงข้อความ",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.top_bar.background.color.label": {
+    "message": "สี",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.top_bar.background.label": {
+    "message": "พื้นหลัง",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.top_bar.label": {
+    "message": "แถบด้านบน",
+    "description": "",
+    "placeholders": null
+  }
+}

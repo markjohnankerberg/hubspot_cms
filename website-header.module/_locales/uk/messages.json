@@ -1,0 +1,647 @@
+{
+  "name": {
+    "message": "Верхній колонтитул вебсайту",
+    "description": "",
+    "placeholders": null
+  },
+  "button.add_button.label": {
+    "message": "Додати кнопку",
+    "description": "",
+    "placeholders": null
+  },
+  "button.add_icon.label": {
+    "message": "Додати значок",
+    "description": "",
+    "placeholders": null
+  },
+  "button.button_link.label": {
+    "message": "Посилання кнопки",
+    "description": "",
+    "placeholders": null
+  },
+  "button.button_text.default": {
+    "message": "Зверніться до нас",
+    "description": "",
+    "placeholders": null
+  },
+  "button.button_text.label": {
+    "message": "Текст кнопки",
+    "description": "",
+    "placeholders": null
+  },
+  "button.icon.icon_field.label": {
+    "message": "Значок",
+    "description": "",
+    "placeholders": null
+  },
+  "button.icon.label": {
+    "message": "Значок",
+    "description": "",
+    "placeholders": null
+  },
+  "button.icon.position.choices.left": {
+    "message": "По лівому краю",
+    "description": "",
+    "placeholders": null
+  },
+  "button.icon.position.choices.right": {
+    "message": "По правому краю",
+    "description": "",
+    "placeholders": null
+  },
+  "button.icon.position.label": {
+    "message": "Положення",
+    "description": "",
+    "placeholders": null
+  },
+  "button.label": {
+    "message": "Кнопка",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.close_main_navigation_text.default": {
+    "message": "Закрийте основну навігацію",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.close_main_navigation_text.label": {
+    "message": "Закрийте основну навігацію",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.desktop_navigation_text.default": {
+    "message": "Навігація по робочому столу",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.desktop_navigation_text.label": {
+    "message": "Навігація по робочому столу",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.label": {
+    "message": "Текст за замовчуванням",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.mobile_navigation_text.default": {
+    "message": "Навігація на мобільному пристрої",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.mobile_navigation_text.label": {
+    "message": "Навігація на мобільному пристрої",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.open_main_navigation_text.default": {
+    "message": "Відкрийте основну навігацію",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.open_main_navigation_text.label": {
+    "message": "Відкрийте основну навігацію",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.show_for_submenu_text.default": {
+    "message": "Показати додаткове меню для {{ link.label }}",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.show_for_submenu_text.label": {
+    "message": "Показати текст додаткове меню для тексту",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.show_submenu_for_translations_text.default": {
+    "message": "Показати додаткове меню для перекладу",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.show_submenu_for_translations_text.label": {
+    "message": "Показати додаткове меню для перекладу",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.add_language_switcher.help_text": {
+    "message": "Перемикач мови з’явиться лише у разі наявності на сторінці варіантів з багатьма мовами.",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.add_language_switcher.label": {
+    "message": "Додати перемикач мови",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.choices.hybrid": {
+    "message": "Гібридний",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.choices.localized": {
+    "message": "Локалізовано",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.choices.pagelang": {
+    "message": "PageLang",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.help_text": {
+    "message": "Мова тексту в перемикачі мов PageLang означає, що назви мов показуватимуться мовою сторінки, для якої ввімкнено перемикач. Режим «Локалізовано»  означає, що назва кожної мови показуватиметься цією мовою, а «Гібридний» — це поєднання двох наведених вище режимів.",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.label": {
+    "message": "Режим показу",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.placeholder": {
+    "message": "Пошук",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.label": {
+    "message": "Перемикач мови",
+    "description": "",
+    "placeholders": null
+  },
+  "layout.choices.centered": {
+    "message": "Логотип у центрі",
+    "description": "",
+    "placeholders": null
+  },
+  "layout.choices.left": {
+    "message": "Логотип зліва",
+    "description": "",
+    "placeholders": null
+  },
+  "layout.label": {
+    "message": "Макет",
+    "description": "",
+    "placeholders": null
+  },
+  "logo.label": {
+    "message": "Логотип",
+    "description": "",
+    "placeholders": null
+  },
+  "logo.link.help_text": {
+    "message": "Якщо не вказана URL-адреса, ваш логотип буде з’єднано посиланням на ваш основний домен.",
+    "description": "",
+    "placeholders": null
+  },
+  "logo.link.label": {
+    "message": "Посилання",
+    "description": "",
+    "placeholders": null
+  },
+  "logo.logo.label": {
+    "message": "Логотип",
+    "description": "",
+    "placeholders": null
+  },
+  "logo.open_in_new_tab.label": {
+    "message": "Відкривати посилання в новій вкладці при натисканні відвідувачами",
+    "description": "",
+    "placeholders": null
+  },
+  "menu.label": {
+    "message": "Меню",
+    "description": "",
+    "placeholders": null
+  },
+  "menu.max_levels.help_text": {
+    "message": "Визначає кількість дочірніх елементів дерева меню, які можна розгорнути в меню",
+    "description": "",
+    "placeholders": null
+  },
+  "menu.max_levels.label": {
+    "message": "Максимальні рівні",
+    "description": "",
+    "placeholders": null
+  },
+  "menu.menu.label": {
+    "message": "Меню",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.alignment.alignment.label": {
+    "message": "Вирівнювання",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.alignment.label": {
+    "message": "Вирівнювання",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.background.color.label": {
+    "message": "Колір",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.background.label": {
+    "message": "Фон",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.border.border.label": {
+    "message": "Межа",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.border.label": {
+    "message": "Межа",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.corner.label": {
+    "message": "Кут",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.corner.radius.label": {
+    "message": "Радіус",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.background.color.label": {
+    "message": "Колір",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.background.label": {
+    "message": "Фон",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.border.border.label": {
+    "message": "Межа",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.border.label": {
+    "message": "Межа",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.label": {
+    "message": "При наведенні",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.text.font.label": {
+    "message": "Шрифт",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.text.label": {
+    "message": "Текст",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.label": {
+    "message": "Кнопка",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_size.choices.large": {
+    "message": "Великий",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_size.choices.regular": {
+    "message": "Звичайний",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_size.choices.small": {
+    "message": "Малий",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_size.label": {
+    "message": "Розмір кнопки",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_style.choices.primary": {
+    "message": "Основний",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_style.choices.secondary": {
+    "message": "Додаткові",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_style.choices.simple": {
+    "message": "Простий",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_style.label": {
+    "message": "Стиль кнопки",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.help_text": {
+    "message": "Використовуйте попередні налаштування, щоб швидко налаштувати вигляд вибраної позиції в порівнянні з наперед визначеними значеннями.",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.label": {
+    "message": "Попередні налаштування",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.spacing.label": {
+    "message": "Інтервал",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.spacing.spacing.label": {
+    "message": "Інтервал",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.font.label": {
+    "message": "Шрифт",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.label": {
+    "message": "Текст",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.text_transform.choices.capitalize": {
+    "message": "Усі великі літери",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.text_transform.choices.lowercase": {
+    "message": "Малі літери",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.text_transform.choices.none": {
+    "message": "Немає",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.text_transform.choices.uppercase": {
+    "message": "Великі літери",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.text_transform.label": {
+    "message": "Перетворення тексту",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.label": {
+    "message": "Стилі",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.background.color.label": {
+    "message": "Колір",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.background.label": {
+    "message": "Фон",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.hover.background_color.label": {
+    "message": "Колір фону",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.hover.font_color.label": {
+    "message": "Колір шрифту",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.hover.label": {
+    "message": "При наведенні",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.label": {
+    "message": "Розкривні списки",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.text.font_color.label": {
+    "message": "Колір шрифту",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.text.label": {
+    "message": "Текст",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.hover.font.label": {
+    "message": "Шрифт",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.hover.label": {
+    "message": "При наведенні",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.label": {
+    "message": "Перемикач мови",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.font.label": {
+    "message": "Шрифт",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.label": {
+    "message": "Текст",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.text_transform.choices.capitalize": {
+    "message": "Усі великі літери",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.text_transform.choices.lowercase": {
+    "message": "Малі літери",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.text_transform.choices.none": {
+    "message": "Немає",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.text_transform.choices.uppercase": {
+    "message": "Великі літери",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.text_transform.label": {
+    "message": "Перетворення тексту",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.logo.corner.label": {
+    "message": "Кут",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.logo.corner.radius.label": {
+    "message": "Радіус",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.logo.label": {
+    "message": "Логотип",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.active.font.label": {
+    "message": "Шрифт",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.active.label": {
+    "message": "Активно",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.active.background_color.label": {
+    "message": "Колір фону",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.active.font_color.label": {
+    "message": "Колір шрифту",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.active.label": {
+    "message": "Активно",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.background.color.label": {
+    "message": "Колір",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.background.label": {
+    "message": "Фон",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.hover.background_color.label": {
+    "message": "Колір фону",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.hover.font_color.label": {
+    "message": "Колір шрифту",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.hover.label": {
+    "message": "При наведенні",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.label": {
+    "message": "Розкривні списки",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.text.font_color.label": {
+    "message": "Колір шрифту",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.text.label": {
+    "message": "Текст",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.hover.font.label": {
+    "message": "Шрифт",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.hover.label": {
+    "message": "При наведенні",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.label": {
+    "message": "Меню",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.font.label": {
+    "message": "Шрифт",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.label": {
+    "message": "Текст",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.text_transform.choices.capitalize": {
+    "message": "Усі великі літери",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.text_transform.choices.lowercase": {
+    "message": "Малі літери",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.text_transform.choices.none": {
+    "message": "Немає",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.text_transform.choices.uppercase": {
+    "message": "Великі літери",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.text_transform.label": {
+    "message": "Перетворення тексту",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.top_bar.background.color.label": {
+    "message": "Колір",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.top_bar.background.label": {
+    "message": "Фон",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.top_bar.label": {
+    "message": "Верхня панель",
+    "description": "",
+    "placeholders": null
+  }
+}

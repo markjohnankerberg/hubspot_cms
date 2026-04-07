@@ -1,0 +1,647 @@
+{
+  "name": {
+    "message": "رأس صفحة موقع الويب",
+    "description": "",
+    "placeholders": null
+  },
+  "button.add_button.label": {
+    "message": "إضافة زر",
+    "description": "",
+    "placeholders": null
+  },
+  "button.add_icon.label": {
+    "message": "إضافة أيقونة",
+    "description": "",
+    "placeholders": null
+  },
+  "button.button_link.label": {
+    "message": "رابط الزر",
+    "description": "",
+    "placeholders": null
+  },
+  "button.button_text.default": {
+    "message": "اتصل بنا",
+    "description": "",
+    "placeholders": null
+  },
+  "button.button_text.label": {
+    "message": "نص الزر",
+    "description": "",
+    "placeholders": null
+  },
+  "button.icon.icon_field.label": {
+    "message": "الأيقونة",
+    "description": "",
+    "placeholders": null
+  },
+  "button.icon.label": {
+    "message": "الأيقونة",
+    "description": "",
+    "placeholders": null
+  },
+  "button.icon.position.choices.left": {
+    "message": "اليسار",
+    "description": "",
+    "placeholders": null
+  },
+  "button.icon.position.choices.right": {
+    "message": "اليمين",
+    "description": "",
+    "placeholders": null
+  },
+  "button.icon.position.label": {
+    "message": "الموضع",
+    "description": "",
+    "placeholders": null
+  },
+  "button.label": {
+    "message": "الزر",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.close_main_navigation_text.default": {
+    "message": "إغلاق التنقل الرئيسي",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.close_main_navigation_text.label": {
+    "message": "إغلاق التنقل الرئيسي",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.desktop_navigation_text.default": {
+    "message": "التنقل على سطح المكتب",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.desktop_navigation_text.label": {
+    "message": "التنقل على سطح المكتب",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.label": {
+    "message": "نص افتراضي",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.mobile_navigation_text.default": {
+    "message": "التنقل داخل الأجهزة المحمولة",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.mobile_navigation_text.label": {
+    "message": "التنقل داخل الأجهزة المحمولة",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.open_main_navigation_text.default": {
+    "message": "فتح التنقل الرئيسي",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.open_main_navigation_text.label": {
+    "message": "فتح التنقل الرئيسي",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.show_for_submenu_text.default": {
+    "message": "إظهار القائمة الفرعية لـ {{ link.label }}",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.show_for_submenu_text.label": {
+    "message": "إظهار القائمة الفرعية للنص",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.show_submenu_for_translations_text.default": {
+    "message": "إظهار القائمة الفرعية للترجمات",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.show_submenu_for_translations_text.label": {
+    "message": "إظهار القائمة الفرعية للترجمات",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.add_language_switcher.help_text": {
+    "message": "سيظهر مبدل اللغة فقط إذا كان هناك تباين متعدد اللغات للصفحة.",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.add_language_switcher.label": {
+    "message": "إضافة مبدل اللغة",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.choices.hybrid": {
+    "message": "مختلط",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.choices.localized": {
+    "message": "مترجَم",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.choices.pagelang": {
+    "message": "لغة الصفحة",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.help_text": {
+    "message": "لغة النص في مبدل اللغة. يشير مصطلح \"لغة الصفحة\" إلى أن أسماء اللغات ستظهر بلغة الصفحة التي تحتوي على المبدل. ويشير مصطلح \"مترجَم\" إلى أن اسم كل لغة سيتم عرضه بتلك اللغة. أما مصطلح \"مختلط\"، فيعتبر مزيجًا من الخيارين.",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.label": {
+    "message": "وضع العرض",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.placeholder": {
+    "message": "بحث",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.label": {
+    "message": "مبدل اللغة",
+    "description": "",
+    "placeholders": null
+  },
+  "layout.choices.centered": {
+    "message": "توسيط الشعار",
+    "description": "",
+    "placeholders": null
+  },
+  "layout.choices.left": {
+    "message": "شعار جهة اليسار",
+    "description": "",
+    "placeholders": null
+  },
+  "layout.label": {
+    "message": "التخطيط",
+    "description": "",
+    "placeholders": null
+  },
+  "logo.label": {
+    "message": "الشعار",
+    "description": "",
+    "placeholders": null
+  },
+  "logo.link.help_text": {
+    "message": "إذا لم يتم تحديد عنوان url، فسيرتبط شعارك بالمجال الأساسي لديك",
+    "description": "",
+    "placeholders": null
+  },
+  "logo.link.label": {
+    "message": "الرابط",
+    "description": "",
+    "placeholders": null
+  },
+  "logo.logo.label": {
+    "message": "الشعار",
+    "description": "",
+    "placeholders": null
+  },
+  "logo.open_in_new_tab.label": {
+    "message": "فتح الرابط في علامة تبويب جديدة عند نقر الزوار",
+    "description": "",
+    "placeholders": null
+  },
+  "menu.label": {
+    "message": "القائمة",
+    "description": "",
+    "placeholders": null
+  },
+  "menu.max_levels.help_text": {
+    "message": "يحدد عدد العناصر الفرعية لشجرة القائمة التي يمكن توسيعها في القائمة",
+    "description": "",
+    "placeholders": null
+  },
+  "menu.max_levels.label": {
+    "message": "المستويات القصوى",
+    "description": "",
+    "placeholders": null
+  },
+  "menu.menu.label": {
+    "message": "القائمة",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.alignment.alignment.label": {
+    "message": "محاذاة",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.alignment.label": {
+    "message": "محاذاة",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.background.color.label": {
+    "message": "اللون",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.background.label": {
+    "message": "الخلفية",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.border.border.label": {
+    "message": "الحد",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.border.label": {
+    "message": "الحد",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.corner.label": {
+    "message": "الزاوية",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.corner.radius.label": {
+    "message": "نصف قطر",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.background.color.label": {
+    "message": "اللون",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.background.label": {
+    "message": "الخلفية",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.border.border.label": {
+    "message": "الحد",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.border.label": {
+    "message": "الحد",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.label": {
+    "message": "التمرير",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.text.font.label": {
+    "message": "الخط",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.text.label": {
+    "message": "النص",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.label": {
+    "message": "الزر",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_size.choices.large": {
+    "message": "كبير",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_size.choices.regular": {
+    "message": "عادي",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_size.choices.small": {
+    "message": "صغير",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_size.label": {
+    "message": "حجم الزر",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_style.choices.primary": {
+    "message": "الأساسية",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_style.choices.secondary": {
+    "message": "الثانوية",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_style.choices.simple": {
+    "message": "بسيط",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_style.label": {
+    "message": "نمط الزر",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.help_text": {
+    "message": "استخدم إعدادات الضبط المسبقة لضبط مظهر العنصر المحدد بسرعة على القيم المحددة مسبقًا.",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.label": {
+    "message": "عمليات الضبط المسبقة",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.spacing.label": {
+    "message": "التباعد",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.spacing.spacing.label": {
+    "message": "التباعد",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.font.label": {
+    "message": "الخط",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.label": {
+    "message": "النص",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.text_transform.choices.capitalize": {
+    "message": "الكتابة بأحرف كبيرة",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.text_transform.choices.lowercase": {
+    "message": "الكتابة بأحرف صغيرة",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.text_transform.choices.none": {
+    "message": "لا يوجد",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.text_transform.choices.uppercase": {
+    "message": "الكتابة بأحرف كبيرة",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.text_transform.label": {
+    "message": "تحويل النص",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.label": {
+    "message": "الأنماط",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.background.color.label": {
+    "message": "اللون",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.background.label": {
+    "message": "الخلفية",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.hover.background_color.label": {
+    "message": "لون الخلفية",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.hover.font_color.label": {
+    "message": "لون الخط",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.hover.label": {
+    "message": "التمرير",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.label": {
+    "message": "قوائم منسدلة",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.text.font_color.label": {
+    "message": "لون الخط",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.text.label": {
+    "message": "النص",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.hover.font.label": {
+    "message": "الخط",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.hover.label": {
+    "message": "التمرير",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.label": {
+    "message": "مبدل اللغة",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.font.label": {
+    "message": "الخط",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.label": {
+    "message": "النص",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.text_transform.choices.capitalize": {
+    "message": "الكتابة بأحرف كبيرة",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.text_transform.choices.lowercase": {
+    "message": "الكتابة بأحرف صغيرة",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.text_transform.choices.none": {
+    "message": "لا يوجد",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.text_transform.choices.uppercase": {
+    "message": "الكتابة بأحرف كبيرة",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.text_transform.label": {
+    "message": "تحويل النص",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.logo.corner.label": {
+    "message": "الزاوية",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.logo.corner.radius.label": {
+    "message": "نصف قطر",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.logo.label": {
+    "message": "الشعار",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.active.font.label": {
+    "message": "الخط",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.active.label": {
+    "message": "نشِط",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.active.background_color.label": {
+    "message": "لون الخلفية",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.active.font_color.label": {
+    "message": "لون الخط",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.active.label": {
+    "message": "نشِط",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.background.color.label": {
+    "message": "اللون",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.background.label": {
+    "message": "الخلفية",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.hover.background_color.label": {
+    "message": "لون الخلفية",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.hover.font_color.label": {
+    "message": "لون الخط",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.hover.label": {
+    "message": "التمرير",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.label": {
+    "message": "قوائم منسدلة",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.text.font_color.label": {
+    "message": "لون الخط",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.text.label": {
+    "message": "النص",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.hover.font.label": {
+    "message": "الخط",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.hover.label": {
+    "message": "التمرير",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.label": {
+    "message": "القائمة",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.font.label": {
+    "message": "الخط",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.label": {
+    "message": "النص",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.text_transform.choices.capitalize": {
+    "message": "الكتابة بأحرف كبيرة",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.text_transform.choices.lowercase": {
+    "message": "الكتابة بأحرف صغيرة",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.text_transform.choices.none": {
+    "message": "لا يوجد",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.text_transform.choices.uppercase": {
+    "message": "الكتابة بأحرف كبيرة",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.text_transform.label": {
+    "message": "تحويل النص",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.top_bar.background.color.label": {
+    "message": "اللون",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.top_bar.background.label": {
+    "message": "الخلفية",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.top_bar.label": {
+    "message": "الشريط العلوى",
+    "description": "",
+    "placeholders": null
+  }
+}

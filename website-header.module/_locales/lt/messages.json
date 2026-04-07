@@ -1,0 +1,647 @@
+{
+  "name": {
+    "message": "Svetainės antraštė",
+    "description": "",
+    "placeholders": null
+  },
+  "button.add_button.label": {
+    "message": "Įtraukti mygtuką",
+    "description": "",
+    "placeholders": null
+  },
+  "button.add_icon.label": {
+    "message": "Įtraukti piktogramą",
+    "description": "",
+    "placeholders": null
+  },
+  "button.button_link.label": {
+    "message": "Mygtuko nuoroda",
+    "description": "",
+    "placeholders": null
+  },
+  "button.button_text.default": {
+    "message": "Susisiekite su mumis",
+    "description": "",
+    "placeholders": null
+  },
+  "button.button_text.label": {
+    "message": "Mygtuko tekstas",
+    "description": "",
+    "placeholders": null
+  },
+  "button.icon.icon_field.label": {
+    "message": "Piktograma",
+    "description": "",
+    "placeholders": null
+  },
+  "button.icon.label": {
+    "message": "Piktograma",
+    "description": "",
+    "placeholders": null
+  },
+  "button.icon.position.choices.left": {
+    "message": "Kairėje",
+    "description": "",
+    "placeholders": null
+  },
+  "button.icon.position.choices.right": {
+    "message": "Dešinėje",
+    "description": "",
+    "placeholders": null
+  },
+  "button.icon.position.label": {
+    "message": "Padėtis",
+    "description": "",
+    "placeholders": null
+  },
+  "button.label": {
+    "message": "Mygtukas",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.close_main_navigation_text.default": {
+    "message": "Užverti pagrindinį naršymo langą",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.close_main_navigation_text.label": {
+    "message": "Užverti pagrindinį naršymo langą",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.desktop_navigation_text.default": {
+    "message": "Naršymas naudojantis kompiuteriu",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.desktop_navigation_text.label": {
+    "message": "Naršymas naudojantis kompiuteriu",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.label": {
+    "message": "Numatytasis tekstas",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.mobile_navigation_text.default": {
+    "message": "Naršymas naudojantis mobiliuoju įrenginiu",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.mobile_navigation_text.label": {
+    "message": "Naršymas naudojantis mobiliuoju įrenginiu",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.open_main_navigation_text.default": {
+    "message": "Atverti pagrindinį naršymo langą",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.open_main_navigation_text.label": {
+    "message": "Atverti pagrindinį naršymo langą",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.show_for_submenu_text.default": {
+    "message": "Rodyti {{ link.label }} submeniu",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.show_for_submenu_text.label": {
+    "message": "Rodyti teksto submeniu",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.show_submenu_for_translations_text.default": {
+    "message": "Rodyti vertimų submeniu",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.show_submenu_for_translations_text.label": {
+    "message": "Rodyti vertimų antrinį meniu",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.add_language_switcher.help_text": {
+    "message": "Kalbos keitiklis rodomas tik tuo atveju, jei puslapis turi kelių kalbų variantus.",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.add_language_switcher.label": {
+    "message": "Įtraukti kalbos keitiklį",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.choices.hybrid": {
+    "message": "Hibridinis",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.choices.localized": {
+    "message": "Lokalizuota",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.choices.pagelang": {
+    "message": "Puslapio kalba",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.help_text": {
+    "message": "Kalbų perjungiklio teksto kalba. „Puslapio kalba“ reiškia, kad kalbų pavadinimai bus rodomi puslapio, kuriame naudojamas perjungiklis, kalba. „Lokalizuota“ reiškia, kad kiekvienos kalbos pavadinimas bus rodomas ta kalba. Pasirinkus „Hibridinis“ bus taikomas šių dviejų parinkčių derinys.",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.label": {
+    "message": "Rodymo režimas",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.placeholder": {
+    "message": "Paieška",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.label": {
+    "message": "Kalbos keitiklis",
+    "description": "",
+    "placeholders": null
+  },
+  "layout.choices.centered": {
+    "message": "Logotipas centre",
+    "description": "",
+    "placeholders": null
+  },
+  "layout.choices.left": {
+    "message": "Logotipas kairėje",
+    "description": "",
+    "placeholders": null
+  },
+  "layout.label": {
+    "message": "Išdėstymas",
+    "description": "",
+    "placeholders": null
+  },
+  "logo.label": {
+    "message": "Logotipas",
+    "description": "",
+    "placeholders": null
+  },
+  "logo.link.help_text": {
+    "message": "Jei URL nenurodytas, logotipas bus susietas su pagrindiniu domenu",
+    "description": "",
+    "placeholders": null
+  },
+  "logo.link.label": {
+    "message": "Nuoroda",
+    "description": "",
+    "placeholders": null
+  },
+  "logo.logo.label": {
+    "message": "Logotipas",
+    "description": "",
+    "placeholders": null
+  },
+  "logo.open_in_new_tab.label": {
+    "message": "Lankytojams spustelėjus atidaryti nuorodą naujame skirtuke",
+    "description": "",
+    "placeholders": null
+  },
+  "menu.label": {
+    "message": "Meniu",
+    "description": "",
+    "placeholders": null
+  },
+  "menu.max_levels.help_text": {
+    "message": "Nustato meniu medžio antrinių elementų, kuriuos meniu galima išplėsti, skaičių",
+    "description": "",
+    "placeholders": null
+  },
+  "menu.max_levels.label": {
+    "message": "Didžiausi lygiai",
+    "description": "",
+    "placeholders": null
+  },
+  "menu.menu.label": {
+    "message": "Meniu",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.alignment.alignment.label": {
+    "message": "Lygiuotė",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.alignment.label": {
+    "message": "Lygiuotė",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.background.color.label": {
+    "message": "Spalva",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.background.label": {
+    "message": "Fonas",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.border.border.label": {
+    "message": "Kraštinė",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.border.label": {
+    "message": "Kraštinė",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.corner.label": {
+    "message": "Kampas",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.corner.radius.label": {
+    "message": "Spindulys",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.background.color.label": {
+    "message": "Spalva",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.background.label": {
+    "message": "Fonas",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.border.border.label": {
+    "message": "Kraštinė",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.border.label": {
+    "message": "Kraštinė",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.label": {
+    "message": "Laikyti virš",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.text.font.label": {
+    "message": "Šriftas",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.text.label": {
+    "message": "Tekstas",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.label": {
+    "message": "Mygtukas",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_size.choices.large": {
+    "message": "Didelis",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_size.choices.regular": {
+    "message": "Įprastas",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_size.choices.small": {
+    "message": "Mažas",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_size.label": {
+    "message": "Mygtuko dydis",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_style.choices.primary": {
+    "message": "Pagrindinis",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_style.choices.secondary": {
+    "message": "Antriniai",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_style.choices.simple": {
+    "message": "Paprastas",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_style.label": {
+    "message": "Mygtuko stilius",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.help_text": {
+    "message": "Naudokite iš anksto paruoštus šablonus, kad greitai pakoreguotumėte pasirinktų objektų vaizdą pagal iš anksto numatytas vertes.",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.label": {
+    "message": "Iš anksto paruošti šablonai",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.spacing.label": {
+    "message": "Tarpai",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.spacing.spacing.label": {
+    "message": "Tarpai",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.font.label": {
+    "message": "Šriftas",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.label": {
+    "message": "Tekstas",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.text_transform.choices.capitalize": {
+    "message": "Rašyti didžiąja raide",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.text_transform.choices.lowercase": {
+    "message": "Mažosios raidės",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.text_transform.choices.none": {
+    "message": "Nėra",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.text_transform.choices.uppercase": {
+    "message": "Didžiosios raidės",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.text_transform.label": {
+    "message": "Teksto keitimas",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.label": {
+    "message": "Stiliai",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.background.color.label": {
+    "message": "Spalva",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.background.label": {
+    "message": "Fonas",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.hover.background_color.label": {
+    "message": "Fono spalva",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.hover.font_color.label": {
+    "message": "Šrifto spalva",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.hover.label": {
+    "message": "Laikyti virš",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.label": {
+    "message": "Išskleidžiamieji meniu",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.text.font_color.label": {
+    "message": "Šrifto spalva",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.text.label": {
+    "message": "Tekstas",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.hover.font.label": {
+    "message": "Šriftas",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.hover.label": {
+    "message": "Laikyti virš",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.label": {
+    "message": "Kalbos keitiklis",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.font.label": {
+    "message": "Šriftas",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.label": {
+    "message": "Tekstas",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.text_transform.choices.capitalize": {
+    "message": "Rašyti didžiąja raide",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.text_transform.choices.lowercase": {
+    "message": "Mažosios raidės",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.text_transform.choices.none": {
+    "message": "Nėra",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.text_transform.choices.uppercase": {
+    "message": "Didžiosios raidės",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.text_transform.label": {
+    "message": "Teksto keitimas",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.logo.corner.label": {
+    "message": "Kampas",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.logo.corner.radius.label": {
+    "message": "Spindulys",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.logo.label": {
+    "message": "Logotipas",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.active.font.label": {
+    "message": "Šriftas",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.active.label": {
+    "message": "Aktyvus",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.active.background_color.label": {
+    "message": "Fono spalva",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.active.font_color.label": {
+    "message": "Šrifto spalva",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.active.label": {
+    "message": "Aktyvus",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.background.color.label": {
+    "message": "Spalva",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.background.label": {
+    "message": "Fonas",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.hover.background_color.label": {
+    "message": "Fono spalva",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.hover.font_color.label": {
+    "message": "Šrifto spalva",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.hover.label": {
+    "message": "Laikyti virš",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.label": {
+    "message": "Išskleidžiamieji meniu",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.text.font_color.label": {
+    "message": "Šrifto spalva",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.text.label": {
+    "message": "Tekstas",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.hover.font.label": {
+    "message": "Šriftas",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.hover.label": {
+    "message": "Laikyti virš",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.label": {
+    "message": "Meniu",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.font.label": {
+    "message": "Šriftas",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.label": {
+    "message": "Tekstas",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.text_transform.choices.capitalize": {
+    "message": "Rašyti didžiąja raide",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.text_transform.choices.lowercase": {
+    "message": "Mažosios raidės",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.text_transform.choices.none": {
+    "message": "Nėra",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.text_transform.choices.uppercase": {
+    "message": "Didžiosios raidės",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.text_transform.label": {
+    "message": "Teksto keitimas",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.top_bar.background.color.label": {
+    "message": "Spalva",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.top_bar.background.label": {
+    "message": "Fonas",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.top_bar.label": {
+    "message": "Viršutinė juosta",
+    "description": "",
+    "placeholders": null
+  }
+}

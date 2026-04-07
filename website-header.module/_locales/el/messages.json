@@ -1,0 +1,647 @@
+{
+  "name": {
+    "message": "Κεφαλίδα ιστότοπου",
+    "description": "",
+    "placeholders": null
+  },
+  "button.add_button.label": {
+    "message": "Προσθήκη κουμπιού",
+    "description": "",
+    "placeholders": null
+  },
+  "button.add_icon.label": {
+    "message": "Προσθήκη εικονιδίου",
+    "description": "",
+    "placeholders": null
+  },
+  "button.button_link.label": {
+    "message": "Σύνδεσμος κουμπιού",
+    "description": "",
+    "placeholders": null
+  },
+  "button.button_text.default": {
+    "message": "Επικοινωνία",
+    "description": "",
+    "placeholders": null
+  },
+  "button.button_text.label": {
+    "message": "Κείμενο κουμπιού",
+    "description": "",
+    "placeholders": null
+  },
+  "button.icon.icon_field.label": {
+    "message": "Εικονίδιο",
+    "description": "",
+    "placeholders": null
+  },
+  "button.icon.label": {
+    "message": "Εικονίδιο",
+    "description": "",
+    "placeholders": null
+  },
+  "button.icon.position.choices.left": {
+    "message": "Αριστερά",
+    "description": "",
+    "placeholders": null
+  },
+  "button.icon.position.choices.right": {
+    "message": "Δεξιά",
+    "description": "",
+    "placeholders": null
+  },
+  "button.icon.position.label": {
+    "message": "Θέση",
+    "description": "",
+    "placeholders": null
+  },
+  "button.label": {
+    "message": "Κουμπί",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.close_main_navigation_text.default": {
+    "message": "Κλείσιμο κύριας πλοήγησης",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.close_main_navigation_text.label": {
+    "message": "Κλείσιμο κύριας πλοήγησης",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.desktop_navigation_text.default": {
+    "message": "Πλοήγηση μέσω υπολογιστή",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.desktop_navigation_text.label": {
+    "message": "Πλοήγηση μέσω υπολογιστή",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.label": {
+    "message": "Προεπιλεγμένο κείμενο",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.mobile_navigation_text.default": {
+    "message": "Πλοήγηση μέσω κινητού τηλεφώνου",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.mobile_navigation_text.label": {
+    "message": "Πλοήγηση μέσω κινητού τηλεφώνου",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.open_main_navigation_text.default": {
+    "message": "Άνοιγμα κύριας πλοήγησης",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.open_main_navigation_text.label": {
+    "message": "Άνοιγμα κύριας πλοήγησης",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.show_for_submenu_text.default": {
+    "message": "Εμφάνιση υπομενού για {{ link.label }}",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.show_for_submenu_text.label": {
+    "message": "Εμφάνιση υπομενού για κείμενο",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.show_submenu_for_translations_text.default": {
+    "message": "Εμφάνιση υπομενού για μεταφράσεις",
+    "description": "",
+    "placeholders": null
+  },
+  "default_text.show_submenu_for_translations_text.label": {
+    "message": "Εμφάνιση υπομενού για μεταφράσεις",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.add_language_switcher.help_text": {
+    "message": "Η εναλλαγή γλώσσας θα εμφανίζεται μόνο αν υπάρχει πολυγλωσσική παραλλαγή για μια σελίδα.",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.add_language_switcher.label": {
+    "message": "Προσθήκη εναλλαγής γλώσσας",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.choices.hybrid": {
+    "message": "Υβριδική",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.choices.localized": {
+    "message": "Με τοπική προσαρμογή",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.choices.pagelang": {
+    "message": "Γλώσσα σελίδας",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.help_text": {
+    "message": "Η γλώσσα του κειμένου στον επιλογέα γλώσσας. Η επιλογή Γλώσσα σελίδας σημαίνει ότι τα ονόματα των γλωσσών θα εμφανίζονται στη γλώσσα στην οποία είναι ενεργοποιημένος ο επιλογέας. Η επιλογή Με τοπική προσαρμογή σημαίνει ότι το όνομα κάθε γλώσσας θα εμφανίζεται στη συγκεκριμένη γλώσσα. Η επιλογή Υβριδική είναι ένας συνδυασμός των δύο.",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.label": {
+    "message": "Λειτουργία προβολής",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.display_mode.placeholder": {
+    "message": "Αναζήτηση",
+    "description": "",
+    "placeholders": null
+  },
+  "language_switcher.label": {
+    "message": "Εναλλαγή γλώσσας",
+    "description": "",
+    "placeholders": null
+  },
+  "layout.choices.centered": {
+    "message": "Λογότυπο στο κέντρο",
+    "description": "",
+    "placeholders": null
+  },
+  "layout.choices.left": {
+    "message": "Λογότυπο αριστερά",
+    "description": "",
+    "placeholders": null
+  },
+  "layout.label": {
+    "message": "Διάταξη",
+    "description": "",
+    "placeholders": null
+  },
+  "logo.label": {
+    "message": "Λογότυπο",
+    "description": "",
+    "placeholders": null
+  },
+  "logo.link.help_text": {
+    "message": "Αν δεν έχει καθοριστεί url, το λογότυπό σας θα συνδέει προς το κύριο domain σας",
+    "description": "",
+    "placeholders": null
+  },
+  "logo.link.label": {
+    "message": "Σύνδεσμος",
+    "description": "",
+    "placeholders": null
+  },
+  "logo.logo.label": {
+    "message": "Λογότυπο",
+    "description": "",
+    "placeholders": null
+  },
+  "logo.open_in_new_tab.label": {
+    "message": "Άνοιγμα συνδέσμου σε νέα καρτέλα όταν κάνουν κλικ οι επισκέπτες",
+    "description": "",
+    "placeholders": null
+  },
+  "menu.label": {
+    "message": "Μενού",
+    "description": "",
+    "placeholders": null
+  },
+  "menu.max_levels.help_text": {
+    "message": "Καθορίζει πόσοι κλάδοι του δέντρου μενού μπορούν να επεκταθούν στο μενού",
+    "description": "",
+    "placeholders": null
+  },
+  "menu.max_levels.label": {
+    "message": "Μέγ. αρ. επιπέδων",
+    "description": "",
+    "placeholders": null
+  },
+  "menu.menu.label": {
+    "message": "Μενού",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.alignment.alignment.label": {
+    "message": "Στοίχιση",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.alignment.label": {
+    "message": "Στοίχιση",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.background.color.label": {
+    "message": "Χρώμα",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.background.label": {
+    "message": "Φόντο",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.border.border.label": {
+    "message": "Περιθώριο",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.border.label": {
+    "message": "Περιθώριο",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.corner.label": {
+    "message": "Γωνία",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.corner.radius.label": {
+    "message": "Ακτίνα καμπυλότητας",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.background.color.label": {
+    "message": "Χρώμα",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.background.label": {
+    "message": "Φόντο",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.border.border.label": {
+    "message": "Περιθώριο",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.border.label": {
+    "message": "Περιθώριο",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.label": {
+    "message": "Κατάδειξη",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.text.font.label": {
+    "message": "Γραμματοσειρά",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.hover.text.label": {
+    "message": "Κείμενο",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.label": {
+    "message": "Κουμπί",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_size.choices.large": {
+    "message": "Μεγάλο",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_size.choices.regular": {
+    "message": "Κανονικό",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_size.choices.small": {
+    "message": "Μικρό",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_size.label": {
+    "message": "Μέγεθος κουμπιού",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_style.choices.primary": {
+    "message": "Κύριο",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_style.choices.secondary": {
+    "message": "Δευτερεύον",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_style.choices.simple": {
+    "message": "Απλό",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.button_style.label": {
+    "message": "Στυλ κουμπιού",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.help_text": {
+    "message": "Χρησιμοποιήστε τις προεπιλογές για να προσαρμόσετε γρήγορα την εμφάνιση του επιλεγμένου στοιχείου σε προκαθορισμένες τιμές.",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.presets.label": {
+    "message": "Προεπιλογές",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.spacing.label": {
+    "message": "Διάκενο",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.spacing.spacing.label": {
+    "message": "Διάκενο",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.font.label": {
+    "message": "Γραμματοσειρά",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.label": {
+    "message": "Κείμενο",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.text_transform.choices.capitalize": {
+    "message": "Μετατροπή σε κεφαλαία",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.text_transform.choices.lowercase": {
+    "message": "Πεζά",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.text_transform.choices.none": {
+    "message": "Κανένα",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.text_transform.choices.uppercase": {
+    "message": "Κεφαλαία",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.button.text.text_transform.label": {
+    "message": "Μετασχηματισμός κειμένου",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.label": {
+    "message": "Στυλ",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.background.color.label": {
+    "message": "Χρώμα",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.background.label": {
+    "message": "Φόντο",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.hover.background_color.label": {
+    "message": "Χρώμα φόντου",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.hover.font_color.label": {
+    "message": "Χρώμα γραμματοσειράς",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.hover.label": {
+    "message": "Κατάδειξη",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.label": {
+    "message": "Αναπτυσσόμενα μενού",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.text.font_color.label": {
+    "message": "Χρώμα γραμματοσειράς",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.drop_downs.text.label": {
+    "message": "Κείμενο",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.hover.font.label": {
+    "message": "Γραμματοσειρά",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.hover.label": {
+    "message": "Κατάδειξη",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.label": {
+    "message": "Εναλλαγή γλώσσας",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.font.label": {
+    "message": "Γραμματοσειρά",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.label": {
+    "message": "Κείμενο",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.text_transform.choices.capitalize": {
+    "message": "Μετατροπή σε κεφαλαία",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.text_transform.choices.lowercase": {
+    "message": "Πεζά",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.text_transform.choices.none": {
+    "message": "Κανένα",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.text_transform.choices.uppercase": {
+    "message": "Κεφαλαία",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.language_switcher.text.text_transform.label": {
+    "message": "Μετασχηματισμός κειμένου",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.logo.corner.label": {
+    "message": "Γωνία",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.logo.corner.radius.label": {
+    "message": "Ακτίνα καμπυλότητας",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.logo.label": {
+    "message": "Λογότυπο",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.active.font.label": {
+    "message": "Γραμματοσειρά",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.active.label": {
+    "message": "Ενεργό",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.active.background_color.label": {
+    "message": "Χρώμα φόντου",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.active.font_color.label": {
+    "message": "Χρώμα γραμματοσειράς",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.active.label": {
+    "message": "Ενεργό",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.background.color.label": {
+    "message": "Χρώμα",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.background.label": {
+    "message": "Φόντο",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.hover.background_color.label": {
+    "message": "Χρώμα φόντου",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.hover.font_color.label": {
+    "message": "Χρώμα γραμματοσειράς",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.hover.label": {
+    "message": "Κατάδειξη",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.label": {
+    "message": "Αναπτυσσόμενα μενού",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.text.font_color.label": {
+    "message": "Χρώμα γραμματοσειράς",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.drop_downs.text.label": {
+    "message": "Κείμενο",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.hover.font.label": {
+    "message": "Γραμματοσειρά",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.hover.label": {
+    "message": "Κατάδειξη",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.label": {
+    "message": "Μενού",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.font.label": {
+    "message": "Γραμματοσειρά",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.label": {
+    "message": "Κείμενο",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.text_transform.choices.capitalize": {
+    "message": "Μετατροπή σε κεφαλαία",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.text_transform.choices.lowercase": {
+    "message": "Πεζά",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.text_transform.choices.none": {
+    "message": "Κανένα",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.text_transform.choices.uppercase": {
+    "message": "Κεφαλαία",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.menu.text.text_transform.label": {
+    "message": "Μετασχηματισμός κειμένου",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.top_bar.background.color.label": {
+    "message": "Χρώμα",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.top_bar.background.label": {
+    "message": "Φόντο",
+    "description": "",
+    "placeholders": null
+  },
+  "styles.top_bar.label": {
+    "message": "Επάνω γραμμή",
+    "description": "",
+    "placeholders": null
+  }
+}

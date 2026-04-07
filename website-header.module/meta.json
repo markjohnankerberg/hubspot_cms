@@ -1,0 +1,16 @@
+{
+  "label": "Website header",
+  "host_template_types": [
+    "PAGE",
+    "BLOG_LISTING",
+    "BLOG_POST"
+  ],
+  "icon": "../../images/module-icons/menu.svg",
+  "extra_classes": "",
+  "smart_type": "NOT_SMART",
+  "master_language": "en",
+  "categories": [
+    "design",
+    "functionality"
+  ]
+}
