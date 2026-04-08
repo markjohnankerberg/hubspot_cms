@@ -222,6 +222,28 @@ if (mobileChildToggle) {
   });
 }
 
+// Button dropdown
+
+const buttonDropdownWrappers = document.querySelectorAll(
+  '.header__button-wrapper--has-dropdown'
+);
+
+if (buttonDropdownWrappers) {
+  Array.prototype.forEach.call(buttonDropdownWrappers, function (el) {
+    el.addEventListener('mouseover', function () {
+      this.classList.add('header__button-wrapper--open');
+      var btn = this.querySelector('.header__button');
+      if (btn) btn.setAttribute('aria-expanded', 'true');
+    });
+
+    el.addEventListener('mouseout', function () {
+      this.classList.remove('header__button-wrapper--open');
+      var btn = this.querySelector('.header__button');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
+
 // Language switcher
 
 // Handles toggle for language switcher submenu

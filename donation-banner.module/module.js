@@ -49,7 +49,7 @@
           'FR16030':   'https://dl.dropboxusercontent.com/scl/fi/840angbujoiw8wgw14lbw/MicroSD-Card-600x600.png?rlkey=ac7qpw4smq8pyubg07snhnyls&raw=1',
           'FR16100':   'https://dl.dropboxusercontent.com/scl/fi/fncc17ae3dzdjzx468wze/Audio-Bible-Micro-Proclaimer-600x600.png?rlkey=x1s5c5icvgarfqbajubk6rgg6&raw=1',
           'FR16500':   'https://dl.dropboxusercontent.com/scl/fi/1dx2i0aw3kmzwh4uvvbxx/Proclaimer-600x600.png?rlkey=f359uj1dbsr86sdacmecm6gnt&raw=1',
-          'FR161000':  'https://dl.dropboxusercontent.com/scl/fi/uowkz7ngxjkhg84xf27wm/Audio-Bible-Bundle-600x600.png?rlkey=ynpwop1ao29mfti83x9p3l4wi&raw=1'
+          'FR161000':  'https://www.dropbox.com/scl/fi/idj56wp0u6jsy2zbz1xnd/Proclaimer-Bundle-600x600-no-shadow.png?rlkey=1ppzlnhpjemkr7kcobv346zzt&st=v0mo61k9&dl=0'
         };
         function getSkuBase(sku) {
           var m = sku.match(/FR16-(\d+)/i);

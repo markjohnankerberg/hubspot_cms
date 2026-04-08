@@ -177,9 +177,14 @@
     {% do rel.append("noopener") %}
   {% endif %}
 
+  {% set has_dropdown = module.button.add_dropdown && module.button.dropdown_items|length > 0 %}
+
+  {% if has_dropdown %}<div class="header__button-wrapper header__button-wrapper--has-dropdown">{% endif %}
+
   <a href="{{ href|escape_url }}" class="header__button button {{ button_style|escape_attr }} {{ button_size|escape_attr }} {{ icon_position|escape_attr }}"
     {% if module.button.button_link.open_in_new_tab %}target="_blank"{% endif %}
-    {% if rel %}rel="{{ rel|join(" ")|escape_attr }}"{% endif %}>
+    {% if rel %}rel="{{ rel|join(" ")|escape_attr }}"{% endif %}
+    {% if has_dropdown %}aria-haspopup="true" aria-expanded="false"{% endif %}>
 
     {% if module.button.add_icon && module.button.icon.icon_field %}
       {% icon
@@ -191,8 +196,31 @@
       %}
     {% endif %}
     {{ module.button.button_text|sanitize_html }}
+    {% if has_dropdown %}
+      {% icon
+        extra_classes="header__button-chevron"
+        name="chevron-down",
+        no_wrapper=True,
+        purpose="decorative",
+        style="SOLID"
+      %}
+    {% endif %}
 
   </a>
+
+  {% if has_dropdown %}
+    <ul class="header__button-dropdown no-list">
+      {% for item in module.button.dropdown_items %}
+        <li class="header__button-dropdown-item">
+          <a class="header__button-dropdown-link" href="{{ item.link_url.url.href|escape_url }}"
+            {% if item.link_url.open_in_new_tab %}target="_blank" rel="noopener"{% endif %}>
+            {{ item.link_text|sanitize_html }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
 
 {% endmacro %}
 

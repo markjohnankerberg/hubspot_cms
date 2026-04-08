@@ -23,6 +23,14 @@ const MICRO_PROCLAIMER_URL = "https://dl.dropboxusercontent.com/scl/fi/fncc17ae3
 const PROCLAIMER_URL = "https://dl.dropboxusercontent.com/scl/fi/1dx2i0aw3kmzwh4uvvbxx/Proclaimer-600x600.png?rlkey=f359uj1dbsr86sdacmecm6gnt&raw=1";
 const PROCLAIMER_BUNDLE_URL = "https://dl.dropboxusercontent.com/scl/fi/uowkz7ngxjkhg84xf27wm/Audio-Bible-Bundle-600x600.png?rlkey=ynpwop1ao29mfti83x9p3l4wi&raw=1";
 
+/* Scope all DOM queries to .main_form_section so this form never
+   accidentally targets elements that belong to other modules on the page
+   (e.g. the donation-popup inside the banner module). */
+const FORM_ROOT = document.querySelector('.main_form_section') || document.body;
+const $r   = (id)  => FORM_ROOT.querySelector('#' + id);
+const $rq  = (sel) => FORM_ROOT.querySelector(sel);
+const $rqa = (sel) => FORM_ROOT.querySelectorAll(sel);
+
 /* Build safe URLs (prevents double // when base URL ends with /) */
 const API = (path) =>
     `${API_BASE.replace(/\/+$/, "")}${path.startsWith("/") ? "" : "/"}${path}`;
@@ -73,7 +81,7 @@ const refreshPayments = (() => {
 function renderProducts(products) {
     FORM_PRODUCTS = products;
 
-    const area = document.querySelector(".product_area");
+    const area = $rq(".product_area");
     if (!area) return;
 
     area.innerHTML = `<h3 class="product_area__title">Product Summary</h3>`;
@@ -187,7 +195,7 @@ const wireDynamicFormListeners = (() => {
     let wired = false;
     return () => {
         if (wired) return;
-        const formEl = document.getElementById("dynamic-form");
+        const formEl = $r("dynamic-form");
         if (!formEl) return;
         formEl.addEventListener("change", () => refreshPayments());
         wired = true;
@@ -195,7 +203,7 @@ const wireDynamicFormListeners = (() => {
 })();
 
 function toggleCalendarOffer(amount) {
-    const offer = document.getElementById("calendar-offer");
+    const offer = $r("calendar-offer");
     if (!offer) return;
     if (amount >= 100) {
         offer.hidden = false;
@@ -207,12 +215,12 @@ function toggleCalendarOffer(amount) {
 }
 
 function getCalendarSelected() {
-    const picked = document.querySelector('input[name="want_calendar"]:checked');
+    const picked = $rq('input[name="want_calendar"]:checked');
     return picked ? (picked.value === "yes") : false;
 }
 
 function calcTotals() {
-    const rows = document.querySelectorAll(".product_row");
+    const rows = $rqa(".product_row");
     let subtotal = 0;
     rows.forEach(row => {
         const qty = parseInt(row.querySelector('input[type="number"]').value || "0", 10);
@@ -221,7 +229,7 @@ function calcTotals() {
         subtotal += qty * unit;
     });
 
-    const donationInput = document.getElementById("custom_donation");
+    const donationInput = $r("custom_donation");
     let donation = 0;
     if (donationInput) {
         const raw = String(donationInput.value || "").trim();
@@ -230,10 +238,10 @@ function calcTotals() {
     }
 
     const total = subtotal + donation;
-    const donationEl = document.getElementById("donation_amount");
-    document.getElementById("subtotal").textContent = money(subtotal);
+    const donationEl = $r("donation_amount");
+    $r("subtotal").textContent = money(subtotal);
     if (donationEl) donationEl.textContent = money(donation);
-    document.getElementById("total_amount").textContent = money(total);
+    $r("total_amount").textContent = money(total);
 
     toggleCalendarOffer(total);
 }
@@ -241,7 +249,7 @@ function calcTotals() {
 /* -------- Boot -------- */
 (async function bootstrap() {
     const formId = 1;
-    const titleEl = document.getElementById("form-title");
+    const titleEl = $r("form-title");
 
     if (titleEl) {
         titleEl.textContent = "";
@@ -260,7 +268,7 @@ function calcTotals() {
         renderProducts(products);
     } catch (e) {
         console.error(e);
-        const formEl = document.getElementById("dynamic-form");
+        const formEl = $r("dynamic-form");
         if (titleEl) titleEl.textContent = "Error loading products";
         if (formEl) formEl.innerHTML = '<p style="color:#b91c1c">Could not load the products.</p>';
     }
@@ -268,7 +276,7 @@ function calcTotals() {
 
 /***** Cart helpers *****/
 function getCartItems() {
-    const rows = [...document.querySelectorAll(".product_row")];
+    const rows = [...$rqa(".product_row")];
 
     return rows
         .map(r => {
@@ -311,7 +319,7 @@ function cartHasSubscription() {
 }
 
 function getSubtotalNumber() {
-    const t = document.getElementById("total_amount").textContent || "$0.00";
+    const t = $r("total_amount").textContent || "$0.00";
     return Number(String(t).replace(/[^0-9.]/g, "")) || 0;
 }
 
@@ -323,7 +331,7 @@ function normalizeCountry(countryValue) {
 }
 
 function getSelectedSubscriptionProductId() {
-    const donationInput = document.getElementById("custom_donation");
+    const donationInput = $r("custom_donation");
     const donationAmount = Number(donationInput?.value || 0);
     if (Number.isFinite(donationAmount) && donationAmount > 0) {
         return CUSTOM_DONATION_SUBSCRIPTION_PRODUCT_ID;
@@ -345,7 +353,7 @@ function getSelectedSubscriptionProductId() {
 }
 
 function getSelectedRecurringAmount() {
-    const donationInput = document.getElementById("custom_donation");
+    const donationInput = $r("custom_donation");
     const donationAmount = Number(donationInput?.value || 0);
     if (Number.isFinite(donationAmount) && donationAmount > 0) {
         return donationAmount;
@@ -359,7 +367,7 @@ function getSelectedRecurringAmount() {
 
 /***** Dynamic form → metadata helper *****/
 function getFormFieldsMetadata() {
-    const formEl = document.getElementById("dynamic-form");
+    const formEl = $r("dynamic-form");
     if (!formEl) return {};
 
     const meta = {};
@@ -375,8 +383,8 @@ function getFormFieldsMetadata() {
 
         meta[key] = v;
     });
-    meta.opt_in_email = document.getElementById("opt_in_email")?.checked ? "yes" : "no";
-    meta.opt_in_sms = document.getElementById("opt_in_sms")?.checked ? "yes" : "no";
+    meta.opt_in_email = $r("opt_in_email")?.checked ? "yes" : "no";
+    meta.opt_in_sms = $r("opt_in_sms")?.checked ? "yes" : "no";
 
     return meta;
 }
@@ -388,15 +396,15 @@ let paymentElement;
 let currentClientSecret = null;
 
 function getEmailFromForm() {
-    const byType = document.querySelector('input[type="email"]');
+    const byType = $rq('input[type="email"]');
     if (byType && byType.value) return byType.value.trim();
-    const byName = document.querySelector('input[name="email"]');
+    const byName = $rq('input[name="email"]');
     if (byName && byName.value) return byName.value.trim();
     return "";
 }
 
 function validateForm(showAlert = true) {
-    const form = document.getElementById("dynamic-form");
+    const form = $r("dynamic-form");
     const requiredFields = [
         "first_name",
         "last_name",
@@ -441,9 +449,9 @@ function validateForm(showAlert = true) {
 }
 
 async function mountStripePaymentElement() {
-    const btn = document.getElementById("stripe-pay-button");
-    const msg = document.getElementById("stripe-messages");
-    const container = document.getElementById("payment-element");
+    const btn = $r("stripe-pay-button");
+    const msg = $r("stripe-messages");
+    const container = $r("payment-element");
     if (!container) return;
 
     const subtotal = getSubtotalNumber();
@@ -520,7 +528,7 @@ async function mountStripePaymentElement() {
 
         elements = stripe.elements({ clientSecret: currentClientSecret });
         paymentElement = elements.create("payment");
-        paymentElement.mount("#payment-element");
+        paymentElement.mount($r("payment-element"));
         btn.disabled = false;
     } catch (e) {
         console.error(e);
@@ -566,8 +574,8 @@ function buildSubscriptionIntakePayload(paymentIntent) {
             donation_amount: recurringAmount ? recurringAmount.toFixed(2) : "",
             heard_about_us: formMeta.heard_about_us || "",
             want_calendar: getCalendarSelected() ? "yes" : "no",
-            opt_in_email: document.getElementById("opt_in_email")?.checked ? "yes" : "no",
-            opt_in_sms: document.getElementById("opt_in_sms")?.checked ? "yes" : "no",
+            opt_in_email: $r("opt_in_email")?.checked ? "yes" : "no",
+            opt_in_sms: $r("opt_in_sms")?.checked ? "yes" : "no",
         },
     };
 }
@@ -596,8 +604,8 @@ async function sendSubscriptionIntake(paymentIntent) {
 async function handleStripePayNow() {
     if (!validateForm(true)) return;
 
-    const btn = document.getElementById("stripe-pay-button");
-    const msg = document.getElementById("stripe-messages");
+    const btn = $r("stripe-pay-button");
+    const msg = $r("stripe-messages");
     if (!stripe || !elements) return;
 
     btn.disabled = true;
@@ -642,8 +650,8 @@ async function handleStripePayNow() {
 
 async function sendPayPalOrderToBackend(details) {
     const formMeta = getFormFieldsMetadata();
-    const emailOptIn = !!document.querySelector('input[name="opt_in_email"]')?.checked;
-    const smsOptIn = !!document.querySelector('input[name="opt_in_sms"]')?.checked;
+    const emailOptIn = !!$rq('input[name="opt_in_email"]')?.checked;
+    const smsOptIn = !!$rq('input[name="opt_in_sms"]')?.checked;
 
     const items = getCartItems().map(it => ({
         name: it.name,
@@ -652,7 +660,7 @@ async function sendPayPalOrderToBackend(details) {
         unit_price: String(Math.round((it.unit_price || 0) * 100)),
     }));
 
-    const donationInput = document.getElementById("custom_donation");
+    const donationInput = $r("custom_donation");
     let donation = 0;
     if (donationInput) {
         const raw = String(donationInput.value || "").trim();
@@ -726,7 +734,7 @@ async function sendPayPalOrderToBackend(details) {
 
 /***** PAYPAL (one-time, client-side) *****/
 function renderPayPalOneTime() {
-    const container = document.getElementById("paypal-button-onetime");
+    const container = $r("paypal-button-onetime");
     if (!container) return;
 
     container.style.display = "block";
@@ -786,7 +794,7 @@ function renderPayPalOneTime() {
 const observeTotals = new MutationObserver(() => {
     refreshPayments({ force: true });
 });
-observeTotals.observe(document.getElementById("total_amount"), { childList: true, subtree: true, characterData: true });
+observeTotals.observe($r("total_amount"), { childList: true, subtree: true, characterData: true });
 
 document.addEventListener("change", (e) => {
     if (
@@ -802,10 +810,10 @@ window.addEventListener("load", () => {
     mountStripePaymentElement();
     renderPayPalOneTime();
 
-    const btn = document.getElementById("stripe-pay-button");
+    const btn = $r("stripe-pay-button");
     if (btn) btn.addEventListener("click", handleStripePayNow);
 
-    const donationInput = document.getElementById("custom_donation");
+    const donationInput = $r("custom_donation");
     if (donationInput) donationInput.addEventListener("input", () => {
         calcTotals();
         refreshPayments({ force: true });

@@ -123,6 +123,81 @@
         }
       },
       {
+        "label": "Add dropdown",
+        "name": "add_dropdown",
+        "id": "button.add_dropdown",
+        "type": "boolean",
+        "display": "checkbox",
+        "visibility": {
+          "controlling_field": "button.add_button",
+          "controlling_value_regex": "true",
+          "operator": "EQUAL"
+        },
+        "default": true
+      },
+      {
+        "label": "Dropdown items",
+        "name": "dropdown_items",
+        "type": "group",
+        "occurrence": {
+          "min": 1,
+          "max": 5,
+          "default": 2
+        },
+        "visibility": {
+          "controlling_field": "button.add_dropdown",
+          "controlling_value_regex": "true",
+          "operator": "EQUAL"
+        },
+        "default": [
+          {
+            "link_text": "Donate",
+            "link_url": {
+              "url": {
+                "href": "https://atriresearch.org/donate",
+                "type": "EXTERNAL"
+              }
+            }
+          },
+          {
+            "link_text": "Audio Bibles",
+            "link_url": {
+              "url": {
+                "href": "https://atriresearch.org/audio-bibles",
+                "type": "EXTERNAL"
+              }
+            }
+          }
+        ],
+        "children": [
+          {
+            "label": "Link text",
+            "name": "link_text",
+            "type": "text",
+            "required": true,
+            "default": "Link"
+          },
+          {
+            "label": "Link URL",
+            "name": "link_url",
+            "type": "link",
+            "supported_types": [
+              "EXTERNAL",
+              "CONTENT",
+              "FILE",
+              "EMAIL_ADDRESS",
+              "BLOG"
+            ],
+            "default": {
+              "url": {
+                "href": "#",
+                "type": "EXTERNAL"
+              }
+            }
+          }
+        ]
+      },
+      {
         "label": "Add icon",
         "name": "add_icon",
         "id": "button.add_icon",
