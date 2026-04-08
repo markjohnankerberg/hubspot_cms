@@ -1,9 +1,0 @@
-{
-  "global" : true,
-  "content_types" : [ "KNOWLEDGE_BASE", "QUOTE_TEMPLATE", "QUOTE", "CASE_STUDY", "SITE_PAGE", "SUBSCRIPTION", "CUSTOMER_PORTAL", "BLOG_LISTING", "BLOG_POST", "MEMBERSHIP", "LANDING_PAGE", "QUOTE_BLUEPRINT", "WEB_INTERACTIVE" ],
-  "smart_type" : "NOT_SMART",
-  "host_template_types" : [ "PAGE", "BLOG_LISTING", "BLOG_POST" ],
-  "module_id" : 210322077603,
-  "label" : "custom_paypal_stripe_testing",
-  "is_available_for_new_content" : true
-}
