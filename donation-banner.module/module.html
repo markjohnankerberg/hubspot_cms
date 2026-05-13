@@ -1,0 +1,78 @@
+{% if module.banner_visible != false %}
+<div class="announcement-bar"
+     id="announcement-bar"
+     data-api-url="{{ module.api_url }}"
+     data-show-skus="{{ module.show_sku_breakdown }}">
+  <button class="announcement-bar__close" type="button" aria-label="Close banner">&#x2715;</button>
+  <div class="announcement-bar__inner">
+
+    <!-- Left: messaging copy -->
+    <div class="announcement-bar__copy">
+      <p class="announcement-bar__copy-headline">Many people have never heard. <em>You can change that!</em></p>
+      <p class="announcement-bar__copy-body">Audio Bibles are bringing God's Word to those who cannot read or have never heard.<strong style="background: #E3B341">  Right now, your gift is double matched—every Audio Bible device becomes three,</strong> reaching entire communities with life-changing truth.</p>
+    </div>
+
+    <!-- Right: progress widget -->
+    <div class="announcement-bar__widget">
+
+      <!-- Goal reached message -->
+      <div class="announcement-bar__goal-reached" id="goal-reached-msg" style="display:none;">
+        THANK YOU! Because of you, we've reached our $500,000 goal. Let's continue and reach a second goal of $750,000!!
+      </div>
+
+      <!-- Row 1: Total raised + Goal -->
+      <div class="announcement-bar__progress-header">
+        <span class="announcement-bar__raised"><span id="donation-total">—</span> Total Amount Given - Spring 2026</span>
+        <span class="announcement-bar__goal" id="donation-goal">$500,000 goal</span>
+      </div>
+
+      <!-- Progress bar -->
+      <div class="announcement-bar__bar-track">
+        <div class="announcement-bar__bar-fill" id="donation-progress" style="width: 0%"></div>
+      </div>
+
+      <!-- Row 2: Stats + Buttons -->
+      <div class="announcement-bar__footer">
+        <div class="announcement-bar__stats">
+          <span class="announcement-bar__stat"><strong id="trees-planted">—</strong> Audio Bible Devices Donated</span>
+          <span class="announcement-bar__stat announcement-bar__skus" id="sku-breakdown"></span>
+        </div>
+        <div class="announcement-bar__actions">
+          <a class="announcement-bar__learn-btn" href="https://atriresearch.org/audio-bibles" target="_blank" rel="noopener">Learn More</a>
+          <a class="announcement-bar__donate-btn" href="https://atriresearch.org/audio-bibles#donate-form">Donate</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+{% endif %}
+
+<script>
+/* ── Progress bar ── */
+(function () {
+  var GOAL_1 = 500000;
+  var GOAL_2 = 750000;
+  var totalEl  = document.getElementById('donation-total');
+  var barEl    = document.getElementById('donation-progress');
+  var goalMsg  = document.getElementById('goal-reached-msg');
+  var goalEl   = document.getElementById('donation-goal');
+  if (!totalEl || !barEl) return;
+  var updateBarTimer;
+  function updateBar() {
+    clearTimeout(updateBarTimer);
+    updateBarTimer = setTimeout(function () {
+      var raw = totalEl.textContent.replace(/[^0-9.]/g, '').replace(/\.(?=.*\.)/g, '');
+      var val = parseFloat(raw);
+      if (isNaN(val) || val <= 0) return;
+
+      var goal = val >= GOAL_1 ? GOAL_2 : GOAL_1;
+      if (goalMsg) goalMsg.style.display = val >= GOAL_1 ? '' : 'none';
+      if (goalEl) goalEl.textContent = '$' + goal.toLocaleString() + ' goal';
+      barEl.style.width = Math.min(100, (val / goal) * 100).toFixed(2) + '%';
+    }, 150);
+  }
+  updateBar();
+  new MutationObserver(updateBar).observe(totalEl, { childList: true, characterData: true, subtree: true });
+})();
+</script>
