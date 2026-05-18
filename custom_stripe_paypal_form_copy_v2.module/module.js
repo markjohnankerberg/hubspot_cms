@@ -192,23 +192,6 @@ const wireDynamicFormListeners = (() => {
     };
 })();
 
-function toggleCalendarOffer(amount) {
-    const offer = document.getElementById("calendar-offer");
-    if (!offer) return;
-    if (amount >= 100) {
-        offer.hidden = false;
-    } else {
-        offer.hidden = true;
-        const no = offer.querySelector('input[name="want_calendar"][value="no"]');
-        if (no) no.checked = true;
-    }
-}
-
-function getCalendarSelected() {
-    const picked = document.querySelector('input[name="want_calendar"]:checked');
-    return picked ? (picked.value === "yes") : false;
-}
-
 function calcTotals() {
     const rows = document.querySelectorAll(".product_row");
     let subtotal = 0;
@@ -233,7 +216,6 @@ function calcTotals() {
     if (donationEl) donationEl.textContent = money(donation);
     document.getElementById("total_amount").textContent = money(total);
 
-    toggleCalendarOffer(total);
 }
 
 /* -------- Boot -------- */
@@ -298,6 +280,7 @@ function getCartItems() {
 }
 
 function isSubscriptionProduct(item) {
+    // TODO Can we remove this function
     if (item.is_subscription) return true;
     if (SUBSCRIPTION_PRODUCT_IDS.includes(item.id)) return true;
     if (item.sku && SUBSCRIPTION_SKUS.includes(item.sku)) return true;
@@ -473,7 +456,6 @@ async function mountStripePaymentElement() {
     }
 
     const amount = Math.round(subtotal * 100);
-    const wantCalendar = getCalendarSelected();
     const email = getEmailFromForm();
     const items = getCartItems();
     const formMeta = getFormFieldsMetadata();
@@ -499,7 +481,6 @@ async function mountStripePaymentElement() {
                 currency: "usd",
                 email: email || undefined,
                 metadata: {
-                    want_calendar: wantCalendar ? "yes" : "no",
                     subtotal: subtotal.toFixed(2),
                     ...formMeta,
                     ...itemMeta,
@@ -570,7 +551,6 @@ function buildSubscriptionIntakePayload(paymentIntent) {
         metadata: {
             donation_amount: recurringAmount ? recurringAmount.toFixed(2) : "",
             heard_about_us: formMeta.heard_about_us || "",
-            want_calendar: getCalendarSelected() ? "yes" : "no",
             opt_in_email: document.getElementById("opt_in_email")?.checked ? "yes" : "no",
             opt_in_sms: document.getElementById("opt_in_sms")?.checked ? "yes" : "no",
         },
@@ -666,7 +646,6 @@ async function sendPayPalOrderToBackend(details) {
     }
 
     const total = getSubtotalNumber();
-    const wantCalendar = getCalendarSelected();
     const heardAboutUs = formMeta.heard_about_us || "";
 
     const payer = details.payer || {};
@@ -703,7 +682,6 @@ async function sendPayPalOrderToBackend(details) {
         state_region: stateRegion,
         country_region: countryRegion,
         heard_about_us: heardAboutUs,
-        want_calendar: Boolean(wantCalendar),
         donation_amount: Number(donation.toFixed(2)),
         items,
         form_fields: formMeta,
