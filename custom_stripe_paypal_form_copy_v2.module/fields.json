@@ -1,0 +1,21 @@
+[ {
+  "id" : "f3fa8f3b-22d6-3203-8c83-e26f7956a2ea",
+  "name" : "data_api_base",
+  "label" : "Text",
+  "required" : false,
+  "locked" : true,
+  "allow_new_line" : false,
+  "type" : "text",
+  "display_width" : null,
+  "default" : "https://johnankerberg-api-managemet-9b367f1169c7.herokuapp.com"
+}, {
+  "id" : "e3f953de-37dc-67f8-aa4e-da7ed341f2db",
+  "name" : "number_field",
+  "label" : "Number",
+  "required" : false,
+  "locked" : true,
+  "display" : "text",
+  "step" : 1,
+  "type" : "number",
+  "display_width" : null
+} ]
