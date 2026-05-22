@@ -1,0 +1,19 @@
+{# ATRI Search results — reads ?q= & ?source= from the URL and queries the Search API #}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<div class="atri-sr"
+     data-api-base="{{ module.api_base_url|escape_attr }}"
+     data-per-page="{{ module.per_page }}"
+     data-currency="{{ module.currency_symbol|escape_attr }}"
+     data-show-filters="{% if module.show_filters %}true{% else %}false{% endif %}"
+     data-fallback="{% if module.enable_sample_fallback %}true{% else %}false{% endif %}">
+  <div class="atri-sr-wrap">
+    <div class="atri-sr-head" data-sr-head></div>
+    <div class="atri-sr-filters" data-sr-filters role="tablist" aria-label="Filter results by type"></div>
+    <div class="atri-sr-grid" data-sr-grid></div>
+    <nav class="atri-sr-pager" data-sr-pager aria-label="Search results pages"></nav>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+[
+  {
+    "label": "Show search trigger icon",
+    "name": "show_trigger",
+    "type": "boolean",
+    "display": "toggle",
+    "help_text": "Render the search icon button. Turn off if you trigger the overlay from your existing header instead (call window.ATRISearchOverlay.open() or dispatch the 'atri:open-search' event).",
+    "default": true
+  },
+  {
+    "label": "Accessible label",
+    "name": "trigger_label",
+    "type": "text",
+    "help_text": "Screen-reader label for the search button and dialog.",
+    "default": "Search"
+  },
+  {
+    "label": "Panel heading",
+    "name": "heading",
+    "type": "text",
+    "default": "What can we help you find?"
+  },
+  {
+    "label": "Input placeholder",
+    "name": "placeholder",
+    "type": "text",
+    "default": "Search…"
+  },
+  {
+    "label": "Search results page path",
+    "name": "results_path",
+    "type": "text",
+    "help_text": "Where the form submits to. The query is appended as ?q=…",
+    "default": "/search"
+  },
+  {
+    "label": "Recent searches label",
+    "name": "recent_label",
+    "type": "text",
+    "default": "Recent searches"
+  },
+  {
+    "label": "Empty recent searches text",
+    "name": "empty_recent",
+    "type": "text",
+    "default": "No recent searches yet. Start exploring!"
+  }
+]

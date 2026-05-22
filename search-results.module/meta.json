@@ -1,0 +1,12 @@
+{
+  "label": "Search results",
+  "host_template_types": [
+    "PAGE"
+  ],
+  "smart_type": "NOT_SMART",
+  "master_language": "en",
+  "is_available_for_new_content": true,
+  "categories": [
+    "functionality"
+  ]
+}

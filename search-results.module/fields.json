@@ -1,0 +1,42 @@
+[
+  {
+    "label": "Search API base URL",
+    "name": "api_base_url",
+    "type": "text",
+    "help_text": "Origin of the ATRI Search API, no trailing slash, e.g. https://atri-api.herokuapp.com . The module calls {base}/api/search/ . Leave blank to render sample data only.",
+    "default": ""
+  },
+  {
+    "label": "Results per page",
+    "name": "per_page",
+    "type": "number",
+    "min": 1,
+    "max": 100,
+    "step": 1,
+    "suffix": "results",
+    "default": 12
+  },
+  {
+    "label": "Show source filter pills",
+    "name": "show_filters",
+    "type": "boolean",
+    "display": "toggle",
+    "help_text": "All / Articles / Store. These map to the API's ?source= filter (hubspot / woocommerce).",
+    "default": true
+  },
+  {
+    "label": "Currency symbol",
+    "name": "currency_symbol",
+    "type": "text",
+    "help_text": "Prefixed to WooCommerce product prices (the API returns numeric strings without currency).",
+    "default": "$"
+  },
+  {
+    "label": "Fall back to sample data when API is unreachable",
+    "name": "enable_sample_fallback",
+    "type": "boolean",
+    "display": "toggle",
+    "help_text": "Useful for preview before CORS is enabled on the backend. Turn off in production to show a real error state instead.",
+    "default": true
+  }
+]

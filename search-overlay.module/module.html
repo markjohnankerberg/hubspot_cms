@@ -1,0 +1,42 @@
+{# ATRI Search overlay — slide-in search panel (Harvest Hosts style) #}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<div class="atri-ov"
+     data-results-path="{{ module.results_path|escape_attr }}"
+     data-empty-recent="{{ module.empty_recent|escape_attr }}">
+
+  {% if module.show_trigger %}
+    <button type="button" class="atri-ov-trigger" data-atri-ov-open aria-label="{{ module.trigger_label|escape_attr }}">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+    </button>
+  {% endif %}
+
+  <div class="atri-ov-backdrop" data-atri-ov-backdrop></div>
+
+  <aside class="atri-ov-panel" role="dialog" aria-modal="true" aria-label="{{ module.trigger_label|escape_attr }}">
+    <div class="atri-ov-top">
+      <button type="button" class="atri-ov-close" data-atri-ov-close aria-label="Close search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+
+    <div class="atri-ov-body">
+      <h2 class="atri-ov-heading">{{ module.heading }}</h2>
+
+      <form class="atri-ov-field" data-atri-ov-form autocomplete="off" role="search">
+        <input type="text" class="atri-ov-input" data-atri-ov-input placeholder="{{ module.placeholder|escape_attr }}" aria-label="{{ module.trigger_label|escape_attr }}">
+        <button type="submit" class="atri-ov-submit" aria-label="Submit search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </form>
+
+      <div class="atri-ov-recent">
+        <div class="atri-ov-recent-label">{{ module.recent_label }}</div>
+        <div data-atri-ov-recent></div>
+      </div>
+    </div>
+  </aside>
+</div>

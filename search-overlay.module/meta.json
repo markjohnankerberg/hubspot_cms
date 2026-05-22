@@ -1,0 +1,14 @@
+{
+  "label": "Search overlay",
+  "host_template_types": [
+    "PAGE",
+    "BLOG_LISTING",
+    "BLOG_POST"
+  ],
+  "smart_type": "NOT_SMART",
+  "master_language": "en",
+  "is_available_for_new_content": true,
+  "categories": [
+    "functionality"
+  ]
+}

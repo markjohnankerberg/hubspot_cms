@@ -1,0 +1,125 @@
+/* ===== ATRI Search overlay ===== */
+.atri-ov { --atri-ink: #1c1c1c; }
+
+/* Trigger button (optional — matches the dark header icon style) */
+.atri-ov-trigger {
+  background: transparent;
+  border: 0;
+  color: currentColor;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  transition: background .2s;
+}
+.atri-ov-trigger:hover { background: rgba(127, 127, 127, .15); }
+.atri-ov-trigger svg { width: 20px; height: 20px; }
+
+/* Backdrop */
+.atri-ov-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 8, 10, .55);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .4s ease, visibility .4s ease;
+  z-index: 2147483000;
+}
+.atri-ov-backdrop.is-open { opacity: 1; visibility: visible; }
+
+/* Panel */
+.atri-ov-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(560px, 100%);
+  background: #fff;
+  color: var(--atri-ink);
+  transform: translateX(100%);
+  transition: transform .5s cubic-bezier(.16, 1, .3, 1);
+  z-index: 2147483001;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -20px 0 60px rgba(0, 0, 0, .25);
+  font-family: 'Inter', system-ui, sans-serif;
+}
+.atri-ov-panel.is-open { transform: translateX(0); }
+
+.atri-ov-top { display: flex; justify-content: flex-end; padding: 1.5rem 1.75rem; }
+.atri-ov-close {
+  background: transparent; border: 0; color: #555; cursor: pointer;
+  width: 40px; height: 40px; border-radius: 999px;
+  display: inline-flex; align-items: center; justify-content: center;
+  transition: background .2s, color .2s;
+}
+.atri-ov-close:hover { background: #f1f1f1; color: #111; }
+.atri-ov-close svg { width: 22px; height: 22px; }
+
+.atri-ov-body { padding: 1rem 3rem 3rem; overflow-y: auto; }
+.atri-ov-heading {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 600;
+  font-size: 1.7rem;
+  line-height: 1.2;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  max-width: 18ch;
+  margin: 0 0 1.8rem;
+  color: var(--atri-ink);
+}
+
+.atri-ov-field { position: relative; }
+.atri-ov-input {
+  width: 100%;
+  border: 1px solid #d9d9d9;
+  background: #fff;
+  padding: 1rem 3.2rem 1rem 1.1rem;
+  font-family: inherit;
+  font-size: .95rem;
+  color: var(--atri-ink);
+  border-radius: 2px;
+  outline: none;
+  transition: border-color .2s, box-shadow .2s;
+}
+.atri-ov-input::placeholder { color: #a8a8a8; }
+.atri-ov-input:focus { border-color: var(--atri-ink); box-shadow: 0 0 0 3px rgba(0, 0, 0, .05); }
+.atri-ov-submit {
+  position: absolute; top: 50%; right: .5rem; transform: translateY(-50%);
+  background: transparent; border: 0; color: #777; cursor: pointer;
+  width: 38px; height: 38px; border-radius: 2px;
+  display: inline-flex; align-items: center; justify-content: center;
+  transition: color .2s, background .2s;
+}
+.atri-ov-submit:hover { color: #111; background: #f3f3f3; }
+.atri-ov-submit svg { width: 20px; height: 20px; }
+
+.atri-ov-recent { margin-top: 2.6rem; }
+.atri-ov-recent-label {
+  font-size: .68rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+  margin-bottom: .9rem; color: var(--atri-ink);
+}
+.atri-ov-recent-empty { font-size: .85rem; color: #9a9a9a; }
+.atri-ov-recent-list { display: flex; flex-direction: column; gap: .25rem; }
+.atri-ov-recent-item {
+  display: flex; align-items: center; gap: .7rem; width: 100%;
+  background: transparent; border: 0; text-align: left; cursor: pointer;
+  padding: .7rem .5rem; font-family: inherit; font-size: .9rem; color: #333;
+  border-radius: 4px; transition: background .15s;
+}
+.atri-ov-recent-item:hover { background: #f5f5f5; }
+.atri-ov-recent-item svg { width: 16px; height: 16px; color: #aaa; flex-shrink: 0; }
+.atri-ov-recent-item .atri-ov-term { flex: 1; }
+.atri-ov-recent-item .atri-ov-remove { color: #bbb; opacity: 0; transition: opacity .15s, color .15s; }
+.atri-ov-recent-item:hover .atri-ov-remove { opacity: 1; }
+.atri-ov-recent-item .atri-ov-remove:hover { color: #d33; }
+
+@media (max-width: 720px) {
+  .atri-ov-body { padding: 1rem 1.5rem 2.5rem; }
+  .atri-ov-heading { font-size: 1.4rem; }
+}
