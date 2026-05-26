@@ -1,0 +1,45 @@
+[
+  {
+    "label": "Wordmark text",
+    "name": "wordmark_text",
+    "type": "text",
+    "help_text": "The large serif text in the header (e.g. ATRI).",
+    "default": "ATRI"
+  },
+  {
+    "label": "Subtitle",
+    "name": "subtitle",
+    "type": "text",
+    "help_text": "Smaller text beneath the wordmark.",
+    "default": "Ankerberg Theological Research Institute"
+  },
+  {
+    "label": "Navigation menu",
+    "name": "menu",
+    "type": "menu",
+    "help_text": "Select a HubSpot advanced menu for the nav bar.",
+    "required": true,
+    "default": "default"
+  },
+  {
+    "label": "Donate button label",
+    "name": "donate_label",
+    "type": "text",
+    "default": "Donate"
+  },
+  {
+    "label": "Donate button link",
+    "name": "donate_link",
+    "type": "link",
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT"
+    ],
+    "default": {
+      "url": {
+        "href": "https://atriresearch.org/donate",
+        "type": "EXTERNAL"
+      }
+    }
+  }
+]

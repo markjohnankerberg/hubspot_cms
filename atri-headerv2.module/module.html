@@ -1,0 +1,62 @@
+{# ATRI Header Module #}
+
+{% set donate_href = module.donate_link.url.href %}
+{% if module.donate_link.url.type is equalto "EMAIL_ADDRESS" %}
+  {% set donate_href = "mailto:" ~ donate_href %}
+{% endif %}
+
+<header class="atri-header">
+
+  {# ===== Top bar ===== #}
+  <div class="atri-header__topbar">
+    <div class="atri-header__topbar-left">
+      <button class="atri-header__menu-btn" type="button" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        <span>Menu</span>
+      </button>
+    </div>
+
+    <div class="atri-header__brand">
+      <a href="/" class="atri-header__brand-link">
+        <div class="atri-header__mark">{{ module.wordmark_text }}</div>
+        <div class="atri-header__sub">{{ module.subtitle }}</div>
+      </a>
+    </div>
+
+    <div class="atri-header__actions">
+      <button class="atri-header__search-open" id="atriSearchOpen" type="button" aria-label="Open search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+      </button>
+      <a class="atri-header__donate" href="{{ donate_href|escape_url }}"{% if module.donate_link.open_in_new_tab %} target="_blank" rel="noopener"{% endif %}>{{ module.donate_label }}</a>
+    </div>
+  </div>
+
+  {# ===== Nav row (dynamic from HubSpot menu) ===== #}
+  {% set nav_menu = menu(module.menu, "site_root").children %}
+  <nav class="atri-header__nav" aria-label="Main navigation">
+    {% for link in nav_menu %}
+      <a class="atri-header__nav-link{{ " atri-header__nav-link--active" if link.activeNode }}" href="{{ link.url|escape_url }}"{{ ' aria-current="page"' if link.activeNode }}{{ ' target="_blank" rel="noopener"' if link.linkTarget }}>{{ link.label }}</a>
+    {% endfor %}
+  </nav>
+
+</header>
+
+{# ===== Search panel ===== #}
+<div class="atri-header__backdrop" id="atriBackdrop"></div>
+
+<aside class="atri-header__search-panel" id="atriSearchPanel" role="dialog" aria-modal="true" aria-label="Site search">
+  <div class="atri-header__panel-top">
+    <button class="atri-header__panel-close" id="atriSearchClose" type="button" aria-label="Close search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <div class="atri-header__panel-body">
+    <h2 class="atri-header__panel-heading">What can we help you find?</h2>
+    <form class="atri-header__search-field" id="atriSearchForm" action="/search" method="GET" autocomplete="off">
+      <input type="text" name="q" placeholder="Search…" aria-label="Search" />
+      <button class="atri-header__search-submit" type="submit" aria-label="Submit search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+    </form>
+  </div>
+</aside>
