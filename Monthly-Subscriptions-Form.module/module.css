@@ -1,0 +1,438 @@
+/* Reset / base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main_form_section html, .main_form_section body {
+    height: 100%;
+}
+
+.main_form_section body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 24px;
+}
+
+/* Card wrapper */
+.main_form_section {
+    width: 100%;
+    max-width: 440px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    padding: 15px;
+    border: 1px solid #eee;
+    margin: 0 auto;
+}
+
+.main_form {
+    display: grid;
+    gap: 18px;
+    position: sticky;
+    top: 24px;
+    align-self: start;
+}
+
+.main_form h2 {
+    margin-bottom: 4px;
+    color: #333;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: left;
+}
+
+/* ---- Tier list (stacked vertically) ---- */
+.tier_list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.tier_card {
+    position: relative;
+    background-color: #2f3a47;
+    color: #e7eaee;
+    border-radius: 4px;
+    padding: 22px 20px 20px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    border: 2px solid transparent;
+    transition: border-color 0.2s ease, transform 0.1s ease;
+}
+
+.tier_card.is-selected {
+    border-color: #a89888;
+    box-shadow: 0 0 0 3px rgba(168, 152, 136, 0.25);
+}
+
+.tier_card__header {
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+.tier_card__label {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+    margin-bottom: 4px;
+}
+
+.tier_card__price {
+    font-size: 30px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.1;
+    white-space: nowrap;
+}
+
+.tier_card__currency {
+    font-size: 22px;
+    font-weight: 700;
+    vertical-align: top;
+    margin-right: 2px;
+}
+
+.tier_card__amount {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.tier_card__period {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+}
+
+.tier_card__custom_input {
+    width: 120px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 700;
+    font-family: inherit;
+    text-align: center;
+    padding: 2px 4px;
+    outline: none;
+    -moz-appearance: textfield;
+}
+
+.tier_card__custom_input::-webkit-outer-spin-button,
+.tier_card__custom_input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.tier_card__custom_input::placeholder {
+    color: #ffffff;
+    opacity: 0.85;
+    font-weight: 700;
+}
+
+.tier_card__benefits {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tier_card__benefits li {
+    font-size: 13px;
+    line-height: 1.45;
+    color: #cfd3d8;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.tier_card__benefits li:last-child {
+    border-bottom: none;
+}
+
+.tier_card__cta {
+    display: block;
+    width: 100%;
+    margin-top: 14px;
+    padding: 13px 12px;
+    background-color: #a89888;
+    color: #ffffff;
+    border: none;
+    border-radius: 0;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-family: inherit;
+}
+
+.tier_card__cta:hover {
+    background-color: #93826f;
+}
+
+.tier_card__cta:active {
+    transform: translateY(1px);
+}
+
+.tier_card.is-selected .tier_card__cta {
+    background-color: #3D506B;
+}
+
+.tier_card.is-selected .tier_card__cta:hover {
+    background-color: #31445E;
+}
+
+/* POPULAR ribbon */
+.tier_card--popular .tier_card__ribbon {
+    position: absolute;
+    top: 16px;
+    right: -42px;
+    background-color: #70161f;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 5px 50px;
+    transform: rotate(45deg);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Fields */
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    color: #444;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.form-group label.required::after {
+    content: " *";
+    color: #d93025;
+    font-weight: 700;
+}
+
+/* Inputs / selects / textareas */
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 1.4;
+    background: #fff;
+    color: #333;
+    transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+.form-group textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.15);
+}
+
+.form-group ::placeholder {
+    color: #9aa0a6;
+}
+
+.form-group select:invalid {
+    color: #9aa0a6;
+}
+
+
+.form-group .iti {
+    width: 100%;
+    display: block;
+}
+
+.form-group .iti input[type="tel"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 1.4;
+    background: #fff;
+    color: #333;
+    transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+.form-group .iti input[type="tel"]:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.15);
+}
+
+
+/* Submit button */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #3D506B;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color .2s ease, transform .02s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #31445E;
+}
+
+button[type="submit"]:active {
+    transform: translateY(1px);
+}
+
+/* Bottom divider area (Stripe etc.) */
+.payment_section {
+    margin-top: 8px;
+    padding-top: 12px;
+    border-top: 1px solid #eee;
+    color: #555;
+    font-size: 14px;
+}
+
+#stripe-pay-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #635BFF;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#stripe-pay-button:disabled {
+    opacity: .6;
+    cursor: not-allowed;
+}
+
+.help-text {
+    color: #6b7280;
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+.error-text {
+    color: #d93025;
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+.order_summary {
+    margin-top: 16px;
+}
+
+.order_summary__title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    margin: 14px 0 10px;
+}
+
+.order_card {
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    background: #fff;
+    padding: 14px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
+}
+
+.order_row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 2px;
+    color: #444;
+    font-size: 15px;
+}
+
+.order_divider {
+    margin: 8px 0;
+    border-top: 1px dashed #e5e7eb;
+}
+
+.order_row--total {
+    font-weight: 800;
+    font-size: 17px;
+    color: #31445E;
+}
+
+.pay-with-stripe {
+    margin-top: 8px;
+}
+
+#payment-element {
+    min-height: 48px;
+}
+
+/* Opt-in checkboxes under order summary */
+.optin_section {
+    margin: 12px 0 4px;
+    padding-top: 8px;
+    border-top: 1px solid #eee;
+}
+
+.optin_row {
+    margin-top: 10px;
+}
+
+.optin_label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    max-width: 360px;
+    margin: 0 auto;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #374151;
+}
+
+.optin_label input[type="checkbox"] {
+    margin-top: 3px;
+}
+
+.optin_text {
+    display: block;
+}
+
+.donor_disclaimer_small {
+    margin: 12px auto 0;
+    max-width: 360px;
+    font-size: 11px;
+    line-height: 1.5;
+    color: #6b7280;
+}
+
+@media only screen and (max-width: 479px) {
+    .main_form_section a.button:not(a.button.btn-custom), .main_form_section button:not(button.splide__pagination__page, .main_form_section button.splide__arrow, button.btn-custom, .main_form_section .slider__container button.splide__toggle) {
+        padding: 10px 25px !important;
+    }
+}

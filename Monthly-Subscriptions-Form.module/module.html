@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+   <link
+    rel="stylesheet"
+     href="https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.6/build/css/intlTelInput.css"
+      />
+
+    <title>Monthly Subscriptions Form</title>
+</head>
+<body>
+
+<section id="donate-form" class="main_form_section">
+    <div class="main_form">
+        <h2 id="form-title"></h2>
+
+        <!-- Monthly tier picker -->
+        <div class="tier_list">
+            <article class="tier_card" data-amount="30">
+                <div class="tier_card__header">
+                    <div class="tier_card__label">MONTHLY GIFT</div>
+                    <div class="tier_card__price"><span class="tier_card__currency">$</span><span class="tier_card__amount">30</span><span class="tier_card__period"> / MONTHLY</span></div>
+                </div>
+                <ul class="tier_card__benefits">
+                    <li>Friends of ATRI Membership</li>
+                    <li>Exclusive Resources Monthly</li>
+                    <li>Help Create Apologetic Content</li>
+                    <li>Helps to fund International Outreach, including Audio Bibles</li>
+                </ul>
+                <button type="button" class="tier_card__cta" data-action="join">JOIN NOW</button>
+            </article>
+
+            <article class="tier_card tier_card--popular" data-amount="50">
+                <div class="tier_card__ribbon">POPULAR</div>
+                <div class="tier_card__header">
+                    <div class="tier_card__label">MONTHLY GIFT</div>
+                    <div class="tier_card__price"><span class="tier_card__currency">$</span><span class="tier_card__amount">50</span><span class="tier_card__period"> / MONTHLY</span></div>
+                </div>
+                <ul class="tier_card__benefits">
+                    <li>Friends of ATRI Membership</li>
+                    <li>Exclusive Resources Monthly</li>
+                    <li>Help Create Apologetic Content</li>
+                    <li>Helps to fund International Outreach, including Audio Bibles</li>
+                </ul>
+                <button type="button" class="tier_card__cta" data-action="join">JOIN NOW</button>
+            </article>
+
+            <article class="tier_card" data-amount="100">
+                <div class="tier_card__header">
+                    <div class="tier_card__label">MONTHLY GIFT</div>
+                    <div class="tier_card__price"><span class="tier_card__currency">$</span><span class="tier_card__amount">100</span><span class="tier_card__period"> / MONTHLY</span></div>
+                </div>
+                <ul class="tier_card__benefits">
+                    <li>Friends of ATRI Membership</li>
+                    <li>Exclusive Resources Monthly</li>
+                    <li>Helps Create Apologetic Content</li>
+                    <li>Help fund International Outreach, including Audio Bible in Areas with Immediate Need</li>
+                </ul>
+                <button type="button" class="tier_card__cta" data-action="join">JOIN NOW</button>
+            </article>
+
+            <article class="tier_card" data-amount="500">
+                <div class="tier_card__header">
+                    <div class="tier_card__label">MONTHLY GIFT</div>
+                    <div class="tier_card__price"><span class="tier_card__currency">$</span><span class="tier_card__amount">500</span><span class="tier_card__period"> / MONTHLY</span></div>
+                </div>
+                <ul class="tier_card__benefits">
+                    <li>Friends of ATRI Membership</li>
+                    <li>Exclusive Resources Monthly</li>
+                    <li>Help Create Apologetic Content</li>
+                    <li>Help fund International Outreach, including Audio Bible in Areas with Immediate Need</li>
+                    <li>Help fund the continued production and airing of The John Ankerberg Show.</li>
+                </ul>
+                <button type="button" class="tier_card__cta" data-action="join">JOIN NOW</button>
+            </article>
+
+            <article class="tier_card tier_card--custom" data-amount="custom">
+                <div class="tier_card__header">
+                    <div class="tier_card__label">MONTHLY GIFT</div>
+                    <div class="tier_card__price">
+                        <span class="tier_card__currency">$</span>
+                        <input type="number" id="tier_custom_amount" class="tier_card__custom_input" min="1" step="1" placeholder="Custom" aria-label="Custom monthly amount"/>
+                        <span class="tier_card__period"> / MONTHLY</span>
+                    </div>
+                </div>
+                <ul class="tier_card__benefits">
+                    <li>Friends of ATRI Membership</li>
+                    <li>Exclusive Resources Monthly</li>
+                    <li>Help Create Apologetic Content</li>
+                    <li>Help fund International Outreach, including Audio Bible in Areas with Immediate Need</li>
+                </ul>
+                <button type="button" class="tier_card__cta" data-action="join">JOIN NOW</button>
+            </article>
+        </div>
+
+        <!-- HARD-CODED CONTACT FORM -->
+        <form id="dynamic-form">
+          <h3 class="order_summary__title">Donor Information</h3>
+            <!-- Name -->
+            <div class="form-group">
+                <label for="first_name">First Name</label>
+                <input id="first_name" name="first_name" type="text" required>
+            </div>
+
+            <div class="form-group">
+                <label for="last_name">Last Name</label>
+                <input id="last_name" name="last_name" type="text" required>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input id="email" name="email" type="email" required>
+            </div>
+
+            <!-- Address -->
+            <div class="form-group">
+                <label for="street_address">Street Address</label>
+                <input id="street_address" name="street_address" type="text">
+            </div>
+
+            <div class="form-group">
+                <label for="city">City</label>
+                <input id="city" name="city" type="text">
+            </div>
+          <div class="form-group">
+                <label for="state_region">State/Region</label>
+                <input id="state_region" name="state_region" type="text">
+            </div>
+            <div class="form-group">
+                <label for="city">Zip Code</label>
+                <input id="zip" name="zip" type="text">
+            </div>
+            <div class="form-group">
+                <label for="country_region">Country/Region</label>
+                <input id="country_region" name="country_region" type="text">
+            </div>
+
+            <!-- Phone -->
+            <div class="form-group">
+                <label for="mobile_phone">Mobile Phone Number</label>
+                <input id="mobile_phone" name="mobile_phone" type="tel">
+            </div>
+
+            <!-- How did you hear about us? -->
+            <div class="form-group">
+                <label for="heard_about_us">How did you hear about us?</label>
+                <select id="heard_about_us" name="heard_about_us">
+                    <option value="">Select…</option>
+                    <option value="Daystar">Daystar</option>
+                    <option value="GodTV">GodTV</option>
+                    <option value="Internet">Internet</option>
+                    <option value="Roku">Roku</option>
+                    <option value="Lightsource">Lightsource</option>
+                    <option value="OnePlace">OnePlace</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <!-- (Optional) plain submit, mostly for debugging -->
+            <button type="submit" style="display:none;">Submit</button>
+        </form>
+
+
+        <!-- ORDER SUMMARY -->
+        <section class="order_summary">
+            <h3 class="order_summary__title">Order Summary</h3>
+            <div class="order_card">
+                <div class="order_row">
+                    <span>Monthly Gift</span>
+                    <span id="subtotal">$0.00</span>
+                </div>
+                <div class="order_divider"></div>
+                <div class="order_row order_row--total">
+                    <span>Monthly Total</span>
+                    <span id="total_amount">$0.00</span>
+                </div>
+            </div>
+        </section>
+        <section class="optin_section">
+            <div class="optin_row">
+                <label class="optin_label">
+                    <input type="checkbox" id="opt_in_email" name="opt_in_email">
+                    <span class="optin_text">
+                        I agree to receive other communications from The John Ankerberg Show.
+                    </span>
+                </label>
+            </div>
+
+            <div class="optin_row">
+                <label class="optin_label">
+                    <input type="checkbox" id="opt_in_sms" name="opt_in_sms">
+                    <span class="optin_text">
+                        I agree to receive SMS messages from ATRI that may include ministry updates,
+                        early-access content, prayer updates, and occasional opportunities to donate
+                        to the ministry. Message frequency varies. Msg &amp; data rates may apply.
+                        Reply STOP to unsubscribe and HELP for help. Please see Privacy Policy and
+                        Terms of Use.
+                    </span>
+                </label>
+            </div>
+
+            <p class="donor_disclaimer_small">
+                As a 100% donor-funded ministry, your non-restricted gift supports the entirety
+                of ATRI's work including the broadcasting, expansion, and production of The John
+                Ankerberg Show in the US and international markets. The John Ankerberg Show
+                broadcasts to potentially 4.5 billion viewers in more than 200 countries and
+                territories.
+            </p>
+        </section>
+
+        <!-- STRIPE ONLY -->
+        <section class="paymet_section">
+            <div class="pay-with-stripe">
+                <h4 style="margin:12px 0 8px">Pay via Card</h4>
+                <div id="payment-element"></div>
+                <div id="stripe-messages" class="help-text" aria-live="polite"></div>
+                <button id="stripe-pay-button" type="button">Pay via Card</button>
+            </div>
+        </section>
+
+    </div>
+</section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.6/build/js/intlTelInput.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.6/build/js/utils.js"></script>
+
+<script>
+  const input = document.querySelector("#mobile_phone");
+
+  const iti = window.intlTelInput(input, {
+    initialCountry: "us",      // default to United States
+    separateDialCode: true,    // shows +1 in its own box
+    nationalMode: true,        // formats like (423) 762-1663
+    autoPlaceholder: "polite",
+    utilsScript:
+      "https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.6/build/js/utils.js"
+  });
+</script>
+
+<!-- Stripe JS -->
+<script src="https://js.stripe.com/v3/"></script>
+<!-- Your module JS is loaded after this HTML -->
+</body>
+</html>
