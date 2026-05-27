@@ -30,7 +30,14 @@
                     <li>Help Create Apologetic Content</li>
                     <li>Helps to fund International Outreach, including Audio Bibles</li>
                 </ul>
-                <button type="button" class="tier_card__cta" data-action="join">JOIN NOW</button>
+                <div class="tier_card__footer">
+                    <div class="qty_stepper">
+                        <button type="button" class="qty_btn qty_btn--minus" aria-label="Decrease">-</button>
+                        <input type="number" class="qty_input" value="0" min="0" aria-label="Quantity"/>
+                        <button type="button" class="qty_btn qty_btn--plus" aria-label="Increase">+</button>
+                    </div>
+                    <div class="tier_card__price_display">$30.00</div>
+                </div>
             </article>
 
             <article class="tier_card tier_card--popular" data-amount="50">
@@ -45,7 +52,14 @@
                     <li>Help Create Apologetic Content</li>
                     <li>Helps to fund International Outreach, including Audio Bibles</li>
                 </ul>
-                <button type="button" class="tier_card__cta" data-action="join">JOIN NOW</button>
+                <div class="tier_card__footer">
+                    <div class="qty_stepper">
+                        <button type="button" class="qty_btn qty_btn--minus" aria-label="Decrease">-</button>
+                        <input type="number" class="qty_input" value="0" min="0" aria-label="Quantity"/>
+                        <button type="button" class="qty_btn qty_btn--plus" aria-label="Increase">+</button>
+                    </div>
+                    <div class="tier_card__price_display">$50.00</div>
+                </div>
             </article>
 
             <article class="tier_card" data-amount="100">
@@ -59,7 +73,14 @@
                     <li>Helps Create Apologetic Content</li>
                     <li>Help fund International Outreach, including Audio Bible in Areas with Immediate Need</li>
                 </ul>
-                <button type="button" class="tier_card__cta" data-action="join">JOIN NOW</button>
+                <div class="tier_card__footer">
+                    <div class="qty_stepper">
+                        <button type="button" class="qty_btn qty_btn--minus" aria-label="Decrease">-</button>
+                        <input type="number" class="qty_input" value="0" min="0" aria-label="Quantity"/>
+                        <button type="button" class="qty_btn qty_btn--plus" aria-label="Increase">+</button>
+                    </div>
+                    <div class="tier_card__price_display">$100.00</div>
+                </div>
             </article>
 
             <article class="tier_card" data-amount="500">
@@ -74,17 +95,20 @@
                     <li>Help fund International Outreach, including Audio Bible in Areas with Immediate Need</li>
                     <li>Help fund the continued production and airing of The John Ankerberg Show.</li>
                 </ul>
-                <button type="button" class="tier_card__cta" data-action="join">JOIN NOW</button>
+                <div class="tier_card__footer">
+                    <div class="qty_stepper">
+                        <button type="button" class="qty_btn qty_btn--minus" aria-label="Decrease">-</button>
+                        <input type="number" class="qty_input" value="0" min="0" aria-label="Quantity"/>
+                        <button type="button" class="qty_btn qty_btn--plus" aria-label="Increase">+</button>
+                    </div>
+                    <div class="tier_card__price_display">$500.00</div>
+                </div>
             </article>
 
             <article class="tier_card tier_card--custom" data-amount="custom">
                 <div class="tier_card__header">
                     <div class="tier_card__label">MONTHLY GIFT</div>
-                    <div class="tier_card__price">
-                        <span class="tier_card__currency">$</span>
-                        <input type="number" id="tier_custom_amount" class="tier_card__custom_input" min="1" step="1" placeholder="Custom" aria-label="Custom monthly amount"/>
-                        <span class="tier_card__period"> / MONTHLY</span>
-                    </div>
+                    <div class="tier_card__price"><span class="tier_card__currency">$</span><span class="tier_card__amount">Custom</span><span class="tier_card__period"> / MONTHLY</span></div>
                 </div>
                 <ul class="tier_card__benefits">
                     <li>Friends of ATRI Membership</li>
@@ -92,7 +116,14 @@
                     <li>Help Create Apologetic Content</li>
                     <li>Help fund International Outreach, including Audio Bible in Areas with Immediate Need</li>
                 </ul>
-                <button type="button" class="tier_card__cta" data-action="join">JOIN NOW</button>
+                <div class="tier_card__footer tier_card__footer--custom">
+                    <label for="tier_custom_amount" class="tier_card__custom_label">Enter your monthly amount</label>
+                    <div class="tier_card__custom_input_wrap">
+                        <span class="tier_card__custom_currency">$</span>
+                        <input type="number" id="tier_custom_amount" class="tier_card__custom_donation_input" min="0" step="1" placeholder="0" aria-label="Custom monthly donation amount"/>
+                        <span class="tier_card__custom_suffix">/ mo</span>
+                    </div>
+                </div>
             </article>
         </div>
 

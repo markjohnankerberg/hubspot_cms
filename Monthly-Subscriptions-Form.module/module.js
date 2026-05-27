@@ -31,15 +31,12 @@ const debounce = (fn, wait = 400) => {
     };
 };
 
-/* -------- Selected tier state -------- */
-let selectedTier = null; // { amount: number, isCustom: boolean }
-
 let lastFormMetadataSignature = "";
 
 const refreshPayments = (() => {
     const debounced = debounce((force = false) => {
         const meta = getFormFieldsMetadata();
-        const signature = JSON.stringify(meta) + "|" + (selectedTier ? selectedTier.amount : "");
+        const signature = JSON.stringify(meta) + "|" + getSubtotalNumber();
         if (!force && signature === lastFormMetadataSignature) return;
         lastFormMetadataSignature = signature;
         mountStripePaymentElement();
@@ -61,98 +58,120 @@ const wireDynamicFormListeners = (() => {
     };
 })();
 
+/* -------- Tier helpers -------- */
+function isCustomCard(card) {
+    return card.dataset.amount === "custom";
+}
+
+function getTierUnitPrice(card) {
+    if (isCustomCard(card)) {
+        const input = card.querySelector("#tier_custom_amount");
+        const v = input ? Number(input.value) : NaN;
+        return Number.isFinite(v) && v > 0 ? v : 0;
+    }
+    const v = Number(card.dataset.amount);
+    return Number.isFinite(v) ? v : 0;
+}
+
+function getTierQty(card) {
+    if (isCustomCard(card)) {
+        // The custom donation input represents the full amount, not a qty multiplier.
+        return getTierUnitPrice(card) > 0 ? 1 : 0;
+    }
+    const input = card.querySelector(".qty_input");
+    let v = parseInt(input?.value || "0", 10);
+    if (!Number.isFinite(v) || v < 0) v = 0;
+    return v;
+}
+
 function calcTotals() {
-    const amount = selectedTier ? Number(selectedTier.amount) || 0 : 0;
+    let subtotal = 0;
+    document.querySelectorAll(".tier_card").forEach((card) => {
+        const unit = getTierUnitPrice(card);
+        const qty = getTierQty(card);
+        subtotal += unit * qty;
+    });
     const subtotalEl = document.getElementById("subtotal");
     const totalEl = document.getElementById("total_amount");
-    if (subtotalEl) subtotalEl.textContent = money(amount);
-    if (totalEl) totalEl.textContent = money(amount);
+    if (subtotalEl) subtotalEl.textContent = money(subtotal);
+    if (totalEl) totalEl.textContent = money(subtotal);
 }
 
-function updateSelectedTierUI(activeCard) {
-    document.querySelectorAll(".tier_card").forEach((c) => {
-        const isActive = c === activeCard;
-        c.classList.toggle("is-selected", isActive);
-        const cta = c.querySelector(".tier_card__cta");
-        if (cta) cta.textContent = isActive ? "SELECTED" : "JOIN NOW";
-    });
-}
-
-function selectTier(amountRaw, isCustom, cardEl) {
-    const amount = Number(amountRaw);
-    if (!Number.isFinite(amount) || amount <= 0) {
-        alert("Please enter a custom amount greater than $0.");
-        return;
-    }
-
-    selectedTier = { amount, isCustom: !!isCustom };
-    updateSelectedTierUI(cardEl);
-    calcTotals();
-    wireDynamicFormListeners();
-    refreshPayments({ force: true });
+function clampQty(input) {
+    let v = parseInt(input.value || "0", 10);
+    if (!Number.isFinite(v) || v < 0) v = 0;
+    input.value = String(v);
 }
 
 function wireTierPicker() {
     const cards = document.querySelectorAll(".tier_card");
     cards.forEach((card) => {
-        const cta = card.querySelector(".tier_card__cta");
-        if (!cta) return;
-        cta.addEventListener("click", () => {
-            const amountAttr = card.dataset.amount;
-            if (amountAttr === "custom") {
-                const input = card.querySelector("#tier_custom_amount");
-                const v = input ? Number(input.value) : NaN;
-                if (!Number.isFinite(v) || v <= 0) {
-                    if (input) {
-                        input.focus();
-                        input.style.borderBottomColor = "#ff9aa2";
-                    }
-                    return;
-                }
-                selectTier(v, true, card);
-            } else {
-                selectTier(amountAttr, false, card);
-            }
+        const minus = card.querySelector(".qty_btn--minus");
+        const plus = card.querySelector(".qty_btn--plus");
+        const qtyInput = card.querySelector(".qty_input");
+        if (!minus || !plus || !qtyInput) return;
+
+        const onChange = () => {
+            calcTotals();
+            refreshPayments({ force: true });
+        };
+
+        minus.addEventListener("click", () => {
+            let v = parseInt(qtyInput.value || "0", 10);
+            if (!Number.isFinite(v)) v = 0;
+            v = Math.max(0, v - 1);
+            qtyInput.value = String(v);
+            onChange();
+        });
+
+        plus.addEventListener("click", () => {
+            let v = parseInt(qtyInput.value || "0", 10);
+            if (!Number.isFinite(v)) v = 0;
+            v = v + 1;
+            qtyInput.value = String(v);
+            onChange();
+        });
+
+        qtyInput.addEventListener("input", () => {
+            clampQty(qtyInput);
+            onChange();
         });
     });
 
     const customInput = document.getElementById("tier_custom_amount");
     if (customInput) {
         customInput.addEventListener("input", () => {
-            customInput.style.borderBottomColor = "";
-            // If the custom card is currently selected, keep totals in sync as user types
-            const card = customInput.closest(".tier_card");
-            if (card && card.classList.contains("is-selected")) {
-                const v = Number(customInput.value);
-                if (Number.isFinite(v) && v > 0) {
-                    selectedTier = { amount: v, isCustom: true };
-                    calcTotals();
-                    refreshPayments({ force: true });
-                }
-            }
-        });
-        customInput.addEventListener("keydown", (e) => {
-            if (e.key === "Enter") {
-                e.preventDefault();
-                const card = customInput.closest(".tier_card");
-                const cta = card && card.querySelector(".tier_card__cta");
-                if (cta) cta.click();
-            }
+            calcTotals();
+            refreshPayments({ force: true });
         });
     }
+
+    wireDynamicFormListeners();
 }
 
 /***** Cart helpers *****/
 function getCartItems() {
-    if (!selectedTier) return [];
-    return [{
-        id: getSelectedSubscriptionProductId(),
-        sku: "",
-        name: selectedTier.isCustom ? "Custom Monthly Gift" : `$${selectedTier.amount} Monthly Gift`,
-        unit_price: selectedTier.amount,
-        quantity: 1,
-        is_subscription: true,
-    }];
+    const cards = [...document.querySelectorAll(".tier_card")];
+    return cards
+        .map((card) => {
+            const qty = getTierQty(card);
+            if (qty <= 0) return null;
+            const unit = getTierUnitPrice(card);
+            if (unit <= 0) return null;
+            const isCustom = card.dataset.amount === "custom";
+            return {
+                id: isCustom
+                    ? CUSTOM_DONATION_SUBSCRIPTION_PRODUCT_ID
+                    : (FIXED_DONATION_PRODUCT_ID_MAP[unit] || CUSTOM_DONATION_SUBSCRIPTION_PRODUCT_ID),
+                sku: "",
+                name: isCustom ? "Custom Monthly Gift" : `$${unit} Monthly Gift`,
+                unit_price: unit,
+                quantity: qty,
+                is_subscription: true,
+                is_custom: isCustom,
+            };
+        })
+        .filter(Boolean);
 }
 
 function getSubtotalNumber() {
@@ -168,16 +187,19 @@ function normalizeCountry(countryValue) {
 }
 
 function getSelectedSubscriptionProductId() {
-    if (!selectedTier) return null;
-    if (selectedTier.isCustom) return CUSTOM_DONATION_SUBSCRIPTION_PRODUCT_ID;
-    const fixed = FIXED_DONATION_PRODUCT_ID_MAP[selectedTier.amount];
-    if (fixed) return fixed;
-    return CUSTOM_DONATION_SUBSCRIPTION_PRODUCT_ID;
+    const items = getCartItems();
+    if (items.length === 0) return null;
+    // Prefer custom donation tier if present
+    const custom = items.find((i) => i.is_custom);
+    if (custom) return CUSTOM_DONATION_SUBSCRIPTION_PRODUCT_ID;
+    return items[0].id;
 }
 
 function getSelectedRecurringAmount() {
-    if (!selectedTier) return null;
-    return selectedTier.amount > 0 ? selectedTier.amount : null;
+    const items = getCartItems();
+    if (items.length === 0) return null;
+    const total = items.reduce((sum, it) => sum + (Number(it.unit_price || 0) * it.quantity), 0);
+    return total > 0 ? total : null;
 }
 
 /***** Dynamic form → metadata helper *****/
@@ -466,6 +488,7 @@ async function handleStripePayNow() {
         titleEl.style.display = "none";
     }
     wireTierPicker();
+    calcTotals();
 })();
 
 /***** Keep Stripe in sync when totals change *****/

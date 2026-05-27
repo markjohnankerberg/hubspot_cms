@@ -63,13 +63,6 @@
     padding: 22px 20px 20px;
     overflow: hidden;
     font-family: Arial, sans-serif;
-    border: 2px solid transparent;
-    transition: border-color 0.2s ease, transform 0.1s ease;
-}
-
-.tier_card.is-selected {
-    border-color: #a89888;
-    box-shadow: 0 0 0 3px rgba(168, 152, 136, 0.25);
 }
 
 .tier_card__header {
@@ -112,31 +105,78 @@
     color: #ffffff;
 }
 
-.tier_card__custom_input {
-    width: 120px;
-    background: transparent;
-    border: none;
-    border-bottom: 2px solid #ffffff;
-    color: #ffffff;
-    font-size: 26px;
+/* Custom tier — donation amount input (in footer) */
+.tier_card__footer--custom {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 12px 14px;
+}
+
+.tier_card__custom_label {
+    display: block;
+    font-size: 12px;
     font-weight: 700;
-    font-family: inherit;
-    text-align: center;
-    padding: 2px 4px;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tier_card__custom_input_wrap {
+    display: flex;
+    align-items: center;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background: #ffffff;
+    overflow: hidden;
+    transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+.tier_card__custom_input_wrap:focus-within {
+    border-color: #a89888;
+    box-shadow: 0 0 0 3px rgba(168, 152, 136, 0.25);
+}
+
+.tier_card__custom_currency {
+    padding: 10px 10px 10px 12px;
+    color: #475569;
+    font-size: 18px;
+    font-weight: 700;
+    background: #f8fafc;
+    border-right: 1px solid #e5e7eb;
+}
+
+.tier_card__custom_donation_input {
+    flex: 1 1 auto;
+    width: 100%;
+    border: none;
     outline: none;
+    padding: 10px 12px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #111827;
+    background: transparent;
+    font-family: inherit;
     -moz-appearance: textfield;
 }
 
-.tier_card__custom_input::-webkit-outer-spin-button,
-.tier_card__custom_input::-webkit-inner-spin-button {
+.tier_card__custom_donation_input::-webkit-outer-spin-button,
+.tier_card__custom_donation_input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
 
-.tier_card__custom_input::placeholder {
-    color: #ffffff;
-    opacity: 0.85;
-    font-weight: 700;
+.tier_card__custom_donation_input::placeholder {
+    color: #9ca3af;
+    font-weight: 500;
+}
+
+.tier_card__custom_suffix {
+    padding: 10px 12px 10px 6px;
+    color: #6b7280;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
 }
 
 .tier_card__benefits {
@@ -157,37 +197,75 @@
     border-bottom: none;
 }
 
-.tier_card__cta {
-    display: block;
-    width: 100%;
-    margin-top: 14px;
-    padding: 13px 12px;
-    background-color: #a89888;
-    color: #ffffff;
-    border: none;
-    border-radius: 0;
-    font-size: 15px;
+/* Footer with qty stepper + price */
+.tier_card__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 16px;
+    padding: 10px 12px;
+    background: #ffffff;
+    border-radius: 8px;
+}
+
+.qty_stepper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.qty_btn {
+    flex: 0 0 auto;
+    min-width: 44px;
+    height: 36px;
+    padding: 0 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #374151;
+    font-size: 18px;
     font-weight: 700;
-    letter-spacing: 1.5px;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    line-height: 1;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
     font-family: inherit;
 }
 
-.tier_card__cta:hover {
-    background-color: #93826f;
+.qty_btn:hover {
+    background: #f3f4f6;
+    border-color: #9ca3af;
 }
 
-.tier_card__cta:active {
+.qty_btn:active {
     transform: translateY(1px);
 }
 
-.tier_card.is-selected .tier_card__cta {
-    background-color: #3D506B;
+.qty_input {
+    width: 28px;
+    height: 36px;
+    border: none;
+    background: transparent;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #111827;
+    outline: none;
+    -moz-appearance: textfield;
+    font-family: inherit;
 }
 
-.tier_card.is-selected .tier_card__cta:hover {
-    background-color: #31445E;
+.qty_input::-webkit-outer-spin-button,
+.qty_input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.tier_card__price_display {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111827;
+    white-space: nowrap;
 }
 
 /* POPULAR ribbon */
