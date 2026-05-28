@@ -8,6 +8,7 @@
   --atri-line: rgba(255,255,255,.14);
   --atri-txt: #ffffff;
   --atri-muted: #b9b9bd;
+  --atri-accent: #c9a96e;
   --atri-serif: 'Cormorant Garamond', Georgia, serif;
   --atri-sans: 'Inter', system-ui, sans-serif;
   font-family: var(--atri-sans);
@@ -147,9 +148,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.9rem;
-  padding: .85rem 1.5rem;
+  gap: 2rem;
+  padding: 1rem 1.5rem;
   background: var(--atri-bg);
+  border-top: 1px solid rgba(255,255,255,.06);
   border-bottom: 1px solid rgba(255,255,255,.06);
   overflow-x: auto;
   -ms-overflow-style: none;
@@ -163,22 +165,45 @@
 .atri-header__nav-link {
   display: inline-flex;
   align-items: center;
-  gap: .5rem;
-  font-size: .68rem;
-  letter-spacing: .14em;
+  gap: .55rem;
+  font-size: .72rem;
+  font-weight: 500;
+  letter-spacing: .12em;
   text-transform: uppercase;
-  color: #d7d7da;
+  color: #ffffff;
   white-space: nowrap;
   padding: .25rem 0;
-  transition: color .2s;
+  transition: opacity .2s;
 }
 
 .atri-header__nav-link:hover {
-  color: #fff;
+  opacity: .75;
 }
 
 .atri-header__nav-link--active {
   color: #fff;
+}
+
+.atri-header__nav-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.atri-header__nav-icon svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+/* Accent variant — e.g. "Friends of ATRI" */
+.atri-header__nav-link--accent .atri-header__nav-icon {
+  color: var(--atri-accent);
+}
+
+.atri-header__nav-link--accent:hover .atri-header__nav-icon {
+  color: var(--atri-accent);
 }
 
 /* ===== Search panel ===== */

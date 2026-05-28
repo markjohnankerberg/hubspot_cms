@@ -31,12 +31,86 @@
     </div>
   </div>
 
-  {# ===== Nav row (dynamic from HubSpot menu) ===== #}
-  {% set nav_menu = menu(module.menu, "site_root").children %}
+  {# ===== Nav row (hardcoded) ===== #}
+  {# Each nav item is hardcoded with a dummy href="#". Replace the # with the
+     real destination once URLs are known. #}
   <nav class="atri-header__nav" aria-label="Main navigation">
-    {% for link in nav_menu %}
-      <a class="atri-header__nav-link{{ " atri-header__nav-link--active" if link.activeNode }}" href="{{ link.url|escape_url }}"{{ ' aria-current="page"' if link.activeNode }}{{ ' target="_blank" rel="noopener"' if link.linkTarget }}>{{ link.label }}</a>
-    {% endfor %}
+    <a class="atri-header__nav-link" href="#">
+      <span class="atri-header__nav-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><polygon points="10,9 16,12 10,15" fill="currentColor" stroke="none"/></svg>
+      </span>
+      <span class="atri-header__nav-label">Watch</span>
+    </a>
+
+    <a class="atri-header__nav-link" href="#">
+      <span class="atri-header__nav-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="8" y1="22" x2="16" y2="22"/></svg>
+      </span>
+      <span class="atri-header__nav-label">Listen</span>
+    </a>
+
+    <a class="atri-header__nav-link" href="#">
+      <span class="atri-header__nav-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6c-2-1.5-5-2-9-2v15c4 0 7 .5 9 2 2-1.5 5-2 9-2V4c-4 0-7 .5-9 2z"/><line x1="12" y1="6" x2="12" y2="21"/></svg>
+      </span>
+      <span class="atri-header__nav-label">Read</span>
+    </a>
+
+    <a class="atri-header__nav-link" href="#">
+      <span class="atri-header__nav-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10l10-5 10 5-10 5z"/><path d="M6 12v4c0 1.5 3 2.5 6 2.5s6-1 6-2.5v-4"/><line x1="22" y1="10" x2="22" y2="16"/></svg>
+      </span>
+      <span class="atri-header__nav-label">Learn</span>
+    </a>
+
+    <a class="atri-header__nav-link" href="#">
+      <span class="atri-header__nav-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.5"/><circle cx="17" cy="20" r="1.5"/><path d="M2 4h2l3 11h12l2-7H6"/></svg>
+      </span>
+      <span class="atri-header__nav-label">Store</span>
+    </a>
+
+    <a class="atri-header__nav-link" href="#">
+      <span class="atri-header__nav-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c3 3 4.5 6 4.5 9s-1.5 6-4.5 9c-3-3-4.5-6-4.5-9s1.5-6 4.5-9z"/></svg>
+      </span>
+      <span class="atri-header__nav-label">International</span>
+    </a>
+
+    <a class="atri-header__nav-link" href="#">
+      <span class="atri-header__nav-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3 2.5-5 6-5s6 2 6 5"/><path d="M15 20c0-2 1.8-3.5 4-3.5s2.5 1 2.5 3"/></svg>
+      </span>
+      <span class="atri-header__nav-label">Guests</span>
+    </a>
+
+    <a class="atri-header__nav-link" href="#">
+      <span class="atri-header__nav-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="12" y1="11" x2="12" y2="17"/><circle cx="12" cy="8" r="0.6" fill="currentColor" stroke="none"/></svg>
+      </span>
+      <span class="atri-header__nav-label">About</span>
+    </a>
+
+    <a class="atri-header__nav-link" href="#">
+      <span class="atri-header__nav-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+      </span>
+      <span class="atri-header__nav-label">Contact Us</span>
+    </a>
+
+    <a class="atri-header__nav-link atri-header__nav-link--accent" href="#">
+      <span class="atri-header__nav-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3 2.5-5 6-5s6 2 6 5"/><path d="M15 20c0-2 1.8-3.5 4-3.5s2.5 1 2.5 3"/></svg>
+      </span>
+      <span class="atri-header__nav-label">Friends of ATRI</span>
+    </a>
+
+    <a class="atri-header__nav-link" href="#">
+      <span class="atri-header__nav-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-9.5-9C1 9 3 5 6.5 5c2 0 3.5 1 5.5 3 2-2 3.5-3 5.5-3C21 5 23 9 21.5 12c-2.5 4.5-9.5 9-9.5 9z"/></svg>
+      </span>
+      <span class="atri-header__nav-label">Give</span>
+    </a>
   </nav>
 
 </header>
