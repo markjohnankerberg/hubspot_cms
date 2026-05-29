@@ -22,6 +22,20 @@
     "default": "default"
   },
   {
+    "label": "Search API base URL",
+    "name": "search_api_base",
+    "type": "text",
+    "help_text": "Base URL of the ATRI Search API, with no trailing slash (e.g. https://your-app.herokuapp.com). The module calls {base}/api/search/.",
+    "default": ""
+  },
+  {
+    "label": "Results per page",
+    "name": "search_per_page",
+    "type": "number",
+    "help_text": "How many results to request per search (1–100).",
+    "default": 12
+  },
+  {
     "label": "Donate button label",
     "name": "donate_label",
     "type": "text",

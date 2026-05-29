@@ -118,7 +118,9 @@
 {# ===== Search panel ===== #}
 <div class="atri-header__backdrop" id="atriBackdrop"></div>
 
-<aside class="atri-header__search-panel" id="atriSearchPanel" role="dialog" aria-modal="true" aria-label="Site search">
+<aside class="atri-header__search-panel" id="atriSearchPanel" role="dialog" aria-modal="true" aria-label="Site search"
+       data-api-base="{{ module.search_api_base }}"
+       data-per-page="{{ module.search_per_page|default(12) }}">
   <div class="atri-header__panel-top">
     <button class="atri-header__panel-close" id="atriSearchClose" type="button" aria-label="Close search">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
@@ -126,11 +128,25 @@
   </div>
   <div class="atri-header__panel-body">
     <h2 class="atri-header__panel-heading">What can we help you find?</h2>
-    <form class="atri-header__search-field" id="atriSearchForm" action="/search" method="GET" autocomplete="off">
+    <form class="atri-header__search-field" id="atriSearchForm" action="/search" method="GET" autocomplete="off" role="search">
       <input type="text" name="q" placeholder="Search…" aria-label="Search" />
       <button class="atri-header__search-submit" type="submit" aria-label="Submit search">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </button>
     </form>
+
+    {# Source filter pills → API `source` param #}
+    <div class="atri-header__search-filters" id="atriSearchFilters" role="tablist" aria-label="Filter results by type">
+      <button class="atri-header__filter-pill is-active" type="button" data-source="" role="tab" aria-selected="true">All</button>
+      <button class="atri-header__filter-pill" type="button" data-source="hubspot" role="tab" aria-selected="false">Articles</button>
+      <button class="atri-header__filter-pill" type="button" data-source="woocommerce" role="tab" aria-selected="false">Store</button>
+    </div>
+
+    {# Live results, rendered by module.js #}
+    <div class="atri-header__search-status" id="atriSearchStatus" role="status" aria-live="polite"></div>
+    <ul class="atri-header__results" id="atriSearchResults" aria-label="Search results"></ul>
+    <div class="atri-header__results-more">
+      <button class="atri-header__load-more" id="atriSearchMore" type="button" style="display:none">Load more</button>
+    </div>
   </div>
 </aside>
