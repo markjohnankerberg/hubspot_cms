@@ -471,6 +471,81 @@ button[type="submit"]:active {
     min-height: 48px;
 }
 
+/* Free resource offer toggle */
+.free_resource_section {
+    margin-top: 16px;
+}
+
+.free_resource_card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 14px 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    background: #f8faf8;
+}
+
+.free_resource_card__title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #31445E;
+    margin-bottom: 2px;
+}
+
+.free_resource_card__desc {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #6b7280;
+}
+
+.toggle_switch {
+    position: relative;
+    flex: 0 0 auto;
+    cursor: pointer;
+}
+
+.toggle_switch input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle_switch__track {
+    display: block;
+    width: 48px;
+    height: 28px;
+    border-radius: 999px;
+    background: #cbd5e1;
+    transition: background-color .2s ease;
+}
+
+.toggle_switch__thumb {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+    transition: transform .2s ease;
+}
+
+.toggle_switch input:checked + .toggle_switch__track {
+    background: #4CAF50;
+}
+
+.toggle_switch input:checked + .toggle_switch__track .toggle_switch__thumb {
+    transform: translateX(20px);
+}
+
+.toggle_switch input:focus-visible + .toggle_switch__track {
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, .3);
+}
+
 /* Opt-in checkboxes under order summary */
 .optin_section {
     margin: 12px 0 4px;

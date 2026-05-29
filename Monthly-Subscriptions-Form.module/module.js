@@ -6,6 +6,7 @@ const FORM_API_KEY = "";
 const SUBSCRIPTION_API_BASE = "https://woocommerce-subscriptions-api-a963dc6ad505.herokuapp.com";
 const SUBSCRIPTION_API_KEY = "QvFRH-sTDIEMY7sNb91eoMIkPdOd9940psUCyp8jn7x4F1fjearbEB12afaO8Cp0";
 const CUSTOM_DONATION_SUBSCRIPTION_PRODUCT_ID = 69201;
+const FREE_RESOURCE_SKU = "GMOS-P";
 const FIXED_DONATION_PRODUCT_ID_MAP = {
     30: 67049,
     50: 67057,
@@ -146,6 +147,11 @@ function wireTierPicker() {
         });
     }
 
+    const freeResourceToggle = document.getElementById("free_resource_toggle");
+    if (freeResourceToggle) {
+        freeResourceToggle.addEventListener("change", () => refreshPayments({ force: true }));
+    }
+
     wireDynamicFormListeners();
 }
 
@@ -222,6 +228,10 @@ function getFormFieldsMetadata() {
     });
     meta.opt_in_email = document.getElementById("opt_in_email")?.checked ? "yes" : "no";
     meta.opt_in_sms = document.getElementById("opt_in_sms")?.checked ? "yes" : "no";
+
+    const wantsFreeResource = document.getElementById("free_resource_toggle")?.checked;
+    meta.free_resource = wantsFreeResource ? "yes" : "no";
+    if (wantsFreeResource) meta.free_resource_sku = FREE_RESOURCE_SKU;
 
     return meta;
 }
@@ -411,6 +421,8 @@ function buildSubscriptionIntakePayload(paymentIntent) {
             heard_about_us: formMeta.heard_about_us || "",
             opt_in_email: document.getElementById("opt_in_email")?.checked ? "yes" : "no",
             opt_in_sms: document.getElementById("opt_in_sms")?.checked ? "yes" : "no",
+            free_resource: formMeta.free_resource || "no",
+            ...(formMeta.free_resource_sku ? { free_resource_sku: formMeta.free_resource_sku } : {}),
         },
     };
 }
