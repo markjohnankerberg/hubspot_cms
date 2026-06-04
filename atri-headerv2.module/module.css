@@ -566,3 +566,85 @@
     font-size: 1.4rem;
   }
 }
+
+/* ===== Theme override hardening =====
+   The host theme (template_main.css) ships a global rule that wins via
+   !important and clobbers every <button> in the module:
+
+     button:not(.splide__pagination__page, .splide__arrow, .btn-custom, ...) {
+       font-size: 13px !important;
+       text-transform: uppercase !important;
+       letter-spacing: 0 !important;
+       line-height: 1.2 !important;
+       padding: 12px 30px !important;   <- the killer
+       ...
+     }
+
+   Combined with the theme's global `box-sizing: border-box`, that 12px 30px
+   padding inflates our icon buttons (search, submit, close) out of their
+   intended square and balloons the filter pills, and the letter-spacing:0
+   strips our tracking. The module preview doesn't load the theme stylesheet,
+   so this only surfaces on live pages. We re-assert the intended box model
+   with matching specificity + !important so the theme can't win.
+
+   NOTE: keep these as the ONLY !important block. If you add another module
+   button, add it here too. */
+
+/* Icon buttons — kill the forced padding so they stay square and centered. */
+.atri-header__search-open,
+.atri-header__search-submit,
+.atri-header__panel-close {
+  padding: 0 !important;
+  line-height: 1 !important;
+}
+
+.atri-header__search-open {
+  width: 38px !important;
+  height: 38px !important;
+  color: #fff !important;
+}
+
+.atri-header__search-submit {
+  width: 38px !important;
+  height: 38px !important;
+}
+
+.atri-header__panel-close {
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.atri-header__search-open svg,
+.atri-header__search-submit svg {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.atri-header__panel-close svg {
+  width: 22px !important;
+  height: 22px !important;
+}
+
+/* Menu button — restore the size/tracking the theme zeroes out. */
+.atri-header__menu-btn {
+  padding: .55rem .9rem !important;
+  font-size: .68rem !important;
+  letter-spacing: .18em !important;
+  line-height: 1.2 !important;
+}
+
+/* Filter pills — restore compact pill padding/size (keeps border-radius:999px). */
+.atri-header__filter-pill {
+  padding: .4rem .9rem !important;
+  font-size: .68rem !important;
+  letter-spacing: .12em !important;
+  line-height: 1.2 !important;
+}
+
+/* Load-more — restore intended padding/size. */
+.atri-header__load-more {
+  padding: .65rem 1.6rem !important;
+  font-size: .68rem !important;
+  letter-spacing: .14em !important;
+  line-height: 1.2 !important;
+}

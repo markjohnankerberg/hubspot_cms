@@ -26,7 +26,7 @@
     "name": "search_api_base",
     "type": "text",
     "help_text": "Base URL of the ATRI Search API, with no trailing slash (e.g. https://your-app.herokuapp.com). The module calls {base}/api/search/.",
-    "default": ""
+    "default": "https://atri-api-platform-34c090b343d1.herokuapp.com"
   },
   {
     "label": "Results per page",

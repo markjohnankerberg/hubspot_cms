@@ -3,6 +3,7 @@
      id="announcement-bar"
      data-api-url="{{ module.api_url }}"
      data-show-skus="{{ module.show_sku_breakdown }}">
+  <canvas class="announcement-bar__fireworks" id="banner-fireworks" aria-hidden="true"></canvas>
   <button class="announcement-bar__close" type="button" aria-label="Close banner">&#x2715;</button>
   <div class="announcement-bar__inner">
 
@@ -74,5 +75,106 @@
   }
   updateBar();
   new MutationObserver(updateBar).observe(totalEl, { childList: true, characterData: true, subtree: true });
+})();
+
+/* ── Celebration fireworks (ambient, auto-stops after 30s) ── */
+(function () {
+  var DURATION = 30000; // ms of active launching before winding down
+
+  var bar = document.getElementById('announcement-bar');
+  var canvas = document.getElementById('banner-fireworks');
+  if (!bar || !canvas) return;
+
+  // Honor users who prefer reduced motion — skip the effect entirely.
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    canvas.remove();
+    return;
+  }
+
+  var ctx = canvas.getContext('2d');
+  var dpr = Math.min(window.devicePixelRatio || 1, 2);
+  var W = 0, H = 0;
+
+  function resize() {
+    var r = bar.getBoundingClientRect();
+    W = r.width; H = r.height;
+    canvas.width = Math.round(W * dpr);
+    canvas.height = Math.round(H * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var COLORS = ['#E3B341', '#ffffff', '#ff7b7b', '#7ec8ff', '#9d7bff', '#7dffa1'];
+  var GRAVITY = 0.045;
+  var particles = [];
+
+  function burst(x, y) {
+    var count = 26 + ((Math.random() * 18) | 0);
+    var color = COLORS[(Math.random() * COLORS.length) | 0];
+    var speed = 1.6 + Math.random() * 1.8;
+    for (var i = 0; i < count; i++) {
+      var ang = (Math.PI * 2 * i) / count + Math.random() * 0.3;
+      var v = speed * (0.6 + Math.random() * 0.7);
+      particles.push({
+        x: x, y: y,
+        vx: Math.cos(ang) * v,
+        vy: Math.sin(ang) * v,
+        life: 1,
+        decay: 0.012 + Math.random() * 0.012,
+        color: color,
+        size: 1.4 + Math.random() * 1.4
+      });
+    }
+  }
+
+  var start = null;
+  var lastSpawn = 0;
+  var nextGap = 0;
+  var rafId = null;
+
+  function stop() {
+    if (rafId) cancelAnimationFrame(rafId);
+    window.removeEventListener('resize', resize);
+    ctx.clearRect(0, 0, W, H);
+    canvas.remove();
+  }
+
+  function frame(ts) {
+    if (start === null) start = ts;
+    var elapsed = ts - start;
+
+    // Launch a new shell on a randomized cadence while inside the window.
+    if (elapsed < DURATION && ts - lastSpawn > nextGap) {
+      burst(W * (0.08 + Math.random() * 0.84), H * (0.12 + Math.random() * 0.5));
+      lastSpawn = ts;
+      nextGap = 320 + Math.random() * 340;
+    }
+
+    ctx.clearRect(0, 0, W, H);
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.vy += GRAVITY;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      if (p.life <= 0) { particles.splice(i, 1); continue; }
+      ctx.globalAlpha = p.life < 0 ? 0 : p.life;
+      ctx.fillStyle = p.color;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    ctx.globalAlpha = 1;
+
+    // Keep running until the window closes AND lingering sparks have faded.
+    if (elapsed < DURATION || particles.length) {
+      rafId = requestAnimationFrame(frame);
+    } else {
+      stop();
+    }
+  }
+
+  rafId = requestAnimationFrame(frame);
 })();
 </script>
