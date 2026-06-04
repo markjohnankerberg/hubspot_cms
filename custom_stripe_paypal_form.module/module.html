@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- PayPal SDK -->
+    <script src="https://www.paypal.com/sdk/js?client-id=ARt2uKbwZNZPj4qwF8Ws7BdNmP9zfJsuY4LDN7SFe45EbYwahR8IIkyt2GcPP7ci7y3MkopeqbjcSiDG&currency=USD&intent=capture&components=buttons&disable-funding=paylater,card"></script>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+   <link
+    rel="stylesheet"
+     href="https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.6/build/css/intlTelInput.css"
+      />
+
+    <title>Dynamic Form</title>
+</head>
+<body>
+
+<section class="main_form_section">
+    <div class="main_form">
+        <h2 id="form-title"></h2>
+        <!-- Products injected by JS -->
+        <div class="product_area"></div>
+
+        <!-- Optional additional donation -->
+          <div class="product_area">
+            <div class="product_row">
+              <div class="product_left">
+                <div class="product_name">Custom Donation</div>
+              </div>
+              <div class="donation_input donation_input--inline">
+                <span class="currency">$</span>
+                <input id="custom_donation" type="number" min="0" step="1" placeholder="0.00"/>
+              </div>
+            </div>
+            <section class="donation_type_section">
+                <h3 class="order_summary__title">Donation Type</h3>
+                <label><input type="radio" name="donation_type" value="one_time" checked /> One-time</label>
+                <label><input type="radio" name="donation_type" value="monthly" /> Monthly</label>
+            </section>
+          </div>
+
+
+        <!-- HARD-CODED CONTACT FORM -->
+        <form id="dynamic-form">
+          <h3 class="order_summary__title">Donor Information</h3>
+            <!-- Name -->
+            <div class="form-group">
+                <label for="first_name">First Name</label>
+                <input id="first_name" name="first_name" type="text" required>
+            </div>
+
+            <div class="form-group">
+                <label for="last_name">Last Name</label>
+                <input id="last_name" name="last_name" type="text" required>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input id="email" name="email" type="email" required>
+            </div>
+
+            <!-- Address -->
+            <div class="form-group">
+                <label for="street_address">Street Address</label>
+                <input id="street_address" name="street_address" type="text">
+            </div>
+
+            <div class="form-group">
+                <label for="city">City</label>
+                <input id="city" name="city" type="text">
+            </div>
+          <div class="form-group">
+                <label for="state_region">State/Region</label>
+                <input id="state_region" name="state_region" type="text">
+            </div>
+            <div class="form-group">
+                <label for="city">Zip Code</label>
+                <input id="zip" name="zip" type="text">
+            </div>
+            <div class="form-group">
+                <label for="country_region">Country/Region</label>
+                <input id="country_region" name="country_region" type="text">
+            </div>
+
+            <!-- Phone -->
+            <div class="form-group">
+                <label for="mobile_phone">Mobile Phone Number</label>
+                <input id="mobile_phone" name="mobile_phone" type="tel">
+            </div>
+
+            <!-- How did you hear about us? -->
+            <div class="form-group">
+                <label for="heard_about_us">How did you hear about us?</label>
+                <select id="heard_about_us" name="heard_about_us">
+                    <option value="">Select…</option>
+                    <option value="Daystar">Daystar</option>
+                    <option value="GodTV">GodTV</option>
+                    <option value="Internet">Internet</option>
+                    <option value="Roku">Roku</option>
+                    <option value="Lightsource">Lightsource</option>
+                    <option value="OnePlace">OnePlace</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <!-- Bonus calendar offer (still controlled by JS via toggleCalendarOffer) -->
+<!--             <div id="calendar-container">
+                <div class="form-group" id="calendar-offer" hidden>
+                    <label for="want_calendar">I would like to receive my 2026 Prayer Calendar</label>
+                    <div class="calendar-options">
+                        <label><input type="radio" name="want_calendar" value="yes">Yes</label>
+                        <label><input type="radio" name="want_calendar" value="no" checked>No</label>
+                    </div>
+                </div>
+            </div>
+ -->
+            <!-- (Optional) plain submit, mostly for debugging -->
+            <button type="submit" style="display:none;">Submit</button>
+        </form>
+
+
+        <!-- ORDER SUMMARY -->
+        <section class="order_summary">
+            <h3 class="order_summary__title">Order Summary</h3>
+            <div class="order_card">
+                <div class="order_row">
+                    <span>Subtotal</span>
+                    <span id="subtotal">$0.00</span>
+                </div>
+                <div class="order_row">
+                    <span>Donation</span>
+                    <span id="donation_amount">$0.00</span>
+                </div>
+                <div class="order_divider"></div>
+                <div class="order_row order_row--total">
+                    <span>Total Amount</span>
+                    <span id="total_amount">$0.00</span>
+                </div>
+            </div>
+        </section>
+        <section class="optin_section">
+            <div class="optin_row">
+                <label class="optin_label">
+                    <input type="checkbox" id="opt_in_email" name="opt_in_email">
+                    <span class="optin_text">
+                        I agree to receive other communications from The John Ankerberg Show.
+                    </span>
+                </label>
+            </div>
+
+            <div class="optin_row">
+                <label class="optin_label">
+                    <input type="checkbox" id="opt_in_sms" name="opt_in_sms">
+                    <span class="optin_text">
+                        I agree to receive SMS messages from ATRI that may include ministry updates,
+                        early-access content, prayer updates, and occasional opportunities to donate
+                        to the ministry. Message frequency varies. Msg &amp; data rates may apply.
+                        Reply STOP to unsubscribe and HELP for help. Please see Privacy Policy and
+                        Terms of Use.
+                    </span>
+                </label>
+            </div>
+
+            <p class="donor_disclaimer_small">
+                As a 100% donor-funded ministry, your non-restricted gift supports the entirety
+                of ATRI's work including the broadcasting, expansion, and production of The John
+                Ankerberg Show in the US and international markets. The John Ankerberg Show
+                broadcasts to potentially 4.5 billion viewers in more than 200 countries and
+                territories.
+            </p>
+        </section>
+
+        <!-- PAYMENTS -->
+        <section class="paymet_section">
+            <div class="pay-with-stripe">
+                <h4 style="margin:12px 0 8px">Pay via Card</h4>
+                <div id="payment-element"></div>
+                <div id="stripe-messages" class="help-text" aria-live="polite"></div>
+                <button id="stripe-pay-button" type="button">Pay via Card</button>
+            </div>
+
+            <div class="pay-with-paypal">
+                <div class="or-divider" style="margin:16px 0; text-align:center; opacity:.7;">— or —</div>
+                <div id="paypal-button-onetime"></div>
+                <div id="paypal-button-subscribe" style="display:none;"></div>
+            </div>
+        </section>
+
+    </div>
+</section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.6/build/js/intlTelInput.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.6/build/js/utils.js"></script>
+
+<script>
+  const input = document.querySelector("#mobile_phone");
+
+  const iti = window.intlTelInput(input, {
+    initialCountry: "us",      // default to United States
+    separateDialCode: true,    // shows +1 in its own box
+    nationalMode: true,        // formats like (423) 762-1663
+    autoPlaceholder: "polite",
+    utilsScript:
+      "https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.6/build/js/utils.js"
+  });
+</script>
+
+<!-- Stripe JS -->
+<script src="https://js.stripe.com/v3/"></script>
+<!-- Your module_custom_stripe_paypal_form.js should be loaded after this HTML -->
+</body>
+</html>

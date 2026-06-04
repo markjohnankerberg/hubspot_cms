@@ -18,11 +18,6 @@ const FIXED_DONATION_PRODUCT_ID_MAP = {
 const SUBSCRIPTION_PRODUCT_IDS = []; // e.g. [123, 456]
 const SUBSCRIPTION_SKUS = []; // e.g. ["SUB-MONTHLY", "SUB-ANNUAL"]
 
-const MICRO_SD_URL = "https://dl.dropboxusercontent.com/scl/fi/840angbujoiw8wgw14lbw/MicroSD-Card-600x600.png?rlkey=ac7qpw4smq8pyubg07snhnyls&raw=1";
-const MICRO_PROCLAIMER_URL = "https://dl.dropboxusercontent.com/scl/fi/fncc17ae3dzdjzx468wze/Audio-Bible-Micro-Proclaimer-600x600.png?rlkey=x1s5c5icvgarfqbajubk6rgg6&raw=1";
-const PROCLAIMER_URL = "https://23773134.fs1.hubspotusercontent-na1.net/hubfs/23773134/Proclaimer%20600x600.png";
-const PROCLAIMER_BUNDLE_URL = "https://dl.dropboxusercontent.com/scl/fi/iy70krlvvvk0zhwej9kxu/Proclaimer-Bundle-600x600.png?rlkey=jk21ce4507g7mwm347jw2cb02&raw=1";
-
 /* Build safe URLs (prevents double // when base URL ends with /) */
 const API = (path) =>
     `${API_BASE.replace(/\/+$/, "")}${path.startsWith("/") ? "" : "/"}${path}`;
@@ -76,11 +71,12 @@ function renderProducts(products) {
     const area = document.querySelector(".product_area");
     if (!area) return;
 
-    area.innerHTML = `<h3 class="product_area__title">Product Summary</h3>`;
+    area.innerHTML = `<h3 class="matched_gift">All Gifts are Double Matched</h3>`;
 
     products.forEach((p, i) => {
         const row = document.createElement("div");
         row.className = "product_row";
+
         row.dataset.unit = String(p.price);
         row.dataset.index = String(i);
         row.dataset.sku = p.sku || "";
@@ -89,32 +85,9 @@ function renderProducts(products) {
 
 
 
-        const SKU_ICON_MAP = {
-            "FR16-30":     MICRO_SD_URL,
-            "FR16-100":    MICRO_PROCLAIMER_URL,
-            "FR16-100-2":  MICRO_PROCLAIMER_URL,
-            "FR16-500":    PROCLAIMER_URL,
-            "FR16-1000":   PROCLAIMER_BUNDLE_URL,
-        };
-        const SKU_NAME_MAP = {
-            "FR16-30":     "Micro SD Card",
-            "FR16-100":    "Micro-Proclaimer",
-            "FR16-100-2":  "Micro-Proclaimer",
-            "FR16-500":  "Proclaimer",
-            "FR16-1000": "Proclaimer Bundle",
-        };
-        const MATCHED_GIFT_SKUS = ["FR16-500", "FR16-1000"];
-        const iconUrl = SKU_ICON_MAP[p.sku] || PROCLAIMER_BUNDLE_URL;
-        const displayName = SKU_NAME_MAP[p.sku] || p.name;
-        const matchedGiftBadge = MATCHED_GIFT_SKUS.includes(p.sku)
-            ? `<span class="matched_gift">Matched Gift</span>`
-            : "";
-
         row.innerHTML = `
       <label class="product_left">
-        <img class="product_icon" src="${iconUrl}" alt="${p.name}" />
-        <span class="product_name">${displayName}</span>
-        ${matchedGiftBadge}
+        <span class="product_name">${p.name}</span>
       </label>
 
       <div class="qty_stepper">
@@ -175,6 +148,23 @@ const wireDynamicFormListeners = (() => {
     };
 })();
 
+function toggleCalendarOffer(amount) {
+    const offer = document.getElementById("calendar-offer");
+    if (!offer) return;
+    if (amount >= 100) {
+        offer.hidden = false;
+    } else {
+        offer.hidden = true;
+        const no = offer.querySelector('input[name="want_calendar"][value="no"]');
+        if (no) no.checked = true;
+    }
+}
+
+function getCalendarSelected() {
+    const picked = document.querySelector('input[name="want_calendar"]:checked');
+    return picked ? (picked.value === "yes") : false;
+}
+
 function calcTotals() {
     const rows = document.querySelectorAll(".product_row");
     let subtotal = 0;
@@ -199,6 +189,7 @@ function calcTotals() {
     if (donationEl) donationEl.textContent = money(donation);
     document.getElementById("total_amount").textContent = money(total);
 
+    toggleCalendarOffer(total);
 }
 
 /* -------- Boot -------- */
@@ -263,7 +254,6 @@ function getCartItems() {
 }
 
 function isSubscriptionProduct(item) {
-    // TODO Can we remove this function
     if (item.is_subscription) return true;
     if (SUBSCRIPTION_PRODUCT_IDS.includes(item.id)) return true;
     if (item.sku && SUBSCRIPTION_SKUS.includes(item.sku)) return true;
@@ -286,14 +276,7 @@ function normalizeCountry(countryValue) {
     return raw.slice(0, 2);
 }
 
-function isDonationTypeMonthly() {
-    const el = document.querySelector('input[name="donation_type"]:checked');
-    return el ? el.value === "monthly" : false;
-}
-
 function getSelectedSubscriptionProductId() {
-    if (!isDonationTypeMonthly()) return null;
-
     const donationInput = document.getElementById("custom_donation");
     const donationAmount = Number(donationInput?.value || 0);
     if (Number.isFinite(donationAmount) && donationAmount > 0) {
@@ -439,6 +422,7 @@ async function mountStripePaymentElement() {
     }
 
     const amount = Math.round(subtotal * 100);
+    const wantCalendar = getCalendarSelected();
     const email = getEmailFromForm();
     const items = getCartItems();
     const formMeta = getFormFieldsMetadata();
@@ -464,6 +448,7 @@ async function mountStripePaymentElement() {
                 currency: "usd",
                 email: email || undefined,
                 metadata: {
+                    want_calendar: wantCalendar ? "yes" : "no",
                     subtotal: subtotal.toFixed(2),
                     ...formMeta,
                     ...itemMeta,
@@ -534,6 +519,7 @@ function buildSubscriptionIntakePayload(paymentIntent) {
         metadata: {
             donation_amount: recurringAmount ? recurringAmount.toFixed(2) : "",
             heard_about_us: formMeta.heard_about_us || "",
+            want_calendar: getCalendarSelected() ? "yes" : "no",
             opt_in_email: document.getElementById("opt_in_email")?.checked ? "yes" : "no",
             opt_in_sms: document.getElementById("opt_in_sms")?.checked ? "yes" : "no",
         },
@@ -629,6 +615,7 @@ async function sendPayPalOrderToBackend(details) {
     }
 
     const total = getSubtotalNumber();
+    const wantCalendar = getCalendarSelected();
     const heardAboutUs = formMeta.heard_about_us || "";
 
     const payer = details.payer || {};
@@ -665,6 +652,7 @@ async function sendPayPalOrderToBackend(details) {
         state_region: stateRegion,
         country_region: countryRegion,
         heard_about_us: heardAboutUs,
+        want_calendar: Boolean(wantCalendar),
         donation_amount: Number(donation.toFixed(2)),
         items,
         form_fields: formMeta,
@@ -776,5 +764,4 @@ window.addEventListener("load", () => {
         calcTotals();
         refreshPayments({ force: true });
     });
-
 });
