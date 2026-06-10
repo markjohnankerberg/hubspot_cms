@@ -57,7 +57,7 @@
                   </svg>
                 </a>
                 <div class="header-dropdown-menu-{{name}}" role="menu" aria-label="{{ item.button.button_text|escape_attr }} options">
-                  <a href="{{ href|escape_url }}" class="header-dropdown-link-{{name}}" role="menuitem">
+                  <a href="https://atriresearch.org/donate" class="header-dropdown-link-{{name}}" role="menuitem">
                     <span class="header-dropdown-icon-{{name}}" aria-hidden="true">
                       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 2.5a1 1 0 0 1 1 1V5h5a1 1 0 1 1 0 2h-5v12h3a1 1 0 1 1 0 2H8a1 1 0 1 1 0-2h3V7H6a1 1 0 0 1 0-2h5V3.5a1 1 0 0 1 1-1Z" fill="currentColor"/>
@@ -481,10 +481,6 @@
       transition: var(--transition);
     }
 
-    .header-{{name}} .header-dropdown-{{name}}.open .header-dropdown-caret-{{name}} {
-      transform: scaleY(-1);
-    }
-
     .header-{{name}} .header-dropdown-{{name}} .header-dropdown-menu-{{name}} {
       position: absolute;
       top: calc(100% + 8px);
@@ -498,8 +494,26 @@
       z-index: 1100;
     }
 
-    .header-{{name}} .header-dropdown-{{name}}.open .header-dropdown-menu-{{name}} {
+    /* Invisible bridge so the cursor can cross the gap from button to menu
+       without the hover state dropping. */
+    .header-{{name}} .header-dropdown-{{name}} .header-dropdown-menu-{{name}}::before {
+      content: "";
+      position: absolute;
+      top: -8px;
+      left: 0;
+      right: 0;
+      height: 8px;
+    }
+
+    /* Open on click (.open class) OR on hover */
+    .header-{{name}} .header-dropdown-{{name}}.open .header-dropdown-menu-{{name}},
+    .header-{{name}} .header-dropdown-{{name}}:hover .header-dropdown-menu-{{name}} {
       display: block;
+    }
+
+    .header-{{name}} .header-dropdown-{{name}}.open .header-dropdown-caret-{{name}},
+    .header-{{name}} .header-dropdown-{{name}}:hover .header-dropdown-caret-{{name}} {
+      transform: scaleY(-1);
     }
 
     .header-{{name}} .header-dropdown-{{name}} .header-dropdown-link-{{name}} {
