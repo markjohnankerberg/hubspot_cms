@@ -189,7 +189,7 @@
         <span class="header-icon-{{name}}" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3 2.5-5 6-5s6 2 6 5"/><path d="M15 20c0-2 1.8-3.5 4-3.5s2.5 1 2.5 3"/></svg>
         </span>
-        <span class="header-icon-label-{{name}}">Friends of ATRI</span>
+        <span class="header-icon-label-{{name}}">Monthly Giving</span>
       </a>
     </nav>
 
@@ -401,6 +401,90 @@
     </div>
   </div>
 </aside>
+
+{# ===== Mobile floating dock (phones only) =====
+   Fixed pill at the bottom of the viewport holding the icon-nav links plus a
+   search trigger. Shown at <=540px, where the in-header icon nav and header
+   search trigger are hidden. Moved to <body> by the inline script (like the
+   search panel) so position:fixed is viewport-relative. #}
+<nav class="hv2-dock" id="hv2MobileDock" aria-label="Quick navigation">
+  <div class="hv2-dock__scroll">
+  <a class="hv2-dock__link hv2-dock__link--search" id="hv2DockSearchOpen" href="javascript:void(0)" role="button" aria-label="Open search">
+    <span class="hv2-dock__icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+    </span>
+    <span class="hv2-dock__label">Search</span>
+  </a>
+
+  <a class="hv2-dock__link" href="https://atriresearch.org/watch">
+    <span class="hv2-dock__icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><polygon points="10,9 16,12 10,15" fill="currentColor" stroke="none"/></svg>
+    </span>
+    <span class="hv2-dock__label">Watch</span>
+  </a>
+
+  <a class="hv2-dock__link" href="https://atriresearch.org/podcasts">
+    <span class="hv2-dock__icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="8" y1="22" x2="16" y2="22"/></svg>
+    </span>
+    <span class="hv2-dock__label">Listen</span>
+  </a>
+
+  <a class="hv2-dock__link" href="https://blog.atriresearch.org/articles">
+    <span class="hv2-dock__icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6c-2-1.5-5-2-9-2v15c4 0 7 .5 9 2 2-1.5 5-2 9-2V4c-4 0-7 .5-9 2z"/><line x1="12" y1="6" x2="12" y2="21"/></svg>
+    </span>
+    <span class="hv2-dock__label">Read</span>
+  </a>
+
+  <a class="hv2-dock__link" href="https://jabible.org/">
+    <span class="hv2-dock__icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10l10-5 10 5-10 5z"/><path d="M6 12v4c0 1.5 3 2.5 6 2.5s6-1 6-2.5v-4"/><line x1="22" y1="10" x2="22" y2="16"/></svg>
+    </span>
+    <span class="hv2-dock__label">Learn</span>
+  </a>
+
+  <a class="hv2-dock__link" href="http://atriresearchresources.org/">
+    <span class="hv2-dock__icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.5"/><circle cx="17" cy="20" r="1.5"/><path d="M2 4h2l3 11h12l2-7H6"/></svg>
+    </span>
+    <span class="hv2-dock__label">Store</span>
+  </a>
+
+  <a class="hv2-dock__link" href="http://jabiblia.org">
+    <span class="hv2-dock__icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3c3 3 4.5 6 4.5 9s-1.5 6-4.5 9c-3-3-4.5-6-4.5-9s1.5-6 4.5-9z"/></svg>
+    </span>
+    <span class="hv2-dock__label">International</span>
+  </a>
+
+  <a class="hv2-dock__link" href="https://atriresearch.org/guests">
+    <span class="hv2-dock__icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3 2.5-5 6-5s6 2 6 5"/><path d="M15 20c0-2 1.8-3.5 4-3.5s2.5 1 2.5 3"/></svg>
+    </span>
+    <span class="hv2-dock__label">Guests</span>
+  </a>
+
+  <a class="hv2-dock__link" href="https://atriresearch.org/about-the-john-ankerberg-show/">
+    <span class="hv2-dock__icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="12" y1="11" x2="12" y2="17"/><circle cx="12" cy="8" r="0.6" fill="currentColor" stroke="none"/></svg>
+    </span>
+    <span class="hv2-dock__label">About</span>
+  </a>
+
+  <a class="hv2-dock__link" href="https://atriresearch.org/friends-of-atri">
+    <span class="hv2-dock__icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3 2.5-5 6-5s6 2 6 5"/><path d="M15 20c0-2 1.8-3.5 4-3.5s2.5 1 2.5 3"/></svg>
+    </span>
+    <span class="hv2-dock__label">Monthly Giving</span>
+  </a>
+  </div>
+
+  {# Micro gradient arrow: hints that the dock scrolls; fades out at the end #}
+  <span class="hv2-dock__more" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+  </span>
+</nav>
 
 {% require_css %}
   <style>
@@ -642,7 +726,7 @@
       top: -8px;
       left: 0;
       right: 0;
-      height: 8px;
+      height: 12px;
     }
 
     /* Open on click (.open class) OR on hover */
@@ -1334,6 +1418,17 @@
         padding: 7px 12px;
       }
 
+      .header-{{name}} .header-search-open-{{name}} {
+        display: none;
+      }
+
+      /* Icons move to the floating bottom dock (.hv2-dock) on phones */
+      .header-{{name}} .header-icon-nav-{{name}},
+      .header.sticky .header-{{name}} .header-icon-nav-{{name}},
+      .header.sticky-small .header-{{name}} .header-icon-nav-{{name}} {
+        display: none;
+      }
+
       .header-{{name}} .custom__btns-{{name}} .custom__btn-{{name}} .header-btn.btn-{{name}}:not(.btn-custom) {
         padding: 9.5px 12px !important;
       }
@@ -1769,6 +1864,129 @@
       }
     }
 
+    /* ===== Mobile floating dock (phones only) =====
+       Like the search panel, the dock is moved to <body> by the inline script,
+       so these styles are NOT scoped under .header-{{name}}. Sits below the
+       search backdrop (1090) / panel (1100) so the open search covers it. */
+
+    .hv2-dock {
+      display: none;
+      position: fixed;
+      bottom: calc(14px + env(safe-area-inset-bottom, 0px));
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: calc(100vw - 28px);
+      background: rgba(48, 52, 54, 0.97);
+      border: 1px solid #494d4f;
+      border-radius: 999px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+      overflow: hidden;
+      z-index: 1080;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    /* Inner scroller: the pill stays put while the links scroll, so the
+       gradient arrow can overlay the pill's right edge without moving. */
+    .hv2-dock__scroll {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 10px 14px;
+      overflow-x: auto;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .hv2-dock__scroll::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Micro gradient arrow: right-edge scroll hint */
+    .hv2-dock__more {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 9px;
+      color: #c9a96e;
+      /* Opaque fade into the dock background, with a slight gold hue layered
+         over the right edge */
+      background:
+        linear-gradient(to right, rgba(201, 169, 110, 0), rgba(201, 169, 110, 0.16) 70%),
+        linear-gradient(to right, rgba(48, 52, 54, 0), rgba(48, 52, 54, 0.97) 62%);
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+
+    .hv2-dock__more svg {
+      width: 12px;
+      height: 12px;
+      display: block;
+    }
+
+    /* Hidden once scrolled to the end (or when nothing overflows) */
+    .hv2-dock.hv2-dock--end .hv2-dock__more {
+      opacity: 0;
+    }
+
+    .hv2-dock__link {
+      flex: 0 0 auto;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      padding: 2px 7px;
+      color: var(--clr-light-beige, #d9cfc2);
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: color 0.2s ease;
+    }
+
+    .hv2-dock__link:hover {
+      color: var(--clr-light, #fff);
+    }
+
+    .hv2-dock__icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: inherit;
+    }
+
+    .hv2-dock__icon svg {
+      width: 20px;
+      height: 20px;
+      display: block;
+    }
+
+    .hv2-dock__link--search {
+      color: #c9a96e;
+    }
+
+    .hv2-dock__link--search:hover {
+      color: #d8bd8a;
+    }
+
+    /* Hidden while the slide-out menu is open (class toggled by the menu JS) */
+    body.hv2-menu-open .hv2-dock {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    @media (max-width: 540px) {
+      .hv2-dock {
+        display: flex;
+      }
+    }
+
     /* ===== Theme override hardening =====
        The host theme ships a global rule that wins via !important and clobbers
        every <button> (forced padding 12px 30px, letter-spacing 0, etc.). That
@@ -1837,6 +2055,10 @@
 
         // Toggle the menu button active class
         $(this).toggleClass('menu-btn-active');
+
+        // The floating dock lives on <body> (moved there by the search script),
+        // so mirror the menu state there to hide the dock behind the open menu
+        $('body').toggleClass('hv2-menu-open', $(this).hasClass('menu-btn-active'));
 
         // Slide toggle the navigation panel
         if ($(this).hasClass('menu-btn-active')) {
@@ -1950,6 +2172,8 @@
 
   const backdrop = document.getElementById('hv2Backdrop');
   const openBtn = document.getElementById('hv2SearchOpen');
+  const dock = document.getElementById('hv2MobileDock');
+  const dockSearchBtn = document.getElementById('hv2DockSearchOpen');
   const closeBtn = document.getElementById('hv2SearchClose');
   const form = document.getElementById('hv2SearchForm');
   const input = form ? form.querySelector('input[name="q"]') : null;
@@ -1962,6 +2186,22 @@
   // not a HubSpot column wrapper that may have a CSS transform applied.
   if (panel.parentNode !== document.body) document.body.appendChild(panel);
   if (backdrop && backdrop.parentNode !== document.body) document.body.appendChild(backdrop);
+  if (dock && dock.parentNode !== document.body) document.body.appendChild(dock);
+
+  // ===== Dock scroll hint (micro gradient arrow) =====
+  // Fade the arrow out once the dock is scrolled to the end, or when the
+  // links fit without overflowing (e.g. wide phones in landscape).
+  const dockScroll = dock ? dock.querySelector('.hv2-dock__scroll') : null;
+  if (dock && dockScroll) {
+    const updateDockHint = () => {
+      const overflows = dockScroll.scrollWidth > dockScroll.clientWidth + 1;
+      const atEnd = dockScroll.scrollLeft + dockScroll.clientWidth >= dockScroll.scrollWidth - 4;
+      dock.classList.toggle('hv2-dock--end', !overflows || atEnd);
+    };
+    dockScroll.addEventListener('scroll', updateDockHint, { passive: true });
+    window.addEventListener('resize', updateDockHint);
+    updateDockHint();
+  }
 
   // ----- Config (from HubL via data attributes) -----
   const apiBase = (panel.dataset.apiBase || '').replace(/\/+$/, '');
@@ -1985,6 +2225,7 @@
   };
 
   if (openBtn) openBtn.addEventListener('click', openSearch);
+  if (dockSearchBtn) dockSearchBtn.addEventListener('click', openSearch);
   if (closeBtn) closeBtn.addEventListener('click', closeSearch);
   if (backdrop) backdrop.addEventListener('click', closeSearch);
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeSearch(); });
